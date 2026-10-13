@@ -1,0 +1,2305 @@
+{
+ "id": "clip_forehand_flat_beginner_p11_foreflat",
+ "title": "Forehand (flat), player P11",
+ "blurb": "THETIS clip, adult beginner",
+ "player": {
+  "level": "NTRP 2.0 (adult beginner)",
+  "dominant": "auto",
+  "goal": "Rally consistently with friends",
+  "question": "Why is my forehand inconsistent?",
+  "sessions_per_week": 3,
+  "minutes": 20,
+  "court_access": "sometimes",
+  "partner": false
+ },
+ "report": {
+  "status": "ok",
+  "stroke": {
+   "label": "forehand",
+   "confidence": 1.0,
+   "scores": {
+    "serve": 0.0,
+    "forehand": 1.0,
+    "backhand": 0.0
+   }
+  },
+  "issues": [
+   {
+    "id": "elbow",
+    "title": "Arm cramped or locked at contact",
+    "phase": "contact",
+    "value": 145.99,
+    "unit": "deg",
+    "reference": "expert P10-P90: 106.52 to 135.61",
+    "deviation": 0.53,
+    "confidence": 0.77,
+    "consistency": 1.0,
+    "relevance": 0.75,
+    "frame": 51,
+    "time_s": 2.83,
+    "joints": [
+     11,
+     13,
+     15
+    ],
+    "expert_median": 125.95,
+    "expert_p10": 106.52,
+    "expert_p90": 135.61,
+    "percentile": 98,
+    "z": 1.77,
+    "score": 0.309,
+    "retrieval": {
+     "query": "Why is my forehand inconsistent? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.699,
+       "rerank": 4.85,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.607,
+       "rerank": 3.24,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.553,
+       "rerank": -7.96,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.512,
+       "rerank": -7.65,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.5,
+       "rerank": -11.13,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.486,
+       "rerank": -10.34,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.481,
+       "rerank": -8.26,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.477,
+       "rerank": -8.71,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.699,
+       "rerank": 4.85,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.607,
+       "rerank": 3.24,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.512,
+       "rerank": -7.65,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "references": [
+     {
+      "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Arm spacing at contact",
+      "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+      "dense": 0.699,
+      "rerank": 4.85,
+      "rank_dense": 1,
+      "rank_final": 1
+     },
+     {
+      "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+      "doc": "02_common_beginner_faults.md",
+      "doc_title": "Common Beginner Forehand Faults",
+      "section": "Fault: cramped or locked elbow",
+      "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+      "dense": 0.607,
+      "rerank": 3.24,
+      "rank_dense": 2,
+      "rank_final": 2
+     },
+     {
+      "id": "serious_tennis#p48-2",
+      "doc": "serious_tennis.pdf",
+      "doc_title": "Serious Tennis (Williams & Petersen)",
+      "section": "p. 48 (2)",
+      "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+      "dense": 0.512,
+      "rerank": -7.65,
+      "rank_dense": 4,
+      "rank_final": 3
+     }
+    ],
+    "reasoning": [
+     {
+      "step": "Observed",
+      "text": "Arm cramped or locked at contact: measured 145.99 deg at 2.83 s (contact phase)."
+     },
+     {
+      "step": "Compared with target",
+      "text": "Target expert P10-P90: 106.52 to 135.61; deviation 0.53 on a 0-1 scale."
+     },
+     {
+      "step": "Trust",
+      "text": "Joint tracking confidence 0.77; the deviation held on 100% of the frames checked."
+     },
+     {
+      "step": "Prioritised",
+      "text": "score = 0.53 \u00d7 0.77 \u00d7 1.00 \u00d7 0.75 = 0.309, ranked 1 of 1 candidate issues."
+     }
+    ],
+    "explanation": "The issue is a cramped arm at contact, which reduces accuracy and power. It matters because a relaxed, slightly bent arm allows better control and a longer swing path. Cue: Focus on placing the ball just outside your racket's sweet spot to encourage a more relaxed follow-through. [1]",
+    "explanation_source": "Qwen/Qwen2.5-3B-Instruct, grounded on retrieved passages",
+    "cue": "Give the ball room: contact it with a relaxed, slightly bent arm at a comfortable arm's length."
+   }
+  ],
+  "other_candidates": [],
+  "features": {
+   "turn": {
+    "value": 40.78,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 1.55 to 68.42",
+    "expert_median": 15.2,
+    "expert_p10": 1.55,
+    "expert_p90": 68.42,
+    "percentile": 70,
+    "z": -0.98
+   },
+   "elbow": {
+    "value": 145.99,
+    "unit": "deg",
+    "confidence": 0.77,
+    "reference": "expert P10-P90: 106.52 to 135.61",
+    "expert_median": 125.95,
+    "expert_p10": 106.52,
+    "expert_p90": 135.61,
+    "percentile": 98,
+    "z": 1.77
+   },
+   "knee": {
+    "value": 110.14,
+    "unit": "deg",
+    "confidence": 0.97,
+    "reference": "expert P10-P90: 94.96 to 141.34",
+    "expert_median": 127.0,
+    "expert_p10": 94.96,
+    "expert_p90": 141.34,
+    "percentile": 25,
+    "z": -0.93
+   },
+   "lean": {
+    "value": 15.45,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 8.98 to 22.84",
+    "expert_median": 14.09,
+    "expert_p10": 8.98,
+    "expert_p90": 22.84,
+    "percentile": 57,
+    "z": 0.25
+   },
+   "contact": {
+    "value": 0.42,
+    "unit": "torso lengths",
+    "confidence": 0.83,
+    "reference": "expert P10-P90: -0.48 to 0.78",
+    "expert_median": 0.51,
+    "expert_p10": -0.48,
+    "expert_p90": 0.78,
+    "percentile": 40,
+    "z": 0.18
+   },
+   "follow": {
+    "value": 0.91,
+    "unit": "torso lengths",
+    "confidence": 0.75,
+    "reference": "expert P10-P90: 0.41 to 1.14",
+    "expert_median": 0.74,
+    "expert_p10": 0.41,
+    "expert_p90": 1.14,
+    "percentile": 68,
+    "z": -0.6
+   }
+  },
+  "phases": {
+   "preparation_s": [
+    2.44,
+    2.83
+   ],
+   "contact_s": 2.83,
+   "follow_through_s": [
+    2.83,
+    3.39
+   ]
+  },
+  "wrist_speed": [
+   0.06,
+   0.09,
+   0.1,
+   0.1,
+   0.09,
+   0.08,
+   0.09,
+   0.11,
+   0.12,
+   0.13,
+   0.15,
+   0.21,
+   0.28,
+   0.36,
+   0.45,
+   0.55,
+   0.64,
+   0.71,
+   0.75,
+   0.79,
+   0.95,
+   1.34,
+   1.86,
+   2.32,
+   2.44,
+   2.21,
+   1.48,
+   0.96,
+   0.65,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.74,
+   0.76,
+   1.0,
+   1.55,
+   2.4,
+   3.09,
+   3.65,
+   4.07,
+   4.39,
+   4.37,
+   3.94,
+   3.22,
+   2.39,
+   1.63,
+   1.2,
+   0.97,
+   0.82,
+   0.59,
+   0.38,
+   0.39,
+   0.5,
+   0.68,
+   0.83,
+   1.07,
+   1.44,
+   1.71,
+   1.69,
+   1.42,
+   1.24,
+   1.38,
+   1.75,
+   1.97,
+   1.9,
+   1.74,
+   1.79,
+   2.06,
+   2.2,
+   2.13,
+   1.87,
+   1.53,
+   1.29,
+   1.08,
+   0.94,
+   0.77,
+   0.68,
+   0.64,
+   0.58,
+   0.5,
+   0.4,
+   0.28,
+   0.17,
+   0.09,
+   0.07,
+   0.07,
+   0.07,
+   0.05
+  ],
+  "t": [
+   0.0,
+   0.056,
+   0.111,
+   0.167,
+   0.222,
+   0.278,
+   0.333,
+   0.389,
+   0.444,
+   0.5,
+   0.556,
+   0.611,
+   0.667,
+   0.722,
+   0.778,
+   0.833,
+   0.889,
+   0.944,
+   1.0,
+   1.056,
+   1.111,
+   1.167,
+   1.222,
+   1.278,
+   1.333,
+   1.389,
+   1.444,
+   1.5,
+   1.556,
+   1.611,
+   1.667,
+   1.722,
+   1.778,
+   1.833,
+   1.889,
+   1.944,
+   2.0,
+   2.056,
+   2.111,
+   2.167,
+   2.222,
+   2.278,
+   2.333,
+   2.389,
+   2.444,
+   2.5,
+   2.556,
+   2.611,
+   2.667,
+   2.722,
+   2.778,
+   2.833,
+   2.889,
+   2.944,
+   3.0,
+   3.056,
+   3.111,
+   3.167,
+   3.222,
+   3.278,
+   3.333,
+   3.389,
+   3.444,
+   3.5,
+   3.556,
+   3.611,
+   3.667,
+   3.722,
+   3.778,
+   3.833,
+   3.889,
+   3.944,
+   4.0,
+   4.056,
+   4.111,
+   4.167,
+   4.222,
+   4.278,
+   4.333,
+   4.389,
+   4.444,
+   4.5,
+   4.556,
+   4.611,
+   4.667,
+   4.722,
+   4.778,
+   4.833,
+   4.889,
+   4.944,
+   5.0,
+   5.056,
+   5.111,
+   5.167,
+   5.222,
+   5.278,
+   5.333,
+   5.389,
+   5.444
+  ],
+  "contact_idx": 51,
+  "frames": [
+   {
+    "label": "Preparation",
+    "file": "frame_0.jpg",
+    "time_s": 2.44
+   },
+   {
+    "label": "Contact",
+    "file": "frame_1.jpg",
+    "time_s": 2.83
+   },
+   {
+    "label": "Follow-through",
+    "file": "frame_2.jpg",
+    "time_s": 3.39
+   }
+  ],
+  "strip": [
+   {
+    "label": "2.44s",
+    "file": "strip_0.jpg",
+    "time_s": 2.44
+   },
+   {
+    "label": "2.56s",
+    "file": "strip_1.jpg",
+    "time_s": 2.56
+   },
+   {
+    "label": "2.67s",
+    "file": "strip_2.jpg",
+    "time_s": 2.67
+   },
+   {
+    "label": "2.83s",
+    "file": "strip_3.jpg",
+    "time_s": 2.83
+   },
+   {
+    "label": "2.94s",
+    "file": "strip_4.jpg",
+    "time_s": 2.94
+   },
+   {
+    "label": "3.11s",
+    "file": "strip_5.jpg",
+    "time_s": 3.11
+   },
+   {
+    "label": "3.22s",
+    "file": "strip_6.jpg",
+    "time_s": 3.22
+   },
+   {
+    "label": "3.39s",
+    "file": "strip_7.jpg",
+    "time_s": 3.39
+   }
+  ],
+  "scrub": [
+   {
+    "label": "0.00s",
+    "file": "scrub_0.jpg",
+    "time_s": 0.0,
+    "idx": 0
+   },
+   {
+    "label": "0.11s",
+    "file": "scrub_1.jpg",
+    "time_s": 0.11,
+    "idx": 2
+   },
+   {
+    "label": "0.28s",
+    "file": "scrub_2.jpg",
+    "time_s": 0.28,
+    "idx": 5
+   },
+   {
+    "label": "0.39s",
+    "file": "scrub_3.jpg",
+    "time_s": 0.39,
+    "idx": 7
+   },
+   {
+    "label": "0.56s",
+    "file": "scrub_4.jpg",
+    "time_s": 0.56,
+    "idx": 10
+   },
+   {
+    "label": "0.67s",
+    "file": "scrub_5.jpg",
+    "time_s": 0.67,
+    "idx": 12
+   },
+   {
+    "label": "0.83s",
+    "file": "scrub_6.jpg",
+    "time_s": 0.83,
+    "idx": 15
+   },
+   {
+    "label": "0.94s",
+    "file": "scrub_7.jpg",
+    "time_s": 0.94,
+    "idx": 17
+   },
+   {
+    "label": "1.11s",
+    "file": "scrub_8.jpg",
+    "time_s": 1.11,
+    "idx": 20
+   },
+   {
+    "label": "1.22s",
+    "file": "scrub_9.jpg",
+    "time_s": 1.22,
+    "idx": 22
+   },
+   {
+    "label": "1.39s",
+    "file": "scrub_10.jpg",
+    "time_s": 1.39,
+    "idx": 25
+   },
+   {
+    "label": "1.50s",
+    "file": "scrub_11.jpg",
+    "time_s": 1.5,
+    "idx": 27
+   },
+   {
+    "label": "1.67s",
+    "file": "scrub_12.jpg",
+    "time_s": 1.67,
+    "idx": 30
+   },
+   {
+    "label": "1.78s",
+    "file": "scrub_13.jpg",
+    "time_s": 1.78,
+    "idx": 32
+   },
+   {
+    "label": "1.94s",
+    "file": "scrub_14.jpg",
+    "time_s": 1.94,
+    "idx": 35
+   },
+   {
+    "label": "2.06s",
+    "file": "scrub_15.jpg",
+    "time_s": 2.06,
+    "idx": 37
+   },
+   {
+    "label": "2.22s",
+    "file": "scrub_16.jpg",
+    "time_s": 2.22,
+    "idx": 40
+   },
+   {
+    "label": "2.33s",
+    "file": "scrub_17.jpg",
+    "time_s": 2.33,
+    "idx": 42
+   },
+   {
+    "label": "2.50s",
+    "file": "scrub_18.jpg",
+    "time_s": 2.5,
+    "idx": 45
+   },
+   {
+    "label": "2.61s",
+    "file": "scrub_19.jpg",
+    "time_s": 2.61,
+    "idx": 47
+   },
+   {
+    "label": "2.78s",
+    "file": "scrub_20.jpg",
+    "time_s": 2.78,
+    "idx": 50
+   },
+   {
+    "label": "2.89s",
+    "file": "scrub_21.jpg",
+    "time_s": 2.89,
+    "idx": 52
+   },
+   {
+    "label": "3.06s",
+    "file": "scrub_22.jpg",
+    "time_s": 3.06,
+    "idx": 55
+   },
+   {
+    "label": "3.17s",
+    "file": "scrub_23.jpg",
+    "time_s": 3.17,
+    "idx": 57
+   },
+   {
+    "label": "3.33s",
+    "file": "scrub_24.jpg",
+    "time_s": 3.33,
+    "idx": 60
+   },
+   {
+    "label": "3.44s",
+    "file": "scrub_25.jpg",
+    "time_s": 3.44,
+    "idx": 62
+   },
+   {
+    "label": "3.61s",
+    "file": "scrub_26.jpg",
+    "time_s": 3.61,
+    "idx": 65
+   },
+   {
+    "label": "3.72s",
+    "file": "scrub_27.jpg",
+    "time_s": 3.72,
+    "idx": 67
+   },
+   {
+    "label": "3.89s",
+    "file": "scrub_28.jpg",
+    "time_s": 3.89,
+    "idx": 70
+   },
+   {
+    "label": "4.00s",
+    "file": "scrub_29.jpg",
+    "time_s": 4.0,
+    "idx": 72
+   },
+   {
+    "label": "4.17s",
+    "file": "scrub_30.jpg",
+    "time_s": 4.17,
+    "idx": 75
+   },
+   {
+    "label": "4.28s",
+    "file": "scrub_31.jpg",
+    "time_s": 4.28,
+    "idx": 77
+   },
+   {
+    "label": "4.44s",
+    "file": "scrub_32.jpg",
+    "time_s": 4.44,
+    "idx": 80
+   },
+   {
+    "label": "4.56s",
+    "file": "scrub_33.jpg",
+    "time_s": 4.56,
+    "idx": 82
+   },
+   {
+    "label": "4.72s",
+    "file": "scrub_34.jpg",
+    "time_s": 4.72,
+    "idx": 85
+   },
+   {
+    "label": "4.83s",
+    "file": "scrub_35.jpg",
+    "time_s": 4.83,
+    "idx": 87
+   },
+   {
+    "label": "5.00s",
+    "file": "scrub_36.jpg",
+    "time_s": 5.0,
+    "idx": 90
+   },
+   {
+    "label": "5.11s",
+    "file": "scrub_37.jpg",
+    "time_s": 5.11,
+    "idx": 92
+   },
+   {
+    "label": "5.28s",
+    "file": "scrub_38.jpg",
+    "time_s": 5.28,
+    "idx": 95
+   },
+   {
+    "label": "5.44s",
+    "file": "scrub_39.jpg",
+    "time_s": 5.44,
+    "idx": 98
+   }
+  ],
+  "warnings": [],
+  "stages": [
+   {
+    "name": "Video decoding + pose estimation",
+    "tool": "OpenCV + MediaPipe Pose Landmarker (BlazePose, 33 keypoints)",
+    "status": "ran",
+    "detail": "99 frames sampled at ~18 fps, 33 keypoints each",
+    "ms": 1383
+   },
+   {
+    "name": "Keypoint cleaning",
+    "tool": "NumPy: confidence flagging, gap interpolation, smoothing",
+    "status": "ran",
+    "detail": "person detected in 100% of frames; mean visibility 0.90",
+    "ms": 9
+   },
+   {
+    "name": "Stroke check + features",
+    "tool": "Pose-sequence classifier (rule-based) + NumPy/pandas features",
+    "status": "ran",
+    "detail": "forehand (100%); contact at 2.83 s",
+    "ms": 1
+   },
+   {
+    "name": "Issue detection + prioritisation",
+    "tool": "Reference-range comparison; score = deviation x confidence x consistency x relevance",
+    "status": "ran",
+    "detail": "1 candidate issue(s); top: Arm cramped or locked at contact",
+    "ms": 0
+   },
+   {
+    "name": "Retrieval + rerank + explanation",
+    "tool": "MiniLM-L6 bi-encoder + FAISS \u2192 ms-marco MiniLM cross-encoder rerank (56 passages)",
+    "status": "ran",
+    "detail": "3 passages selected as evidence",
+    "ms": 1873
+   }
+  ],
+  "capture_tips": [],
+  "total_ms": 3374,
+  "qa": {
+   "q_inconsistent": {
+    "question": "Why is my forehand inconsistent?",
+    "retrieval": {
+     "query": "Why is my forehand inconsistent? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.699,
+       "rerank": 4.85,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.607,
+       "rerank": 3.24,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.553,
+       "rerank": -7.96,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.512,
+       "rerank": -7.65,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.5,
+       "rerank": -11.13,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.486,
+       "rerank": -10.34,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.481,
+       "rerank": -8.26,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.477,
+       "rerank": -8.71,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.699,
+       "rerank": 4.85,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.607,
+       "rerank": 3.24,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.512,
+       "rerank": -7.65,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "The cramped arm measurement suggests you're not allowing enough space between your arm and the ball at contact, which is crucial for a consistent forehand.",
+    "why": "Your arm is currently at an extreme angle (145.99 deg), far beyond the recommended range (106.52 to 135.61 deg). This restricts your ability to control the shot and makes it harder to generate power consistently.",
+    "improve": "Focus on relaxing your arm and keeping it slightly bent at contact, aiming for an elbow angle closer to the expert range. Practice with balls at varying depths to improve your footwork and ensure you're moving to a comfortable distance from the ball.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_unstable": {
+    "question": "Why is my forehand unstable?",
+    "retrieval": {
+     "query": "Why is my forehand unstable? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.681,
+       "rerank": 4.62,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.582,
+       "rerank": 2.36,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.527,
+       "rerank": -8.49,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.516,
+       "rerank": -7.96,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.502,
+       "rerank": -11.11,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.492,
+       "rerank": -10.74,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.481,
+       "rerank": -8.69,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.477,
+       "rerank": -8.85,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.681,
+       "rerank": 4.62,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.582,
+       "rerank": 2.36,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.516,
+       "rerank": -7.96,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "The cramped arm measurement suggests you're not allowing enough space between your arm and the ball at contact, which is crucial for a stable forehand.",
+    "why": "Your arm is currently at an extreme angle (145.99 deg), far beyond the recommended range (106.52 to 135.61 deg). This cramped position limits your ability to control the shot and increases the risk of errors.",
+    "improve": "Focus on relaxing your arm and keeping it slightly bent at contact, aiming for an elbow angle closer to the expert range. Practice with balls at varying depths to ensure you can maintain this relaxed position. Next session, try to keep your feet more open to the net, allowing for a better setup before hitting.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_first": {
+    "question": "What should I work on first?",
+    "retrieval": {
+     "query": "What should I work on first? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.636,
+       "rerank": 5.55,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.478,
+       "rerank": -9.66,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.442,
+       "rerank": 2.94,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.418,
+       "rerank": -8.29,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.363,
+       "rerank": -11.1,
+       "rank_dense": 5,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.362,
+       "rerank": -11.25,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.36,
+       "rerank": -11.28,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.357,
+       "rerank": -11.05,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.636,
+       "rerank": 5.55,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.442,
+       "rerank": 2.94,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.418,
+       "rerank": -8.29,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Work on adjusting your arm spacing at contact.",
+    "why": "Your arm is currently cramped or locked at 145.99 degrees, which is far outside the recommended range of 106.52 to 135.61 degrees. This indicates you need to relax and bend your arm more at contact, similar to how expert players do.",
+    "improve": "Focus on keeping your arm bent at contact, aiming for an elbow angle closer to 110 degrees. Practice with balls at varying depths to ensure you can maintain this spacing while moving. Next session, try to keep your feet positioned so you can comfortably reach the ball without locking your arm.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_week": {
+    "question": "What should I practise this week?",
+    "retrieval": {
+     "query": "What should I practise this week? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.617,
+       "rerank": 3.97,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.444,
+       "rerank": -10.52,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.444,
+       "rerank": -0.3,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.377,
+       "rerank": -9.64,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.355,
+       "rerank": -11.3,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.344,
+       "rerank": -11.3,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.333,
+       "rerank": -11.05,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.331,
+       "rerank": -11.22,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.617,
+       "rerank": 3.97,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.444,
+       "rerank": -0.3,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.377,
+       "rerank": -9.64,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Focus on spaced forehands with fed balls at varied depths.",
+    "why": "Your current arm angle of 145.99 degrees is too cramped, which restricts your swing and accuracy. By practicing with fed balls at different distances, you'll learn to space your forehand correctly, improving your consistency and feel.",
+    "improve": "When hitting, aim to keep your arm at an angle between 106.52 to 135.61 degrees. This will allow you to maintain a relaxed and bendy hitting arm, ensuring you have a full swing path.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_late": {
+    "question": "Why do I hit the ball late?",
+    "retrieval": {
+     "query": "Why do I hit the ball late? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.735,
+       "rerank": 6.37,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.697,
+       "rerank": 5.0,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.599,
+       "rerank": 1.69,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.562,
+       "rerank": -4.66,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.553,
+       "rerank": -3.72,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.546,
+       "rerank": -5.29,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-leaning-away",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: leaning away",
+       "text": "Tipping the trunk away from the ball at contact pulls the head and racket off line. It often appears when players try to generate power by throwing the body at the ball. Keep the head still and let the racket swing past it.",
+       "dense": 0.543,
+       "rerank": -6.23,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.514,
+       "rerank": -6.72,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.735,
+       "rerank": 6.37,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.697,
+       "rerank": 5.0,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.599,
+       "rerank": 1.69,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "The cramped arm measurement suggests you're hitting the ball late due to poor footwork and positioning.",
+    "why": "Your arm is too close to the ball, which is causing you to hit the ball late. This is likely because your feet aren't positioned correctly, preventing you from moving to a comfortable distance from the ball.",
+    "improve": "Focus on moving your feet to a comfortable position before the ball comes to you. Aim to have your racket face square to the ball when it reaches your front hip. Practice this with fed balls at varying depths to improve your timing.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_power": {
+    "question": "How can I get more power without swinging harder?",
+    "retrieval": {
+     "query": "How can I get more power without swinging harder? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.658,
+       "rerank": 3.98,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.57,
+       "rerank": 1.0,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.526,
+       "rerank": -9.18,
+       "rank_dense": 3,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.492,
+       "rerank": -3.83,
+       "rank_dense": 4,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.427,
+       "rerank": -5.87,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.409,
+       "rerank": 0.02,
+       "rank_dense": 6,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.397,
+       "rerank": -8.1,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.395,
+       "rerank": -9.82,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.658,
+       "rerank": 3.98,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.57,
+       "rerank": 1.0,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.409,
+       "rerank": 0.02,
+       "rank_dense": 6,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Relax your arm and keep it slightly bent at contact. This will help you generate more power naturally.",
+    "why": "Your current arm angle of 145.99 degrees is much higher than the expert range of 106.52 to 135.61 degrees. Keeping your arm relaxed and slightly bent allows for better control and power transfer.",
+    "improve": "Focus on keeping your arm at a 90-degree angle at contact. Practice this with a ball at varying depths. Next session, try to maintain this angle while moving closer to the ball.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_balance": {
+    "question": "How do I stay balanced when I hit?",
+    "retrieval": {
+     "query": "How do I stay balanced when I hit? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.7,
+       "rerank": 6.13,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.522,
+       "rerank": 3.04,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.491,
+       "rerank": -7.65,
+       "rank_dense": 3,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.474,
+       "rerank": -7.06,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.462,
+       "rerank": -3.4,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.455,
+       "rerank": -8.56,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.445,
+       "rerank": -5.92,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.441,
+       "rerank": -10.06,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.7,
+       "rerank": 6.13,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.522,
+       "rerank": 3.04,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.462,
+       "rerank": -3.4,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Relax your arm and keep it slightly bent at contact, aiming closer to the expert range of 106.52 to 135.61 degrees.",
+    "why": "Your current measurement of 145.99 degrees is too high, indicating a cramped arm position. This makes it difficult to control the shot and maintain balance.",
+    "improve": "Focus on moving your feet to a comfortable distance from the ball before hitting. Use a ball that's slightly higher in height to help you adjust your stance. Next session, aim to keep your head still and your trunk vertical during the swing.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_net": {
+    "question": "Why does my forehand go into the net?",
+    "retrieval": {
+     "query": "Why does my forehand go into the net? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.698,
+       "rerank": 4.36,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.608,
+       "rerank": 1.1,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.522,
+       "rerank": -4.85,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.52,
+       "rerank": -10.61,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.517,
+       "rerank": -8.15,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.513,
+       "rerank": -8.0,
+       "rank_dense": 6,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.499,
+       "rerank": -9.27,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.498,
+       "rerank": -8.57,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.698,
+       "rerank": 4.36,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.608,
+       "rerank": 1.1,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.522,
+       "rerank": -4.85,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your arm is too cramped at contact, which causes you to hit the ball into the net.",
+    "why": "The measurement shows an arm angle of 145.99 degrees, far above the expert range of 106.52 to 135.61 degrees. This indicates your arm is too close to the ball, jamming the swing and reducing your margin for error.",
+    "improve": "Focus on relaxing your arm and keeping it slightly bent at contact, aiming for an elbow angle closer to 106.52 to 135.61 degrees. Practice with fed balls at varying depths to adjust your feet and improve your footwork.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_nocourt": {
+    "question": "I have 15 minutes and no court. What can I do?",
+    "retrieval": {
+     "query": "I have 15 minutes and no court. What can I do? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.6,
+       "rerank": 1.98,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.461,
+       "rerank": -1.46,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.461,
+       "rerank": -8.6,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.41,
+       "rerank": -11.12,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.399,
+       "rerank": -10.0,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.378,
+       "rerank": -10.45,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.364,
+       "rerank": -11.1,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.362,
+       "rerank": -7.71,
+       "rank_dense": 8,
+       "rank_final": 3
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.6,
+       "rerank": 1.98,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.461,
+       "rerank": -1.46,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.362,
+       "rerank": -7.71,
+       "rank_dense": 8,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Practice self-drop forehands focusing on maintaining a relaxed, slightly bent arm at contact.",
+    "why": "Your current arm position is too cramped (145.99 deg) compared to expert players (106.52 to 135.61 deg). This indicates you need to relax your arm more naturally to improve your swing path and control.",
+    "improve": "When dropping the ball, keep your arm relaxed and bend it at the elbow as if you're about to throw a ball. Focus on this cue during your 15-minute session. Next time, try to maintain this relaxed arm position while hitting into the service box.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_followthrough": {
+    "question": "How do I know if my follow-through is right?",
+    "retrieval": {
+     "query": "How do I know if my follow-through is right? Arm cramped or locked at contact elbow arm extension contact spacing",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.662,
+       "rerank": 3.78,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.475,
+       "rerank": -0.77,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.428,
+       "rerank": -10.2,
+       "rank_dense": 3,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.42,
+       "rerank": -8.62,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.372,
+       "rerank": -10.81,
+       "rank_dense": 5,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p24-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (2)",
+       "text": "How tightly do you grip your racquet? For instruction purposes, I've defined three different grip intensities: Tight to fight. The hand has a death grip on the racquet that only a hammer and chisel could loosen. Too many muscles are contracted, resulting in a rigid swing and early fatigue. Novice players often use this grip, and even intermediates will tighten for a killer ace, a shot they're aiming for under pressure or an out-of-position shot they're trying to muscle over the net.",
+       "dense": 0.363,
+       "rerank": -11.34,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.362,
+       "rerank": -9.36,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.326,
+       "rerank": -11.18,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.662,
+       "rerank": 3.78,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.475,
+       "rerank": -0.77,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.42,
+       "rerank": -8.62,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your arm is currently too cramped, which is reducing your swing's effectiveness. Aim to keep it slightly bent at contact, similar to expert players.",
+    "why": "The measurement of 145.99 degrees is significantly higher than the expert range of 106.52 to 135.61 degrees. This indicates your arm is too close to the ball, causing a cramped position that limits your ability to generate power and control.",
+    "improve": "Focus on keeping your arm slightly bent at contact, aiming for an elbow angle closer to 110 degrees. Next session, practice with balls at varying depths to ensure you're moving into a comfortable stance before hitting.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   }
+  }
+ },
+ "plan": {
+  "focus": [
+   "elbow"
+  ],
+  "levels": {
+   "elbow": 2
+  },
+  "sessions": [
+   {
+    "day": "Mon",
+    "at_court": true,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "elbow2",
+      "issue": "elbow",
+      "level": 2,
+      "name": "Wall or fence spacing",
+      "minutes": 10,
+      "court": true,
+      "partner": false,
+      "steps": "Stand a racket-length plus an arm from a fence; swing so the racket brushes without jamming. 3 sets of 8.",
+      "goal": "No jammed contacts on 6 of 8."
+     },
+     {
+      "id": "elbow1",
+      "issue": "elbow",
+      "level": 1,
+      "name": "Arm-length spacing check",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Extend the racket arm out to the side, then relax the elbow slightly. Swing slowly keeping that spacing. 3 sets of 10.",
+      "goal": "Same relaxed arm shape at contact on 8 of 10."
+     }
+    ],
+    "label": "Court session"
+   },
+   {
+    "day": "Wed",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "elbow1",
+      "issue": "elbow",
+      "level": 1,
+      "name": "Arm-length spacing check",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Extend the racket arm out to the side, then relax the elbow slightly. Swing slowly keeping that spacing. 3 sets of 10.",
+      "goal": "Same relaxed arm shape at contact on 8 of 10."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   },
+   {
+    "day": "Sat",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "elbow1",
+      "issue": "elbow",
+      "level": 1,
+      "name": "Arm-length spacing check",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Extend the racket arm out to the side, then relax the elbow slightly. Swing slowly keeping that spacing. 3 sets of 10.",
+      "goal": "Same relaxed arm shape at contact on 8 of 10."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   }
+  ],
+  "rationale": "Focus: arm cramped or locked at contact. Built for 3 sessions/week of ~20 min, court access: sometimes, partner: no.",
+  "adjustments": []
+ }
+}

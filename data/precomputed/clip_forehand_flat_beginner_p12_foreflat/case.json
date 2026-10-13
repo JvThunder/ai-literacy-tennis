@@ -1,0 +1,2264 @@
+{
+ "id": "clip_forehand_flat_beginner_p12_foreflat",
+ "title": "Forehand (flat), player P12",
+ "blurb": "THETIS clip, adult beginner",
+ "player": {
+  "level": "NTRP 2.0 (adult beginner)",
+  "dominant": "auto",
+  "goal": "Rally consistently with friends",
+  "question": "Why is my forehand inconsistent?",
+  "sessions_per_week": 3,
+  "minutes": 20,
+  "court_access": "sometimes",
+  "partner": false
+ },
+ "report": {
+  "status": "ok",
+  "stroke": {
+   "label": "forehand",
+   "confidence": 0.99,
+   "scores": {
+    "serve": 0.0,
+    "forehand": 0.99,
+    "backhand": 0.01
+   }
+  },
+  "issues": [
+   {
+    "id": "knee",
+    "title": "Not enough knee bend",
+    "phase": "preparation",
+    "value": 141.13,
+    "unit": "deg",
+    "reference": "expert P10-P90: 94.96 to 141.34",
+    "deviation": 0.04,
+    "confidence": 0.96,
+    "consistency": 0.88,
+    "relevance": 0.6,
+    "frame": 29,
+    "time_s": 1.53,
+    "joints": [
+     23,
+     25,
+     27,
+     24,
+     26,
+     28
+    ],
+    "expert_median": 127.0,
+    "expert_p10": 94.96,
+    "expert_p90": 141.34,
+    "percentile": 89,
+    "z": 0.78,
+    "score": 0.021,
+    "retrieval": {
+     "query": "Why is my forehand inconsistent? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.581,
+       "rerank": -4.06,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.551,
+       "rerank": -5.09,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.546,
+       "rerank": -5.02,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.512,
+       "rerank": -11.09,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.505,
+       "rerank": -5.36,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.495,
+       "rerank": -8.2,
+       "rank_dense": 6,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.482,
+       "rerank": -10.44,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.475,
+       "rerank": -11.07,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.581,
+       "rerank": -4.06,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.546,
+       "rerank": -5.02,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.551,
+       "rerank": -5.09,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "references": [
+     {
+      "id": "02_common_beginner_faults#fault-staying-tall",
+      "doc": "02_common_beginner_faults.md",
+      "doc_title": "Common Beginner Forehand Faults",
+      "section": "Fault: staying tall",
+      "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+      "dense": 0.581,
+      "rerank": -4.06,
+      "rank_dense": 1,
+      "rank_final": 1
+     },
+     {
+      "id": "serious_tennis#p49-3",
+      "doc": "serious_tennis.pdf",
+      "doc_title": "Serious Tennis (Williams & Petersen)",
+      "section": "p. 49 (3)",
+      "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+      "dense": 0.546,
+      "rerank": -5.02,
+      "rank_dense": 3,
+      "rank_final": 2
+     },
+     {
+      "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Legs and weight transfer",
+      "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+      "dense": 0.551,
+      "rerank": -5.09,
+      "rank_dense": 2,
+      "rank_final": 3
+     }
+    ],
+    "reasoning": [
+     {
+      "step": "Observed",
+      "text": "Not enough knee bend: measured 141.13 deg at 1.53 s (preparation phase)."
+     },
+     {
+      "step": "Compared with target",
+      "text": "Target expert P10-P90: 94.96 to 141.34; deviation 0.04 on a 0-1 scale."
+     },
+     {
+      "step": "Trust",
+      "text": "Joint tracking confidence 0.96; the deviation held on 88% of the frames checked."
+     },
+     {
+      "step": "Prioritised",
+      "text": "score = 0.04 \u00d7 0.96 \u00d7 0.88 \u00d7 0.60 = 0.021, ranked 1 of 1 candidate issues."
+     }
+    ],
+    "explanation": "The issue is insufficient knee bend, which increases instability and difficulty handling low balls. To improve, focus on a slight knee bend as you prepare to hit the ball, lowering your center of gravity. [1]",
+    "explanation_source": "Qwen/Qwen2.5-3B-Instruct, grounded on retrieved passages",
+    "cue": "Sit slightly into your legs so you can push up through the ball."
+   }
+  ],
+  "other_candidates": [],
+  "features": {
+   "turn": {
+    "value": 8.03,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 1.55 to 68.42",
+    "expert_median": 15.2,
+    "expert_p10": 1.55,
+    "expert_p90": 68.42,
+    "percentile": 32,
+    "z": 0.27
+   },
+   "elbow": {
+    "value": 123.73,
+    "unit": "deg",
+    "confidence": 0.71,
+    "reference": "expert P10-P90: 106.52 to 135.61",
+    "expert_median": 125.95,
+    "expert_p10": 106.52,
+    "expert_p90": 135.61,
+    "percentile": 38,
+    "z": 0.2
+   },
+   "knee": {
+    "value": 141.13,
+    "unit": "deg",
+    "confidence": 0.96,
+    "reference": "expert P10-P90: 94.96 to 141.34",
+    "expert_median": 127.0,
+    "expert_p10": 94.96,
+    "expert_p90": 141.34,
+    "percentile": 89,
+    "z": 0.78
+   },
+   "lean": {
+    "value": 15.54,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 8.98 to 22.84",
+    "expert_median": 14.09,
+    "expert_p10": 8.98,
+    "expert_p90": 22.84,
+    "percentile": 57,
+    "z": 0.27
+   },
+   "contact": {
+    "value": 0.67,
+    "unit": "torso lengths",
+    "confidence": 0.79,
+    "reference": "expert P10-P90: -0.48 to 0.78",
+    "expert_median": 0.51,
+    "expert_p10": -0.48,
+    "expert_p90": 0.78,
+    "percentile": 75,
+    "z": -0.32
+   },
+   "follow": {
+    "value": 0.71,
+    "unit": "torso lengths",
+    "confidence": 0.72,
+    "reference": "expert P10-P90: 0.41 to 1.14",
+    "expert_median": 0.74,
+    "expert_p10": 0.41,
+    "expert_p90": 1.14,
+    "percentile": 45,
+    "z": 0.11
+   }
+  },
+  "phases": {
+   "preparation_s": [
+    0.68,
+    2.42
+   ],
+   "contact_s": 2.42,
+   "follow_through_s": [
+    2.42,
+    2.95
+   ]
+  },
+  "wrist_speed": [
+   0.19,
+   0.28,
+   0.28,
+   0.21,
+   0.14,
+   0.09,
+   0.1,
+   0.09,
+   0.09,
+   0.1,
+   0.12,
+   0.15,
+   0.25,
+   0.44,
+   0.74,
+   1.08,
+   1.36,
+   1.48,
+   1.44,
+   1.48,
+   1.65,
+   1.9,
+   2.04,
+   2.11,
+   2.14,
+   2.19,
+   2.12,
+   1.98,
+   1.41,
+   1.25,
+   1.17,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.47,
+   1.76,
+   2.43,
+   3.14,
+   3.2,
+   2.79,
+   2.27,
+   2.05,
+   1.79,
+   1.48,
+   1.09,
+   0.75,
+   0.51,
+   0.45,
+   0.54,
+   0.6,
+   0.58,
+   0.5,
+   0.44,
+   0.47,
+   0.58,
+   0.87,
+   1.23,
+   1.5,
+   1.59,
+   1.6,
+   1.59,
+   1.6,
+   1.58,
+   1.62,
+   1.66,
+   1.56,
+   1.3,
+   1.01,
+   0.57
+  ],
+  "t": [
+   0.0,
+   0.053,
+   0.105,
+   0.158,
+   0.211,
+   0.263,
+   0.316,
+   0.368,
+   0.421,
+   0.474,
+   0.526,
+   0.579,
+   0.632,
+   0.684,
+   0.737,
+   0.789,
+   0.842,
+   0.895,
+   0.947,
+   1.0,
+   1.053,
+   1.105,
+   1.158,
+   1.211,
+   1.263,
+   1.316,
+   1.368,
+   1.421,
+   1.474,
+   1.526,
+   1.579,
+   1.632,
+   1.684,
+   1.737,
+   1.789,
+   1.842,
+   1.895,
+   1.947,
+   2.0,
+   2.053,
+   2.105,
+   2.158,
+   2.211,
+   2.263,
+   2.316,
+   2.368,
+   2.421,
+   2.474,
+   2.526,
+   2.579,
+   2.632,
+   2.684,
+   2.737,
+   2.789,
+   2.842,
+   2.895,
+   2.947,
+   3.0,
+   3.053,
+   3.105,
+   3.158,
+   3.211,
+   3.263,
+   3.316,
+   3.368,
+   3.421,
+   3.474,
+   3.526,
+   3.579,
+   3.632,
+   3.684,
+   3.737,
+   3.789,
+   3.842,
+   3.895,
+   3.947,
+   4.0
+  ],
+  "contact_idx": 46,
+  "frames": [
+   {
+    "label": "Preparation",
+    "file": "frame_0.jpg",
+    "time_s": 0.68
+   },
+   {
+    "label": "Contact",
+    "file": "frame_1.jpg",
+    "time_s": 2.42
+   },
+   {
+    "label": "Follow-through",
+    "file": "frame_2.jpg",
+    "time_s": 2.95
+   }
+  ],
+  "strip": [
+   {
+    "label": "0.68s",
+    "file": "strip_0.jpg",
+    "time_s": 0.68
+   },
+   {
+    "label": "1.00s",
+    "file": "strip_1.jpg",
+    "time_s": 1.0
+   },
+   {
+    "label": "1.32s",
+    "file": "strip_2.jpg",
+    "time_s": 1.32
+   },
+   {
+    "label": "1.63s",
+    "file": "strip_3.jpg",
+    "time_s": 1.63
+   },
+   {
+    "label": "1.95s",
+    "file": "strip_4.jpg",
+    "time_s": 1.95
+   },
+   {
+    "label": "2.26s",
+    "file": "strip_5.jpg",
+    "time_s": 2.26
+   },
+   {
+    "label": "2.58s",
+    "file": "strip_6.jpg",
+    "time_s": 2.58
+   },
+   {
+    "label": "2.95s",
+    "file": "strip_7.jpg",
+    "time_s": 2.95
+   }
+  ],
+  "scrub": [
+   {
+    "label": "0.00s",
+    "file": "scrub_0.jpg",
+    "time_s": 0.0,
+    "idx": 0
+   },
+   {
+    "label": "0.05s",
+    "file": "scrub_1.jpg",
+    "time_s": 0.05,
+    "idx": 1
+   },
+   {
+    "label": "0.16s",
+    "file": "scrub_2.jpg",
+    "time_s": 0.16,
+    "idx": 3
+   },
+   {
+    "label": "0.26s",
+    "file": "scrub_3.jpg",
+    "time_s": 0.26,
+    "idx": 5
+   },
+   {
+    "label": "0.37s",
+    "file": "scrub_4.jpg",
+    "time_s": 0.37,
+    "idx": 7
+   },
+   {
+    "label": "0.47s",
+    "file": "scrub_5.jpg",
+    "time_s": 0.47,
+    "idx": 9
+   },
+   {
+    "label": "0.58s",
+    "file": "scrub_6.jpg",
+    "time_s": 0.58,
+    "idx": 11
+   },
+   {
+    "label": "0.68s",
+    "file": "scrub_7.jpg",
+    "time_s": 0.68,
+    "idx": 13
+   },
+   {
+    "label": "0.79s",
+    "file": "scrub_8.jpg",
+    "time_s": 0.79,
+    "idx": 15
+   },
+   {
+    "label": "0.89s",
+    "file": "scrub_9.jpg",
+    "time_s": 0.89,
+    "idx": 17
+   },
+   {
+    "label": "1.00s",
+    "file": "scrub_10.jpg",
+    "time_s": 1.0,
+    "idx": 19
+   },
+   {
+    "label": "1.11s",
+    "file": "scrub_11.jpg",
+    "time_s": 1.11,
+    "idx": 21
+   },
+   {
+    "label": "1.21s",
+    "file": "scrub_12.jpg",
+    "time_s": 1.21,
+    "idx": 23
+   },
+   {
+    "label": "1.32s",
+    "file": "scrub_13.jpg",
+    "time_s": 1.32,
+    "idx": 25
+   },
+   {
+    "label": "1.42s",
+    "file": "scrub_14.jpg",
+    "time_s": 1.42,
+    "idx": 27
+   },
+   {
+    "label": "1.53s",
+    "file": "scrub_15.jpg",
+    "time_s": 1.53,
+    "idx": 29
+   },
+   {
+    "label": "1.63s",
+    "file": "scrub_16.jpg",
+    "time_s": 1.63,
+    "idx": 31
+   },
+   {
+    "label": "1.74s",
+    "file": "scrub_17.jpg",
+    "time_s": 1.74,
+    "idx": 33
+   },
+   {
+    "label": "1.84s",
+    "file": "scrub_18.jpg",
+    "time_s": 1.84,
+    "idx": 35
+   },
+   {
+    "label": "1.95s",
+    "file": "scrub_19.jpg",
+    "time_s": 1.95,
+    "idx": 37
+   },
+   {
+    "label": "2.00s",
+    "file": "scrub_20.jpg",
+    "time_s": 2.0,
+    "idx": 38
+   },
+   {
+    "label": "2.11s",
+    "file": "scrub_21.jpg",
+    "time_s": 2.11,
+    "idx": 40
+   },
+   {
+    "label": "2.21s",
+    "file": "scrub_22.jpg",
+    "time_s": 2.21,
+    "idx": 42
+   },
+   {
+    "label": "2.32s",
+    "file": "scrub_23.jpg",
+    "time_s": 2.32,
+    "idx": 44
+   },
+   {
+    "label": "2.42s",
+    "file": "scrub_24.jpg",
+    "time_s": 2.42,
+    "idx": 46
+   },
+   {
+    "label": "2.53s",
+    "file": "scrub_25.jpg",
+    "time_s": 2.53,
+    "idx": 48
+   },
+   {
+    "label": "2.63s",
+    "file": "scrub_26.jpg",
+    "time_s": 2.63,
+    "idx": 50
+   },
+   {
+    "label": "2.74s",
+    "file": "scrub_27.jpg",
+    "time_s": 2.74,
+    "idx": 52
+   },
+   {
+    "label": "2.84s",
+    "file": "scrub_28.jpg",
+    "time_s": 2.84,
+    "idx": 54
+   },
+   {
+    "label": "2.95s",
+    "file": "scrub_29.jpg",
+    "time_s": 2.95,
+    "idx": 56
+   },
+   {
+    "label": "3.05s",
+    "file": "scrub_30.jpg",
+    "time_s": 3.05,
+    "idx": 58
+   },
+   {
+    "label": "3.16s",
+    "file": "scrub_31.jpg",
+    "time_s": 3.16,
+    "idx": 60
+   },
+   {
+    "label": "3.26s",
+    "file": "scrub_32.jpg",
+    "time_s": 3.26,
+    "idx": 62
+   },
+   {
+    "label": "3.37s",
+    "file": "scrub_33.jpg",
+    "time_s": 3.37,
+    "idx": 64
+   },
+   {
+    "label": "3.47s",
+    "file": "scrub_34.jpg",
+    "time_s": 3.47,
+    "idx": 66
+   },
+   {
+    "label": "3.58s",
+    "file": "scrub_35.jpg",
+    "time_s": 3.58,
+    "idx": 68
+   },
+   {
+    "label": "3.68s",
+    "file": "scrub_36.jpg",
+    "time_s": 3.68,
+    "idx": 70
+   },
+   {
+    "label": "3.79s",
+    "file": "scrub_37.jpg",
+    "time_s": 3.79,
+    "idx": 72
+   },
+   {
+    "label": "3.89s",
+    "file": "scrub_38.jpg",
+    "time_s": 3.89,
+    "idx": 74
+   },
+   {
+    "label": "4.00s",
+    "file": "scrub_39.jpg",
+    "time_s": 4.0,
+    "idx": 76
+   }
+  ],
+  "warnings": [],
+  "stages": [
+   {
+    "name": "Video decoding + pose estimation",
+    "tool": "OpenCV + MediaPipe Pose Landmarker (BlazePose, 33 keypoints)",
+    "status": "ran",
+    "detail": "77 frames sampled at ~19 fps, 33 keypoints each",
+    "ms": 1006
+   },
+   {
+    "name": "Keypoint cleaning",
+    "tool": "NumPy: confidence flagging, gap interpolation, smoothing",
+    "status": "ran",
+    "detail": "person detected in 100% of frames; mean visibility 0.93",
+    "ms": 8
+   },
+   {
+    "name": "Stroke check + features",
+    "tool": "Pose-sequence classifier (rule-based) + NumPy/pandas features",
+    "status": "ran",
+    "detail": "forehand (99%); contact at 2.42 s",
+    "ms": 1
+   },
+   {
+    "name": "Issue detection + prioritisation",
+    "tool": "Reference-range comparison; score = deviation x confidence x consistency x relevance",
+    "status": "ran",
+    "detail": "1 candidate issue(s); top: Not enough knee bend",
+    "ms": 0
+   },
+   {
+    "name": "Retrieval + rerank + explanation",
+    "tool": "MiniLM-L6 bi-encoder + FAISS \u2192 ms-marco MiniLM cross-encoder rerank (56 passages)",
+    "status": "ran",
+    "detail": "3 passages selected as evidence",
+    "ms": 647
+   }
+  ],
+  "capture_tips": [],
+  "total_ms": 1761,
+  "qa": {
+   "q_inconsistent": {
+    "question": "Why is my forehand inconsistent?",
+    "retrieval": {
+     "query": "Why is my forehand inconsistent? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.581,
+       "rerank": -4.06,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.551,
+       "rerank": -5.09,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.546,
+       "rerank": -5.02,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.512,
+       "rerank": -11.09,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.505,
+       "rerank": -5.36,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.495,
+       "rerank": -8.2,
+       "rank_dense": 6,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.482,
+       "rerank": -10.44,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.475,
+       "rerank": -11.07,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.581,
+       "rerank": -4.06,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.546,
+       "rerank": -5.02,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.551,
+       "rerank": -5.09,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Knee bend is too shallow, which affects your stability and ability to handle low balls.",
+    "why": "Your knee bend measurement of 141.13 degrees is significantly lower than the expert range of 94.96 to 141.34 degrees. This indicates you need more knee bend to improve your balance and control.",
+    "improve": "During your next practice, focus on bending your knees more deeply as you prepare for the shot. Imagine pushing down into the ground with your knees, similar to a small sit-down motion. This will help you maintain better balance and handle low balls more effectively.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_unstable": {
+    "question": "Why is my forehand unstable?",
+    "retrieval": {
+     "query": "Why is my forehand unstable? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.6,
+       "rerank": -2.67,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.582,
+       "rerank": -5.22,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.512,
+       "rerank": -5.43,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.499,
+       "rerank": -5.34,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.482,
+       "rerank": -11.18,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.479,
+       "rerank": -11.08,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.468,
+       "rerank": -8.91,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.465,
+       "rerank": -10.84,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.6,
+       "rerank": -2.67,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.582,
+       "rerank": -5.22,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.499,
+       "rerank": -5.34,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Knee bend needs improvement to ensure stability and control.",
+    "why": "Your current knee bend measurement of 141.13 degrees is significantly higher than the expert range of 94.96 to 141.34 degrees. This indicates you're not bending your knees enough, which can lead to an unstable forehand.",
+    "improve": "Focus on bending your knees slightly during the setup phase. Imagine sitting down into your legs as you prepare for the shot. This will help lower your center of gravity and improve your balance, making your forehand more stable and consistent.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_first": {
+    "question": "What should I work on first?",
+    "retrieval": {
+     "query": "What should I work on first? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.572,
+       "rerank": -3.11,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.508,
+       "rerank": -2.07,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.428,
+       "rerank": -6.45,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.355,
+       "rerank": -10.27,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.314,
+       "rerank": -10.52,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.302,
+       "rerank": -9.84,
+       "rank_dense": 6,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.289,
+       "rerank": -10.73,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.285,
+       "rerank": -10.43,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.508,
+       "rerank": -2.07,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.572,
+       "rerank": -3.11,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.428,
+       "rerank": -6.45,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Work on knee bend during your forehand stroke.",
+    "why": "Your current knee bend is 141.13 degrees, which is significantly higher than the expert range of 94.96 to 141.34 degrees. This measurement suggests you're not bending your knees enough, leading to poor balance and difficulty handling low balls. Improving this will help you stay stable and more effective in rallies.",
+    "improve": "During your next practice, focus on bending your knees about 20 degrees as suggested in reference [3]. Keep your torso upright and imagine pushing up through the ground as you swing. This will help lower your center of gravity and improve your stability.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_week": {
+    "question": "What should I practise this week?",
+    "retrieval": {
+     "query": "What should I practise this week? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.501,
+       "rerank": -5.47,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.491,
+       "rerank": -3.87,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.45,
+       "rerank": -7.96,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "05_filming_and_weekly_planning#reviewing-the-week",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Reviewing the week",
+       "text": "After each session note whether the drills were completed, how hard they felt and whether the feedback helped. Repeat drills that were skipped, simplify those that were too hard and progress those that felt too easy.",
+       "dense": 0.405,
+       "rerank": -9.16,
+       "rank_dense": 4,
+       "rank_final": 4
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.342,
+       "rerank": -10.29,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.32,
+       "rerank": -10.76,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-turn-and-point",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow turn and point",
+       "text": "No court or ball needed. Stand side-on to a mirror or wall and turn the shoulders until the non-racket hand points at the side fence. Hold for two seconds and return. Three sets of ten repetitions train the unit turn and can be done at home in five minutes.",
+       "dense": 0.319,
+       "rerank": -11.22,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.302,
+       "rerank": -10.8,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.491,
+       "rerank": -3.87,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.501,
+       "rerank": -5.47,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.45,
+       "rerank": -7.96,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Focus on knee bend during your forehand practice.",
+    "why": "Your current knee bend is 141.13 degrees, which is significantly higher than the expert range of 94.96 to 141.34 degrees. This indicates you need to focus on bending your knees more, as it will improve your balance and stability, making it easier to handle low balls.",
+    "improve": "During your next session, try to bend your knees about 20 degrees when preparing for the forehand. This will help lower your center of gravity and improve your overall technique.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_late": {
+    "question": "Why do I hit the ball late?",
+    "retrieval": {
+     "query": "Why do I hit the ball late? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.647,
+       "rerank": -1.64,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.597,
+       "rerank": -3.91,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.589,
+       "rerank": -2.38,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.58,
+       "rerank": -0.07,
+       "rank_dense": 4,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.564,
+       "rerank": -7.43,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "02_common_beginner_faults#fault-leaning-away",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: leaning away",
+       "text": "Tipping the trunk away from the ball at contact pulls the head and racket off line. It often appears when players try to generate power by throwing the body at the ball. Keep the head still and let the racket swing past it.",
+       "dense": 0.542,
+       "rerank": -8.22,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.533,
+       "rerank": -4.31,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.523,
+       "rerank": -5.11,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.58,
+       "rerank": -0.07,
+       "rank_dense": 4,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.647,
+       "rerank": -1.64,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.589,
+       "rerank": -2.38,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Knee bend needs improvement to ensure you hit the ball earlier.",
+    "why": "Your knee bend measurement of 141.13 degrees is significantly higher than the expert range of 94.96 to 141.34 degrees. This indicates you're not bending your knees enough, which can lead to hitting the ball late due to poor body positioning and balance.",
+    "improve": "Focus on bending your knees slightly during the turn, aiming for a knee bend around 90 degrees. During the forehand stroke, push up and forward through the ball while keeping your legs slightly bent. Next session, check if you can feel your knees bending more before making contact with the ball.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_power": {
+    "question": "How can I get more power without swinging harder?",
+    "retrieval": {
+     "query": "How can I get more power without swinging harder? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.588,
+       "rerank": -3.42,
+       "rank_dense": 1,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.577,
+       "rerank": 0.89,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.536,
+       "rerank": -1.99,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.495,
+       "rerank": -6.28,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.481,
+       "rerank": -8.2,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p16-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (2)",
+       "text": "Did you ever play with one of those balsa-wood airplanes, the kind with a propeller you wind up with a rubber band? The twisting of the rubber band actually stored energy. When it untwisted, energy was released: the propeller spun and the plane flew. That's what happens in the rotation process of tennis. Coiling stores energy that is powerfully released with the uncoiling. Start from a solid base. For most players, the legs serve as the base, not just the feet. Sometimes you'll see professional players set up their base of support with their feet, flexing their legs and coiling up on this base, then exploding off the ground as they hit the ball. If you can do that consistently, great, but most people can't. So let your legs anchor you, and let your upper body do the coiling.",
+       "dense": 0.443,
+       "rerank": -10.06,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.413,
+       "rerank": -2.68,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p17-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (2)",
+       "text": "Later coiling can result in more power, since the racquet is actually still completing the backswing when the hips and shoulders start uncoiling. But the timing is more difficult\u037e if you don't get fully uncoiled in time, it will drastically affect your shot. Players who take the racquet back with the bounce can get into trouble if the ball comes deep or fast. In tennis, many movements are balanced by counter movements. For example, on a one-handed backhand, the free arm moves back toward the fence as the racquet arm swings forward. On a scissors smash, your body moves backward, reaching up for the smash, and your legs counter by going forward and scissoring. In the control phase of your rotation you have some muscle groups pulling and others pushing to balance one another. For a moment, your body is cocked, wound up, ready to spring\u2014but in perfect balance, awaiting the right moment to uncoil, releasing all that stored muscle elasticity into an effective swing.",
+       "dense": 0.41,
+       "rerank": -2.67,
+       "rank_dense": 8,
+       "rank_final": 3
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.577,
+       "rerank": 0.89,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.536,
+       "rerank": -1.99,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p17-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (2)",
+       "text": "Later coiling can result in more power, since the racquet is actually still completing the backswing when the hips and shoulders start uncoiling. But the timing is more difficult\u037e if you don't get fully uncoiled in time, it will drastically affect your shot. Players who take the racquet back with the bounce can get into trouble if the ball comes deep or fast. In tennis, many movements are balanced by counter movements. For example, on a one-handed backhand, the free arm moves back toward the fence as the racquet arm swings forward. On a scissors smash, your body moves backward, reaching up for the smash, and your legs counter by going forward and scissoring. In the control phase of your rotation you have some muscle groups pulling and others pushing to balance one another. For a moment, your body is cocked, wound up, ready to spring\u2014but in perfect balance, awaiting the right moment to uncoil, releasing all that stored muscle elasticity into an effective swing.",
+       "dense": 0.41,
+       "rerank": -2.67,
+       "rank_dense": 8,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Bend your knees more to increase power naturally.",
+    "why": "Your current knee bend is too shallow, which reduces your ability to generate power. By increasing your knee bend to align with expert levels, you'll be able to use your body's rotation more effectively, leading to better power and consistency.",
+    "improve": "Focus on bending your knees more during the forehand stroke. Imagine you're sitting down slightly as you turn your body towards the ball. This will help you generate more power without swinging harder. Next session, check your knee bend again and aim for a range of 94.96 to 141.34 degrees.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_balance": {
+    "question": "How do I stay balanced when I hit?",
+    "retrieval": {
+     "query": "How do I stay balanced when I hit? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.642,
+       "rerank": -2.12,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.567,
+       "rerank": -0.61,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.509,
+       "rerank": -4.66,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.48,
+       "rerank": -5.09,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.439,
+       "rerank": -2.5,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.408,
+       "rerank": -9.17,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.404,
+       "rerank": -7.93,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.397,
+       "rerank": -9.58,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.567,
+       "rerank": -0.61,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.642,
+       "rerank": -2.12,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.439,
+       "rerank": -2.5,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Bend your knees slightly more during the forehand stroke to improve balance.",
+    "why": "Your current knee bend measurement of 141.13 degrees is higher than the expert range of 94.96 to 141.34 degrees. This suggests you're not bending your knees enough, which can lead to poor balance and difficulty handling low balls.",
+    "improve": "During your next practice, focus on bending your knees to about 95 degrees as you prepare to hit the ball. This will help lower your center of gravity and improve stability.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_net": {
+    "question": "Why does my forehand go into the net?",
+    "retrieval": {
+     "query": "Why does my forehand go into the net? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.618,
+       "rerank": -5.32,
+       "rank_dense": 1,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.592,
+       "rerank": -5.02,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.565,
+       "rerank": -4.07,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.521,
+       "rerank": -7.73,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.51,
+       "rerank": -7.32,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.509,
+       "rerank": -2.1,
+       "rank_dense": 6,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.5,
+       "rerank": -10.6,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.493,
+       "rerank": -10.56,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.509,
+       "rerank": -2.1,
+       "rank_dense": 6,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.565,
+       "rerank": -4.07,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.592,
+       "rerank": -5.02,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Knee bend is too shallow, leading to poor positioning and shots going into the net.",
+    "why": "Your knee bend measurement of 141.13 degrees is significantly lower than the expert range of 94.96 to 141.34 degrees. This indicates insufficient knee bend, which compromises your balance and shot placement.",
+    "improve": "During your next practice, focus on bending your knees more deeply as you prepare to hit the forehand. Imagine pushing your knees outwards while maintaining a stable base. Check your knee bend again after this session to ensure improvement.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_nocourt": {
+    "question": "I have 15 minutes and no court. What can I do?",
+    "retrieval": {
+     "query": "I have 15 minutes and no court. What can I do? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.515,
+       "rerank": -6.81,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.511,
+       "rerank": -6.66,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.503,
+       "rerank": -7.52,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.43,
+       "rerank": -8.48,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-turn-and-point",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow turn and point",
+       "text": "No court or ball needed. Stand side-on to a mirror or wall and turn the shoulders until the non-racket hand points at the side fence. Hold for two seconds and return. Three sets of ten repetitions train the unit turn and can be done at home in five minutes.",
+       "dense": 0.426,
+       "rerank": -3.07,
+       "rank_dense": 5,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#over-the-net-by-a-metre-rally",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Over-the-net-by-a-metre rally",
+       "text": "Use a rope or imaginary line one metre above the net. Aim every forehand over the line and into the court. The target encourages a full swing and upward finish, and gives clear success counts.",
+       "dense": 0.414,
+       "rerank": -10.52,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.402,
+       "rerank": -10.49,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.365,
+       "rerank": -11.13,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "03_beginner_drill_library#shadow-turn-and-point",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow turn and point",
+       "text": "No court or ball needed. Stand side-on to a mirror or wall and turn the shoulders until the non-racket hand points at the side fence. Hold for two seconds and return. Three sets of ten repetitions train the unit turn and can be done at home in five minutes.",
+       "dense": 0.426,
+       "rerank": -3.07,
+       "rank_dense": 5,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.511,
+       "rerank": -6.66,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.515,
+       "rerank": -6.81,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Practice the shadow turn drill from reference [1] to improve your knee bend.",
+    "why": "Your current knee bend is 141.13 degrees, which is significantly higher than the expert range of 94.96 to 141.34 degrees. This drill will help you achieve a more efficient knee bend, improving your balance and stability.",
+    "improve": "During the shadow turn, focus on bending your knees slightly as you turn your shoulders. Keep your back straight but engage your core to maintain balance. Next time, aim for a knee bend closer to the expert range to enhance your forehand consistency.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   },
+   "q_followthrough": {
+    "question": "How do I know if my follow-through is right?",
+    "retrieval": {
+     "query": "How do I know if my follow-through is right? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.509,
+       "rerank": -4.2,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.484,
+       "rerank": -4.14,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.413,
+       "rerank": -10.07,
+       "rank_dense": 3,
+       "rank_final": 7
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.391,
+       "rerank": -7.73,
+       "rank_dense": 4,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.363,
+       "rerank": -5.91,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p17-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (3)",
+       "text": "As you uncoil, you need to stay in balance. As the kinetic energy flows through your unwinding body, you'll release some muscles and flex others. Think of a whip motion\u2014the tail of the whip holds back until the last possible moment, and then it snaps with the power of the whole whip behind it. So it is with your energy flow, as you release your hips, torso, back, shoulder, elbow, and wrist.",
+       "dense": 0.34,
+       "rerank": -9.73,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.326,
+       "rerank": -9.17,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.301,
+       "rerank": -11.08,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.484,
+       "rerank": -4.14,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.509,
+       "rerank": -4.2,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.363,
+       "rerank": -5.91,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your knee bend needs improvement. Aim for a bend around 100 degrees.",
+    "why": "Your current measurement of 141.13 degrees is above the expert range (94.96 to 141.34), indicating you're standing too tall. This reduces balance and makes handling low balls challenging.",
+    "improve": "During your next practice, focus on bending your knees slightly as you turn. Imagine pushing up and forward through the ground, similar to a push-up. This will help lower your center of gravity and improve your stability.",
+    "model": "Qwen/Qwen2.5-3B-Instruct"
+   }
+  }
+ },
+ "plan": {
+  "focus": [
+   "knee"
+  ],
+  "levels": {
+   "knee": 2
+  },
+  "sessions": [
+   {
+    "day": "Mon",
+    "at_court": true,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "knee2",
+      "issue": "knee",
+      "level": 2,
+      "name": "Split-step and hit",
+      "minutes": 10,
+      "court": true,
+      "partner": false,
+      "steps": "Self-feed, split-step as the ball bounces, hit. 3 sets of 8.",
+      "goal": "Balanced, knees bent at contact on 6 of 8."
+     },
+     {
+      "id": "knee1",
+      "issue": "knee",
+      "level": 1,
+      "name": "Sit and swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+      "goal": "Stay bent until contact on 8 of 10."
+     }
+    ],
+    "label": "Court session"
+   },
+   {
+    "day": "Wed",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "knee1",
+      "issue": "knee",
+      "level": 1,
+      "name": "Sit and swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+      "goal": "Stay bent until contact on 8 of 10."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   },
+   {
+    "day": "Sat",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "knee1",
+      "issue": "knee",
+      "level": 1,
+      "name": "Sit and swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+      "goal": "Stay bent until contact on 8 of 10."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   }
+  ],
+  "rationale": "Focus: not enough knee bend. Built for 3 sessions/week of ~20 min, court access: sometimes, partner: no.",
+  "adjustments": []
+ }
+}

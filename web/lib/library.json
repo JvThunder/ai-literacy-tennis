@@ -1,0 +1,255 @@
+{
+ "drills": [
+  {
+   "id": "turn1",
+   "issue": "turn",
+   "level": 1,
+   "name": "Shadow turn and point",
+   "minutes": 5,
+   "court": false,
+   "partner": false,
+   "steps": "Stand side-on to a mirror or wall. Turn your shoulders until your non-racket hand points at the side fence. Hold 2 s, return. 3 sets of 10.",
+   "goal": "Chest faces the side fence on 8 of 10 turns."
+  },
+  {
+   "id": "turn2",
+   "issue": "turn",
+   "level": 2,
+   "name": "Drop-feed turn and hit",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Partner drop-feeds a bounce from the service line. Turn early (before the bounce), hit crosscourt. 3 sets of 8.",
+   "goal": "Shoulders turned before the ball bounces on 6 of 8 balls."
+  },
+  {
+   "id": "turn3",
+   "issue": "turn",
+   "level": 3,
+   "name": "Turn on the move",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Partner feeds alternate sides; recover to the middle and turn each time. 4 sets of 6.",
+   "goal": "Visible shoulder turn on every ball."
+  },
+  {
+   "id": "contact1",
+   "issue": "contact",
+   "level": 1,
+   "name": "Shadow swing past a marker",
+   "minutes": 5,
+   "court": false,
+   "partner": false,
+   "steps": "Put a cone or water bottle ~1 racket length in front of your front hip. Swing and brush it with the strings at contact. 3 sets of 10.",
+   "goal": "Strings pass the marker at the same point on 8 of 10 swings."
+  },
+  {
+   "id": "contact2",
+   "issue": "contact",
+   "level": 2,
+   "name": "Self-drop forehands to a hoop",
+   "minutes": 10,
+   "court": true,
+   "partner": false,
+   "steps": "Drop the ball in front of your front hip, hit it into the cross-court service box. 3 sets of 8.",
+   "goal": "Ball contacted in front of the hip on 6 of 8."
+  },
+  {
+   "id": "contact3",
+   "issue": "contact",
+   "level": 3,
+   "name": "Fed forehands, call 'now'",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Partner feeds; say 'now' out loud at contact and have the partner judge if it was in front. 4 sets of 6.",
+   "goal": "Partner agrees contact was in front on 4 of 6."
+  },
+  {
+   "id": "follow1",
+   "issue": "follow",
+   "level": 1,
+   "name": "Finish and freeze",
+   "minutes": 5,
+   "court": false,
+   "partner": false,
+   "steps": "Slow-motion forehand swings. Finish with the racket over the opposite shoulder and freeze 2 s. 3 sets of 10.",
+   "goal": "Held finish above shoulder height on 8 of 10."
+  },
+  {
+   "id": "follow2",
+   "issue": "follow",
+   "level": 2,
+   "name": "Over-the-net-by-a-metre rally",
+   "minutes": 10,
+   "court": true,
+   "partner": false,
+   "steps": "Hit ten forehands (self-feed) aiming ~1 m above the net, over a rope or line. 3 sets.",
+   "goal": "7 of 10 balls clear the target height and land in."
+  },
+  {
+   "id": "follow3",
+   "issue": "follow",
+   "level": 3,
+   "name": "Finish-high rally",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Cooperative cross-court rally, finish over the shoulder every shot. 5 min x 2.",
+   "goal": "Rally of 6+ shots with a full finish."
+  },
+  {
+   "id": "elbow1",
+   "issue": "elbow",
+   "level": 1,
+   "name": "Arm-length spacing check",
+   "minutes": 5,
+   "court": false,
+   "partner": false,
+   "steps": "Extend the racket arm out to the side, then relax the elbow slightly. Swing slowly keeping that spacing. 3 sets of 10.",
+   "goal": "Same relaxed arm shape at contact on 8 of 10."
+  },
+  {
+   "id": "elbow2",
+   "issue": "elbow",
+   "level": 2,
+   "name": "Wall or fence spacing",
+   "minutes": 10,
+   "court": true,
+   "partner": false,
+   "steps": "Stand a racket-length plus an arm from a fence; swing so the racket brushes without jamming. 3 sets of 8.",
+   "goal": "No jammed contacts on 6 of 8."
+  },
+  {
+   "id": "elbow3",
+   "issue": "elbow",
+   "level": 3,
+   "name": "Fed balls at varied depth",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Partner varies depth; adjust your feet so contact is at comfortable arm's length. 4 sets of 6.",
+   "goal": "Comfortable spacing on 4 of 6."
+  },
+  {
+   "id": "knee1",
+   "issue": "knee",
+   "level": 1,
+   "name": "Sit and swing",
+   "minutes": 5,
+   "court": false,
+   "partner": false,
+   "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+   "goal": "Stay bent until contact on 8 of 10."
+  },
+  {
+   "id": "knee2",
+   "issue": "knee",
+   "level": 2,
+   "name": "Split-step and hit",
+   "minutes": 10,
+   "court": true,
+   "partner": false,
+   "steps": "Self-feed, split-step as the ball bounces, hit. 3 sets of 8.",
+   "goal": "Balanced, knees bent at contact on 6 of 8."
+  },
+  {
+   "id": "knee3",
+   "issue": "knee",
+   "level": 3,
+   "name": "Low-ball focus",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Partner feeds low balls; bend legs to get under the ball. 4 sets of 6.",
+   "goal": "Stable, not bending at the waist, on 4 of 6."
+  },
+  {
+   "id": "lean1",
+   "issue": "lean",
+   "level": 1,
+   "name": "Head-still shadow swing",
+   "minutes": 5,
+   "court": false,
+   "partner": false,
+   "steps": "Place a small sticker on a mirror at head height; keep your eyes on it while swinging. 3 sets of 10.",
+   "goal": "Head stays on the sticker on 8 of 10 swings."
+  },
+  {
+   "id": "lean2",
+   "issue": "lean",
+   "level": 2,
+   "name": "Balanced finish hold",
+   "minutes": 10,
+   "court": true,
+   "partner": false,
+   "steps": "Self-feed forehands and hold your finish for 2 s without stepping. 3 sets of 8.",
+   "goal": "Hold finish balanced on 6 of 8."
+  },
+  {
+   "id": "lean3",
+   "issue": "lean",
+   "level": 3,
+   "name": "Fed balls, upright posture",
+   "minutes": 10,
+   "court": true,
+   "partner": true,
+   "steps": "Partner feeds wider balls; step to the ball, keep upright on contact. 4 sets of 6.",
+   "goal": "Upright at contact on 4 of 6."
+  }
+ ],
+ "issues": {
+  "turn": {
+   "title": "Limited shoulder rotation",
+   "relevance": 0.95,
+   "phase": "preparation",
+   "summary": "Your shoulders barely rotate through the swing, so the arm has to do all the work.",
+   "cue": "Turn so your non-racket hand points at the side fence, then let the racket sweep through the ball toward the target."
+  },
+  "contact": {
+   "title": "Contact too close to / behind the body",
+   "relevance": 1.0,
+   "phase": "contact",
+   "summary": "You meet the ball beside or behind your hip rather than out in front, which makes the shot late and inconsistent.",
+   "cue": "Meet the ball out in front, about a racket's length ahead of your front hip."
+  },
+  "follow": {
+   "title": "Short follow-through",
+   "relevance": 0.8,
+   "phase": "follow-through",
+   "summary": "The swing stops soon after contact instead of finishing across and up.",
+   "cue": "Send the ball over the net by a metre or more and let your racket finish over your opposite shoulder."
+  },
+  "elbow": {
+   "title": "Arm cramped or locked at contact",
+   "relevance": 0.75,
+   "phase": "contact",
+   "summary": "Your hitting arm is either jammed in tight or fully locked straight at contact.",
+   "cue": "Give the ball room: contact it with a relaxed, slightly bent arm at a comfortable arm's length."
+  },
+  "knee": {
+   "title": "Not enough knee bend",
+   "relevance": 0.6,
+   "phase": "preparation",
+   "summary": "You stay tall through the swing, which limits balance and the ability to adjust to ball height.",
+   "cue": "Sit slightly into your legs so you can push up through the ball."
+  },
+  "lean": {
+   "title": "Excess trunk lean",
+   "relevance": 0.6,
+   "phase": "contact",
+   "summary": "Your upper body tips noticeably away from vertical at contact, which hurts balance and consistency.",
+   "cue": "Keep your head still and over your base while the racket swings past it."
+  }
+ },
+ "ref": {
+  "turn_min_deg": 25.0,
+  "elbow_lo": 90.0,
+  "elbow_hi": 172.0,
+  "knee_max_deg": 165.0,
+  "lean_max_deg": 20.0,
+  "contact_fwd_min": 0.25,
+  "follow_min": 0.9
+ }
+}

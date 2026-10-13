@@ -1,0 +1,6 @@
+# Runtime (CPU only) - used for live clip analysis
+numpy
+pandas
+scikit-learn
+opencv-python-headless
+mediapipe

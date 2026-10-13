@@ -1,0 +1,11 @@
+.venv/
+.tools/
+node_modules/
+web/.next/
+data/live/
+__pycache__/
+*.pyc
+.env
+# copyrighted source material: never commit (excerpt is cached in data/cache/pdf_chunks.json)
+Serious tennis*.pdf
+*.log

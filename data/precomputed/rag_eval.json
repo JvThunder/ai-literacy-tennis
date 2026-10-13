@@ -1,0 +1,128 @@
+{
+ "n": 16,
+ "passages": 56,
+ "dense": {
+  "r1": 0.562,
+  "r3": 0.875,
+  "mrr": 0.745
+ },
+ "reranked": {
+  "r1": 0.75,
+  "r3": 1.0,
+  "mrr": 0.875
+ },
+ "rows": [
+  {
+   "query": "my shoulders don't turn before I swing",
+   "gold": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+   "dense_rank": 2,
+   "final_rank": 2,
+   "top": "02_common_beginner_faults#fault-arm-only-swing"
+  },
+  {
+   "query": "hitting the ball beside my hip",
+   "gold": "01_forehand_technique_guide#contact-point",
+   "dense_rank": 1,
+   "final_rank": 2,
+   "top": "02_common_beginner_faults#fault-late-contact"
+  },
+  {
+   "query": "my swing stops right after the ball",
+   "gold": "02_common_beginner_faults#fault-short-follow-through",
+   "dense_rank": 4,
+   "final_rank": 1,
+   "top": "02_common_beginner_faults#fault-short-follow-through"
+  },
+  {
+   "query": "arm is jammed against my body",
+   "gold": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "02_common_beginner_faults#fault-cramped-or-locked-elbow"
+  },
+  {
+   "query": "I lean away from the ball",
+   "gold": "02_common_beginner_faults#fault-leaning-away",
+   "dense_rank": 2,
+   "final_rank": 1,
+   "top": "02_common_beginner_faults#fault-leaning-away"
+  },
+  {
+   "query": "drill without a court to learn the turn",
+   "gold": "03_beginner_drill_library#shadow-turn-and-point",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "03_beginner_drill_library#shadow-turn-and-point"
+  },
+  {
+   "query": "how to practise contact point alone on court",
+   "gold": "03_beginner_drill_library#self-drop-forehands",
+   "dense_rank": 6,
+   "final_rank": 1,
+   "top": "03_beginner_drill_library#self-drop-forehands"
+  },
+  {
+   "query": "should coaching cues describe the ball or the body",
+   "gold": "04_motor_learning_and_feedback#external-focus-of-attention",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "04_motor_learning_and_feedback#external-focus-of-attention"
+  },
+  {
+   "query": "how many corrections to give a beginner",
+   "gold": "04_motor_learning_and_feedback#limit-feedback-to-one-or-two-points",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "04_motor_learning_and_feedback#limit-feedback-to-one-or-two-points"
+  },
+  {
+   "query": "where to place the phone to film my forehand",
+   "gold": "05_filming_and_weekly_planning#filming-from-the-side",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "05_filming_and_weekly_planning#filming-from-the-side"
+  },
+  {
+   "query": "front camera hides rotation",
+   "gold": "05_filming_and_weekly_planning#filming-from-the-front",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "05_filming_and_weekly_planning#filming-from-the-front"
+  },
+  {
+   "query": "what to do after a week of practice if drills felt too hard",
+   "gold": "05_filming_and_weekly_planning#reviewing-the-week",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "05_filming_and_weekly_planning#reviewing-the-week"
+  },
+  {
+   "query": "coil the body like a wound rubber band to store energy",
+   "gold": "serious_tennis#p16-2",
+   "dense_rank": 1,
+   "final_rank": 1,
+   "top": "serious_tennis#p16-2"
+  },
+  {
+   "query": "keep your head still and stay in balance as you uncoil",
+   "gold": "serious_tennis#p17-4",
+   "dense_rank": 2,
+   "final_rank": 2,
+   "top": "serious_tennis#p17-3"
+  },
+  {
+   "query": "novice players squeeze the racquet too tightly",
+   "gold": "serious_tennis#p24-1",
+   "dense_rank": 2,
+   "final_rank": 2,
+   "top": "serious_tennis#p24-2"
+  },
+  {
+   "query": "rotation is the main power source on ground strokes",
+   "gold": "serious_tennis#p48-2",
+   "dense_rank": 2,
+   "final_rank": 1,
+   "top": "serious_tennis#p48-2"
+  }
+ ]
+}

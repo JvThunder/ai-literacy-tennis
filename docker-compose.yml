@@ -1,0 +1,18 @@
+# docker compose up -d --build            -> http://localhost:3000
+# DOMAIN=tennis-ai.example.com docker compose --profile https up -d --build   -> https://$DOMAIN via Caddy
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports: ["${APP_PORT:-3000}:3000"]
+    volumes: ["live:/app/data/live"]
+  caddy:
+    image: caddy:2
+    profiles: ["https"]
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment: { DOMAIN: "${DOMAIN:-localhost}" }
+    command: caddy reverse-proxy --from ${DOMAIN:-localhost} --to app:3000
+    volumes: ["caddy:/data"]
+    depends_on: [app]
+volumes: { live: {}, caddy: {} }

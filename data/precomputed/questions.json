@@ -1,0 +1,42 @@
+[
+ {
+  "id": "q_inconsistent",
+  "text": "Why is my forehand inconsistent?"
+ },
+ {
+  "id": "q_unstable",
+  "text": "Why is my forehand unstable?"
+ },
+ {
+  "id": "q_first",
+  "text": "What should I work on first?"
+ },
+ {
+  "id": "q_week",
+  "text": "What should I practise this week?"
+ },
+ {
+  "id": "q_late",
+  "text": "Why do I hit the ball late?"
+ },
+ {
+  "id": "q_power",
+  "text": "How can I get more power without swinging harder?"
+ },
+ {
+  "id": "q_balance",
+  "text": "How do I stay balanced when I hit?"
+ },
+ {
+  "id": "q_net",
+  "text": "Why does my forehand go into the net?"
+ },
+ {
+  "id": "q_nocourt",
+  "text": "I have 15 minutes and no court. What can I do?"
+ },
+ {
+  "id": "q_followthrough",
+  "text": "How do I know if my follow-through is right?"
+ }
+]

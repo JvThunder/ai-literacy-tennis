@@ -1,0 +1,41 @@
+[
+ {
+  "id": "clip_forehand_flat_beginner_p11_foreflat",
+  "title": "Forehand (flat), player P11",
+  "top": [
+   "Arm cramped or locked at contact"
+  ],
+  "n_issues": 1
+ },
+ {
+  "id": "clip_forehand_flat_beginner_p12_foreflat",
+  "title": "Forehand (flat), player P12",
+  "top": [
+   "Not enough knee bend"
+  ],
+  "n_issues": 1
+ },
+ {
+  "id": "clip_forehand_flat_beginner_p13_foreflat",
+  "title": "Forehand (flat), player P13",
+  "top": [
+   "Arm cramped or locked at contact"
+  ],
+  "n_issues": 1
+ },
+ {
+  "id": "clip_forehand_flat_beginner_p14_foreflat",
+  "title": "Forehand (flat), player P14",
+  "top": [],
+  "n_issues": 0
+ },
+ {
+  "id": "clip_forehand_openstands_beginner_p10_foreopen",
+  "title": "Forehand (open stance), player P10",
+  "top": [
+   "Excess trunk lean",
+   "Arm cramped or locked at contact"
+  ],
+  "n_issues": 2
+ }
+]

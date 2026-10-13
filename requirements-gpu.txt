@@ -1,0 +1,9 @@
+# Offline precompute only (never needed to serve the app)
+-r requirements.txt
+sentence-transformers
+faiss-cpu
+transformers
+accelerate
+torch
+remotezip
+imageio-ffmpeg

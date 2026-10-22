@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# One-shot, idempotent CPU-only deploy for Debian/Ubuntu (or any Linux with apt/dnf/curl).
+# One-shot, idempotent deploy for Debian/Ubuntu (or any Linux with apt/dnf/curl).
 #   ./scripts/deploy.sh                       # build + install systemd service on :3000
 #   DOMAIN=tennis-ai.example.com ./scripts/deploy.sh   # also install Caddy (HTTPS reverse proxy)
 #   NO_SYSTEMD=1 ./scripts/deploy.sh          # build only, then start in the foreground
-# Needs: git checkout of this repo, sudo (for systemd/Caddy), outbound internet. No GPU, no CUDA.
+#   TENNIS_MODE=gpu ./scripts/deploy.sh       # GPU server: live uploads use local Qwen + dense retrieval
+# Default mode is api: CPU only, live answers via OpenRouter (OPENROUTER_API_KEY in .env, see .env.example).
+# Needs: git checkout of this repo, sudo (for systemd/Caddy), outbound internet.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ROOT="$PWD"
@@ -11,6 +13,10 @@ PORT="${PORT:-3000}"
 NODE_VERSION="${NODE_VERSION:-22.11.0}"
 SUDO=""; [ "$(id -u)" -ne 0 ] && SUDO="sudo"
 log() { printf '\n==> %s\n' "$*"; }
+envval() { [ -f .env ] || return 0; sed -n "s/^$1=//p" .env | tail -1 | tr -d "\"'"; }
+MODE="${TENNIS_MODE:-$(envval TENNIS_MODE)}"; MODE="${MODE:-api}"
+REQS=requirements.txt; [ "$MODE" = gpu ] && REQS=requirements-gpu.txt
+export TENNIS_MODE="$MODE"
 
 # ---- 0. sanity: the app only needs these precomputed artefacts -------------------
 for f in data/precomputed/index.json data/reference/reference.json models/pose_landmarker_lite.task; do
@@ -38,19 +44,25 @@ if [ -z "$PY" ]; then
   for c in python3.12 python3.11 python3.10 python3.13 python3; do command -v "$c" >/dev/null 2>&1 && { PY="$c"; break; }; done
 fi
 [ -n "$PY" ] || { echo "python3 (3.10-3.13) not found: apt install python3 python3-venv"; exit 1; }
-log "Python venv with $($PY --version)"
+log "Python venv with $($PY --version) ($REQS, mode $MODE)"
 [ -d .venv ] || "$PY" -m venv .venv
 .venv/bin/pip install --quiet --upgrade pip
-.venv/bin/pip install --quiet -r requirements.txt
+.venv/bin/pip install --quiet -r "$REQS"
 # system libs opencv/mediapipe sometimes need on slim servers (best effort)
-if command -v apt-get >/dev/null 2>&1; then $SUDO apt-get install -y -qq libgl1 libglib2.0-0 >/dev/null 2>&1 || true; fi
+if command -v apt-get >/dev/null 2>&1; then $SUDO apt-get install -y -qq libgl1 libglib2.0-0 libegl1 libgles2 >/dev/null 2>&1 || true; fi
 
 # ---- 3. smoke test the pipeline on a bundled clip (CPU) --------------------------
 log "Smoke test: pose pipeline on a bundled clip"
 CLIP="$(ls clips/*.mp4 | head -1)"
 T="$(mktemp -d)"; echo '{}' > "$T/profile.json"
 .venv/bin/python -m backend.cli "$CLIP" "$T/profile.json" "$T" | grep -q '@@JSON@@' && echo "pipeline OK" || { echo "pipeline smoke test FAILED"; exit 1; }
+log "Smoke test: one live question ($MODE mode)"
+.venv/bin/python -m backend.cli ask "$T" "What should I work on first?" | sed -n 's/.*"model": "\([^"]*\)".*/answered by: \1/p' \
+  || echo "live question smoke test failed (non-fatal)"
 rm -rf "$T"
+if [ "$MODE" = api ] && [ -z "${OPENROUTER_API_KEY:-}${OPENROUTER_KEY:-}$(envval OPENROUTER_API_KEY)$(envval OPENROUTER_KEY)" ]; then
+  echo "NOTE: no OpenRouter key in .env - uploads will get template answers (cp .env.example .env)"
+fi
 
 # ---- 4. build the web app --------------------------------------------------------
 log "Building Next.js app"
@@ -65,7 +77,7 @@ fi
 log "Installing systemd service tennis-ai"
 $SUDO tee /etc/systemd/system/tennis-ai.service >/dev/null <<UNIT
 [Unit]
-Description=AI Tennis Coach (Next.js, CPU only)
+Description=AI Tennis Coach (Next.js, $MODE mode)
 After=network.target
 
 [Service]
@@ -74,7 +86,8 @@ WorkingDirectory=$ROOT/web
 Environment=PATH=$NODE_BIN:/usr/local/bin:/usr/bin:/bin
 Environment=NODE_ENV=production
 Environment=TENNIS_PYTHON=$ROOT/.venv/bin/python
-Environment=CUDA_VISIBLE_DEVICES=
+EnvironmentFile=-$ROOT/.env
+Environment=TENNIS_MODE=$MODE
 ExecStart=$NODE_BIN/npx next start -H 127.0.0.1 -p $PORT
 Restart=on-failure
 

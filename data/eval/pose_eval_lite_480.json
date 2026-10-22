@@ -1,0 +1,158 @@
+{
+ "n_images": 2000,
+ "joints": [
+  "nose",
+  "l_shoulder",
+  "r_shoulder",
+  "l_elbow",
+  "r_elbow",
+  "l_wrist",
+  "r_wrist",
+  "l_hip",
+  "r_hip",
+  "l_knee",
+  "r_knee",
+  "l_ankle",
+  "r_ankle"
+ ],
+ "modes": {
+  "full": {
+   "detected": 0.915,
+   "pck": {
+    "0.1": 0.397,
+    "0.2": 0.686,
+    "0.3": 0.803
+   },
+   "median_err": 0.126,
+   "per_joint": {
+    "nose": {
+     "pck02": 0.781,
+     "median": 0.116
+    },
+    "l_shoulder": {
+     "pck02": 0.786,
+     "median": 0.1
+    },
+    "r_shoulder": {
+     "pck02": 0.774,
+     "median": 0.089
+    },
+    "l_elbow": {
+     "pck02": 0.575,
+     "median": 0.165
+    },
+    "r_elbow": {
+     "pck02": 0.53,
+     "median": 0.186
+    },
+    "l_wrist": {
+     "pck02": 0.567,
+     "median": 0.169
+    },
+    "r_wrist": {
+     "pck02": 0.554,
+     "median": 0.172
+    },
+    "l_hip": {
+     "pck02": 0.723,
+     "median": 0.144
+    },
+    "r_hip": {
+     "pck02": 0.643,
+     "median": 0.161
+    },
+    "l_knee": {
+     "pck02": 0.749,
+     "median": 0.1
+    },
+    "r_knee": {
+     "pck02": 0.744,
+     "median": 0.094
+    },
+    "l_ankle": {
+     "pck02": 0.756,
+     "median": 0.099
+    },
+    "r_ankle": {
+     "pck02": 0.739,
+     "median": 0.09
+    }
+   },
+   "per_action": {
+    "backhand": 0.638,
+    "forehand": 0.719,
+    "ready_position": 0.851,
+    "serve": 0.523
+   }
+  },
+  "crop": {
+   "detected": 0.997,
+   "pck": {
+    "0.1": 0.528,
+    "0.2": 0.838,
+    "0.3": 0.924
+   },
+   "median_err": 0.095,
+   "per_joint": {
+    "nose": {
+     "pck02": 0.918,
+     "median": 0.089
+    },
+    "l_shoulder": {
+     "pck02": 0.92,
+     "median": 0.094
+    },
+    "r_shoulder": {
+     "pck02": 0.903,
+     "median": 0.076
+    },
+    "l_elbow": {
+     "pck02": 0.705,
+     "median": 0.124
+    },
+    "r_elbow": {
+     "pck02": 0.702,
+     "median": 0.12
+    },
+    "l_wrist": {
+     "pck02": 0.681,
+     "median": 0.117
+    },
+    "r_wrist": {
+     "pck02": 0.719,
+     "median": 0.106
+    },
+    "l_hip": {
+     "pck02": 0.884,
+     "median": 0.125
+    },
+    "r_hip": {
+     "pck02": 0.826,
+     "median": 0.134
+    },
+    "l_knee": {
+     "pck02": 0.924,
+     "median": 0.076
+    },
+    "r_knee": {
+     "pck02": 0.894,
+     "median": 0.073
+    },
+    "l_ankle": {
+     "pck02": 0.92,
+     "median": 0.072
+    },
+    "r_ankle": {
+     "pck02": 0.904,
+     "median": 0.065
+    }
+   },
+   "per_action": {
+    "backhand": 0.777,
+    "forehand": 0.83,
+    "ready_position": 0.929,
+    "serve": 0.817
+   }
+  }
+ }
+}

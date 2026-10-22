@@ -5,3 +5,7 @@ web/.next
 data/live
 .git
 *.pdf
+.env
+data/eval/cache
+data/reviews
+.cache

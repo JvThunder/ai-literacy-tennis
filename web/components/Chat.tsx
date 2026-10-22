@@ -62,7 +62,7 @@ function PoseStep({ d, si, setSi }: { d: CaseData; si: number; setSi: (n: number
   const cur = sc[Math.min(si, sc.length - 1)];
   const pe = r.stages.find((s) => s.name.startsWith("Video")), cl = r.stages.find((s) => s.name.startsWith("Keypoint"));
   return (
-    <Assistant title="Pose estimation" models={["MediaPipe Pose Landmarker · BlazePose lite", "OpenCV", "NumPy smoothing"]}>
+    <Assistant title="Pose estimation" models={[d.report.stages?.[0]?.tool?.match(/BlazePose \w+/)?.[0] ? `MediaPipe Pose Landmarker · ${d.report.stages[0].tool.match(/BlazePose \w+/)![0]}` : "MediaPipe Pose Landmarker · BlazePose", "OpenCV", "NumPy smoothing"]}>
       <div className="grid2">
         <div>{cur && <><img className="f" src={base + cur.file} alt="Skeleton overlay" />
           <input type="range" min={0} max={sc.length - 1} value={si} onChange={(e) => setSi(+e.target.value)} aria-label="Scrub frames" />
@@ -81,7 +81,7 @@ function PoseStep({ d, si, setSi }: { d: CaseData; si: number; setSi: (n: number
 function StrokeStep({ d }: { d: CaseData }) {
   const s = d.report.stroke!;
   return (
-    <Assistant title="Stroke check" models={["Pose-sequence classifier (rule-based)"]}>
+    <Assistant title="Stroke check" models={[(d.report.stroke as any)?.method === "learned" ? "Learned pose-sequence classifier (logistic regression)" : "Pose-sequence classifier (rule-based)"]}>
       <div style={{ fontSize: 17 }}><b style={{ textTransform: "capitalize" }}>{s.label}</b> · {Math.round(s.confidence * 100)}% confidence <Chip k="g">passed to feedback</Chip></div>
       {Object.entries(s.scores).map(([k, v]) => (
         <div key={k} style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", gap: 8, alignItems: "center", marginTop: 6 }}><span style={{ textTransform: "capitalize" }}>{k}</span><Bar v={v} />{Math.round(v * 100)}%</div>))}
@@ -125,8 +125,9 @@ function PriorityStep({ d }: { d: CaseData }) {
   );
 }
 
-function RagStep({ d, qid, ragEval }: { d: CaseData; qid: string; ragEval: RagEval | null }) {
-  const qa = d.report.qa?.[qid];
+const Typing = () => <div className="row-msg"><div className="avatar">T</div><div className="bubble"><span className="typing"><i /><i /><i /></span></div></div>;
+
+function RagStep({ d, qa, ragEval }: { d: CaseData; qa?: QA; ragEval: RagEval | null }) {
   const ret: Retrieval | undefined = qa?.retrieval ?? d.report.issues[0]?.retrieval;
   if (!ret) return null;
   const sel = new Set(ret.final.map((p) => p.id));
@@ -135,7 +136,11 @@ function RagStep({ d, qid, ragEval }: { d: CaseData; qid: string; ragEval: RagEv
   const rr = ret.candidates.map((c) => c.rerank);
   const lo = Math.min(...rr), hi = Math.max(...rr);
   return (
-    <Assistant title="Knowledge retrieval (RAG)" models={["Dense retrieval: all-MiniLM-L6-v2 + FAISS", "Reranker: ms-marco-MiniLM-L-6-v2 cross-encoder", "6 coaching sources incl. Serious Tennis excerpt"]}>
+    <Assistant title="Knowledge retrieval (RAG)" models={ret.kind === "onnx"
+      ? ["Dense retrieval: all-MiniLM-L6-v2 (ONNX, CPU)", "Reranker: ms-marco-MiniLM-L-6-v2 cross-encoder (ONNX)", "6 coaching sources incl. Serious Tennis excerpt"]
+      : ret.stage1
+      ? ["Dense retrieval: all-MiniLM-L6-v2 + FAISS", "Reranker: ms-marco-MiniLM-L-6-v2 cross-encoder", "6 coaching sources incl. Serious Tennis excerpt"]
+      : ["Sparse retrieval: TF-IDF cosine (CPU)", "6 coaching sources incl. Serious Tennis excerpt"]}>
       <div className="small">Query</div>
       <div className="mono" style={{ color: "var(--ink)", marginBottom: 8 }}>{ret.query}</div>
       <div className="tscroll"><table>
@@ -147,8 +152,10 @@ function RagStep({ d, qid, ragEval }: { d: CaseData; qid: string; ragEval: RagEv
             {ret.stage1 && <td style={{ minWidth: 90 }}><Bar v={hi > lo ? (c.rerank - lo) / (hi - lo) : 1} /><span className="small">{c.rerank.toFixed(2)}</span></td>}
             <td>{sel.has(c.id) ? <Chip k="g">#{c.rank_final} evidence</Chip> : <span className="small">–</span>}</td></tr>))}</tbody>
       </table></div>
-      <p className="small">Stage 1 retrieves the 8 closest passages by embedding similarity; stage 2 rescoring with a cross-encoder picks the 3 passages passed to the language model as evidence.</p>
-      {ragEval && <details><summary className="small">Retrieval quality on a {ragEval.n}-query labelled test set ({ragEval.passages} passages)</summary>
+      <p className="small">{ret.stage1
+        ? "Stage 1 retrieves the 8 closest passages by embedding similarity; stage 2 rescoring with a cross-encoder picks the 3 passages passed to the language model as evidence."
+        : "Live uploads on the CPU server rank passages by TF-IDF cosine similarity; the top 3 are passed to the language model as evidence."}</p>
+      {ragEval && ret.stage1 && <details><summary className="small">Retrieval quality on a {ragEval.n}-query labelled test set ({ragEval.passages} passages)</summary>
         <table style={{ marginTop: 8 }}><thead><tr><th>Method</th><th>Recall@1</th><th>Recall@3</th><th>MRR</th></tr></thead><tbody>
           <tr><td>Dense (bi-encoder)</td><td>{ragEval.dense.r1}</td><td>{ragEval.dense.r3}</td><td>{ragEval.dense.mrr}</td></tr>
           <tr><td>Dense + cross-encoder rerank</td><td>{ragEval.reranked.r1}</td><td>{ragEval.reranked.r3}</td><td>{ragEval.reranked.mrr}</td></tr></tbody></table></details>}
@@ -156,9 +163,9 @@ function RagStep({ d, qid, ragEval }: { d: CaseData; qid: string; ragEval: RagEv
   );
 }
 
-function AnswerBubble({ d, qid }: { d: CaseData; qid: string }) {
-  const r = d.report, qa: QA | undefined = r.qa?.[qid];
-  const passages = qa?.retrieval.final ?? r.issues[0]?.references ?? [];
+function AnswerBubble({ d, qa }: { d: CaseData; qa?: QA }) {
+  const r = d.report;
+  const passages = qa?.retrieval?.final ?? r.issues[0]?.references ?? [];
   const top = r.issues[0];
   const answer = qa?.answer ?? top?.explanation ?? "No technique issue was found outside the expert range on this clip. Keep your routine and re-film next week.";
   const why = qa?.why ?? (top ? (top.reasoning ?? []).map((s) => s.text).join(" ") : "All measured features were inside the expert range.");
@@ -211,9 +218,24 @@ export default function Chat({ d, questions, ragEval, reference }: { d: CaseData
   const [shown, setShown] = useState(0);
   const [si, setSi] = useState(0);
   const [text, setText] = useState("");
+  const [liveQa, setLiveQa] = useState<Record<string, QA>>({});   // uploads: answers fetched on demand, keyed by qid
   const endRef = useRef<HTMLDivElement>(null);
   const idx = d.report.scrub?.[Math.min(si, (d.report.scrub?.length ?? 1) - 1)]?.idx ?? null;
   const qText = (id: string) => d.report.qa?.[id]?.question ?? questions.find((q) => q.id === id)?.text ?? d.player.question ?? "";
+  const qaFor = (qid: string) => (d.live ? liveQa[qid] : d.report.qa?.[qid]);
+  const pending = (qid: string) => !!d.live && !liveQa[qid];
+
+  async function fetchLive(qid: string, question: string) {
+    let qa: QA;
+    try {
+      const r = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: d.id, question }) });
+      const j = await r.json();
+      if (!r.ok) throw new Error(j.error || "request failed");
+      qa = j;
+    } catch (e: any) { qa = { question, model: `Template explainer (${e.message})` }; }
+    setLiveQa((m) => ({ ...m, [qid]: qa }));
+  }
+  useEffect(() => { if (d.live) fetchLive("", d.player.question || "Please review my forehand."); }, [d]);   // eslint-disable-line
 
   useEffect(() => {
     const m: Msg[] = [{ key: "u0", kind: "user-clip", text: qText(defaultQ) },
@@ -232,12 +254,14 @@ export default function Chat({ d, questions, ragEval, reference }: { d: CaseData
 
   function ask(qid: string, shownText: string, note?: string) {
     const k = Date.now();
+    if (d.live) { qid = "live" + k; fetchLive(qid, shownText); }
     setMsgs((m) => [...m, { key: "uq" + k, kind: "user-q", text: shownText, note }, { key: "rag" + k, kind: "rag", qid }, { key: "ans" + k, kind: "answer", qid }]);
     setShown((s) => s + 1);
   }
   function submit() {
     const t = text.trim(); if (!t) return;
     setText("");
+    if (d.live) return ask("", t);            // uploads: the LLM answers the question as typed
     const mt = matchQuestion(t, questions);
     ask(mt.id, t, mt.sim > 0 ? `Interpreted as: “${mt.text}” (match ${mt.sim.toFixed(2)})` : `Closest supported question: “${mt.text}”`);
   }
@@ -265,13 +289,13 @@ export default function Chat({ d, questions, ragEval, reference }: { d: CaseData
             case "stroke": return r.stroke ? <StrokeStep key={m.key} d={d} /> : null;
             case "features": return r.features ? <FeaturesStep key={m.key} d={d} idx={idx} /> : null;
             case "priority": return <PriorityStep key={m.key} d={d} />;
-            case "rag": return <RagStep key={m.key} d={d} qid={m.qid!} ragEval={ragEval} />;
-            case "answer": return <AnswerBubble key={m.key} d={d} qid={m.qid!} />;
+            case "rag": return pending(m.qid!) ? null : <RagStep key={m.key} d={d} qa={qaFor(m.qid!)} ragEval={ragEval} />;
+            case "answer": return pending(m.qid!) ? <Typing key={m.key} /> : <AnswerBubble key={m.key} d={d} qa={qaFor(m.qid!)} />;
             case "compare": return <CompareStep key={m.key} d={d} reference={reference} />;
             case "plan": return <Assistant key={m.key} title="Your weekly practice plan" models={["Adaptive rule-based planner"]}><PlanPanel d={d} /></Assistant>;
           }
         })}
-        {typing && <div className="row-msg"><div className="avatar">T</div><div className="bubble"><span className="typing"><i /><i /><i /></span></div></div>}
+        {typing && <Typing />}
         <div ref={endRef} />
       </div></div>
       <div className="composer"><div className="col">

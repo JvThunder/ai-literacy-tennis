@@ -1,6 +1,7 @@
-"""Offline GPU job. Output: data/precomputed/*  (the deployed app is CPU-only and just reads this).
+"""Offline job. Output: data/precomputed/*  (the deployed app just reads this).
 
-  TENNIS_EMBED=1 TENNIS_DEVICE=cuda .venv/bin/python precompute.py
+  .venv/bin/python precompute.py                    GPU: dense retrieval + local Qwen2.5-3B on CUDA (default)
+  TENNIS_MODE=api .venv/bin/python precompute.py    CPU + API: same retrieval models via ONNX, answers via OpenRouter
 
 Per forehand clip: pose -> features -> prioritised issues -> staged retrieval (MiniLM+FAISS, cross-encoder rerank)
 -> grounded answers from a local LLM for each question in the question bank.
@@ -8,13 +9,12 @@ Also writes a small retrieval evaluation (recall@k / MRR).
 """
 import json, os, re, shutil, sys, time
 from pathlib import Path
-os.environ.setdefault("TENNIS_EMBED", "1"); os.environ.setdefault("TENNIS_DEVICE", "cuda")
+os.environ.setdefault("TENNIS_MODE", "gpu"); os.environ.setdefault("LLM_RETRIES", "7")   # batch job: wait out API rate limits
 sys.path.insert(0, str(Path(__file__).parent))
-from backend import pipeline, planner, rag
-from backend.config import DATA_DIR, ROOT, ISSUES
+from backend import llm, pipeline, planner, rag
+from backend.config import DATA_DIR, ROOT
 
 OUT = DATA_DIR / "precomputed"
-LLM_NAME = "Qwen/Qwen2.5-3B-Instruct"
 
 QUESTIONS = [  # forehand-only question bank (id, text)
     ("q_inconsistent", "Why is my forehand inconsistent?"),
@@ -50,53 +50,6 @@ RAG_EVAL = [
 ]
 
 
-def load_llm():
-    import torch
-    from transformers import AutoTokenizer, AutoModelForCausalLM
-    tok = AutoTokenizer.from_pretrained(LLM_NAME)
-    m = AutoModelForCausalLM.from_pretrained(LLM_NAME, dtype=torch.bfloat16).cuda()
-
-    def gen(msg, max_new=320):
-        ids = tok.apply_chat_template([{"role": "user", "content": msg}], add_generation_prompt=True,
-                                      return_tensors="pt", return_dict=True).to("cuda")
-        out = m.generate(**ids, max_new_tokens=max_new, do_sample=False)
-        return tok.decode(out[0][ids["input_ids"].shape[1]:], skip_special_tokens=True).strip()
-
-    def explain(issue, player, refs):
-        ctx = "\n".join(f"[{i+1}] {r['doc_title']} > {r['section']}: {r['text']}" for i, r in enumerate(refs))
-        msg = (f"You are a friendly beginner tennis coach. Player goal: {player.get('goal')}.\n"
-               f"Pose estimation found: {issue['title']}: {issue['value']} {issue['unit']} ({issue['reference']}) at {issue['time_s']} s.\n"
-               f"References:\n{ctx}\n\nIn 2-3 plain sentences (max 70 words) say what the problem is and why it matters, "
-               "then ONE cue about the ball or target, not joint angles. Use only the references; cite like [1].")
-        return gen(msg, 140), f"{LLM_NAME}, grounded on retrieved passages"
-    return gen, explain
-
-
-def answer(gen, question, player, issues, ret):
-    ctx = "\n".join(f"[{i+1}] {r['doc_title']} > {r['section']}: {r['text']}" for i, r in enumerate(ret["final"]))
-    if issues:
-        found = "\n".join(f"- {i['title']}: measured {i['value']} {i['unit']}, {i['reference']}; priority score {i['score']}" for i in issues)
-    else:
-        found = "- No technique issue fell outside the expert range on this clip."
-    msg = (f"You are an AI tennis coach for adult beginners (forehand only). The player asked: \"{question}\"\n"
-           f"Player: {player.get('level')}, goal: {player.get('goal')}, {player.get('sessions_per_week')} sessions/week of "
-           f"{player.get('minutes')} min, court access: {player.get('court_access')}.\n"
-           f"Measured from their video (pose estimation):\n{found}\n\nCoaching references:\n{ctx}\n\n"
-           "Reply in exactly three labelled sections, plain language, each at most 55 words, using only the measurements and "
-           "references, citing references like [1]:\n"
-           "ANSWER: direct answer to the question.\n"
-           "WHY: the reasoning that links the measurements to the answer.\n"
-           "HOW TO IMPROVE: concrete steps, one ball-focused cue, and what to check next time.")
-    txt = gen(msg, 330)
-    parts = {k: "" for k in ("answer", "why", "improve")}
-    for key, pat in (("answer", r"ANSWER:"), ("why", r"WHY:"), ("improve", r"HOW TO IMPROVE:")):
-        m = re.search(pat + r"\s*(.*?)(?=\n\s*(?:ANSWER:|WHY:|HOW TO IMPROVE:)|\Z)", txt, re.S)
-        parts[key] = m.group(1).strip() if m else ""
-    if not parts["answer"]:
-        parts["answer"] = txt
-    return parts, txt
-
-
 def rag_eval():
     rows = []
     for q, gold in RAG_EVAL:
@@ -111,7 +64,20 @@ def rag_eval():
                 reranked=dict(r1=rec("final_rank", 1), r3=rec("final_rank", 3), mrr=mrr("final_rank")), rows=rows)
 
 
+def _web_clip(src, d):
+    """H.264 copy of the original clip for the coach review page (browsers cannot play the THETIS mp4v files)."""
+    try:
+        import imageio_ffmpeg, subprocess
+        subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error", "-i", str(src), "-c:v", "libx264", "-crf", "26",
+                        "-pix_fmt", "yuv420p", "-an", "-movflags", "+faststart", str(d / "clip.mp4")], check=True)
+    except Exception as e:
+        print("no web clip:", e)
+
+
 def nice(stem):
+    m = re.match(r"training_(\d+)(?:_(\d+))?(?:_(?:left|right))?$", stem)          # cut from Training Videos/<n>.mp4 by make_examples.py
+    if m:
+        return f"Practice session {int(m.group(1)) + 1}" + (f", forehand {m.group(2)}" if m.group(2) else "")
     s = stem.replace("thetis_", "")
     kind = "Forehand (open stance)" if s.startswith("forehand_openstands") else "Forehand (flat)"
     pid = re.search(r"_p(\d+)_", s)
@@ -121,13 +87,15 @@ def nice(stem):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     print("retrieval:", rag.backend_name())
-    gen, explain = load_llm()
+    gen, model = llm.load()                     # local Qwen (gpu) or OpenRouter (api)
+    explain = llm.explainer(gen, model)
     cases = []
     for v in sorted((ROOT / "clips").glob("*.mp4")):
         cid = "clip_" + re.sub(r"(thetis_|_s1_auto|_auto)", "", v.stem)
         t = time.time()
         d = OUT / cid; shutil.rmtree(d, ignore_errors=True)
-        player = dict(level="NTRP 2.0 (adult beginner)", dominant="auto", goal="Rally consistently with friends",
+        hand = re.search(r"_(left|right)$", v.stem)            # filename suffix sets the hitting hand (left-handers: auto can pick the wrong arm)
+        player = dict(level="NTRP 2.0 (adult beginner)", dominant=hand.group(1) if hand else "auto", goal="Rally consistently with friends",
                       question=QUESTIONS[0][1], sessions_per_week=3, minutes=20, court_access="sometimes", partner=False)
         rep = pipeline.run(str(v), player, d, explain_fn=explain)
         if rep["status"] != "ok":
@@ -135,14 +103,13 @@ def main():
         issues = rep["issues"]
         qa = {}
         for qid, qtext in QUESTIONS:
-            top = issues[0] if issues else None
-            q = qtext + (f" {top['title']} {ISSUES[top['id']]['tags']}" if top else " fundamentals practice progression")
-            ret = rag.retrieve(q, k_dense=8, k_final=3)
-            parts, raw = answer(gen, qtext, player, issues, ret)
-            qa[qid] = dict(question=qtext, retrieval=ret, **parts, model=LLM_NAME)
+            ret = rag.retrieve(llm.question_query(qtext, issues), k_dense=8, k_final=3)
+            parts, raw = llm.answer(gen, qtext, player, issues, ret)
+            qa[qid] = dict(question=qtext, retrieval=ret, **parts, model=model)
         rep["qa"] = qa
+        _web_clip(v, d)
         plan = planner.build(player, [i["id"] for i in issues] or [x["id"] for x in rep.get("other_candidates", [])])
-        (d / "case.json").write_text(json.dumps(dict(id=cid, title=nice(v.stem), blurb="THETIS clip, adult beginner",
+        (d / "case.json").write_text(json.dumps(dict(id=cid, title=nice(v.stem), blurb="Team practice video" if v.stem.startswith("training_") else "THETIS clip, adult beginner",
                                                     player=player, report=rep, plan=plan), indent=1))
         cases.append(dict(id=cid, title=nice(v.stem), top=[i["title"] for i in issues], n_issues=len(issues)))
         print(cid, [i["id"] for i in issues], f"{time.time()-t:.0f}s")

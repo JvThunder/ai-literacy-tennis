@@ -1,18 +1,25 @@
-# docker compose up -d --build            -> http://localhost:3000
-# DOMAIN=tennis-ai.example.com docker compose --profile https up -d --build   -> https://$DOMAIN via Caddy
+# App container only (CPU + API mode, settings from .env), reverse-proxied by the Caddy already running on this host:
+#   docker compose up -d --build                  -> http://127.0.0.1:3000
+# GPU variant: docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d --build
+# Self-contained HTTPS (only on a host where nothing else owns :80/:443):
+#   DOMAIN=tennis-ai.example.com docker compose --profile https up -d --build
 services:
   app:
     build: .
     restart: unless-stopped
-    ports: ["${APP_PORT:-3000}:3000"]
-    volumes: ["live:/app/data/live"]
+    env_file: [{ path: .env, required: false }]
+    ports: ["${APP_BIND:-127.0.0.1}:${APP_PORT:-3000}:3000"]
+    volumes: ["live:/app/data/live", "reviews:/app/data/reviews"]
   caddy:
     image: caddy:2
     profiles: ["https"]
     restart: unless-stopped
     ports: ["80:80", "443:443"]
-    environment: { DOMAIN: "${DOMAIN:-localhost}" }
-    command: caddy reverse-proxy --from ${DOMAIN:-localhost} --to app:3000
-    volumes: ["caddy:/data"]
+    environment:
+      DOMAIN: "${DOMAIN:-localhost}"
+      UPSTREAM: "app:3000"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - "caddy:/data"
     depends_on: [app]
-volumes: { live: {}, caddy: {} }
+volumes: { live: {}, reviews: {}, caddy: {} }

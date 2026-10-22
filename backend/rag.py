@@ -1,17 +1,32 @@
 """Coaching knowledge base: chunk, embed, retrieve (dense) and rerank (cross-encoder).
 
-Offline (GPU): TENNIS_EMBED=1 -> MiniLM bi-encoder + FAISS, then cross-encoder rerank.
-CPU fallback:  TF-IDF cosine ranking (used for live uploads on the deployed server).
+TENNIS_RETRIEVAL picks the backend (same two models in "dense" and "onnx"):
+  dense (default when TENNIS_MODE=gpu): MiniLM bi-encoder + FAISS, then cross-encoder rerank (torch).
+  onnx  (default when TENNIS_MODE=api): the same MiniLM + ms-marco cross-encoder via fastembed/ONNX on CPU, no torch.
+  tfidf: TF-IDF cosine ranking; also the fallback when fastembed is not installed.
 """
 from __future__ import annotations
 import json, os, re, subprocess, zipfile
 from pathlib import Path
 import numpy as np
-from .config import KNOWLEDGE_DIR, ROOT, DATA_DIR
+from .config import KNOWLEDGE_DIR, ROOT, DATA_DIR, MODE
 
 BI_ENCODER = "sentence-transformers/all-MiniLM-L6-v2"
 CROSS_ENCODER = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+ONNX_CROSS = "Xenova/ms-marco-MiniLM-L-6-v2"          # ONNX export of CROSS_ENCODER
+ONNX_CACHE = os.environ.get("TENNIS_FASTEMBED_CACHE", str(ROOT / ".cache" / "fastembed"))
 _idx: dict = {}
+
+
+def kind_wanted() -> str:
+    if os.environ.get("TENNIS_EMBED") == "1":             # legacy switch used by precompute.py
+        return "dense"
+    return os.environ.get("TENNIS_RETRIEVAL", "dense" if MODE == "gpu" else "onnx")
+
+
+def use(kind: str):
+    """Switch backend in-process (evaluation)."""
+    os.environ["TENNIS_RETRIEVAL"] = kind; os.environ.pop("TENNIS_EMBED", None); _idx.clear()
 
 
 def _read(path: Path) -> str:
@@ -86,15 +101,28 @@ def _build():
     chunks = load_chunks()
     _idx["chunks"] = chunks
     texts = [f"{c['section']}. {c['text']}" for c in chunks]
-    if os.environ.get("TENNIS_EMBED") == "1":
+    kind = kind_wanted()
+    if kind == "onnx":
+        try:
+            from fastembed import TextEmbedding
+            from fastembed.rerank.cross_encoder import TextCrossEncoder
+        except ImportError:
+            kind = "tfidf"
+        else:
+            bi = TextEmbedding(BI_ENCODER, cache_dir=ONNX_CACHE)
+            emb = np.asarray(list(bi.embed(texts)), dtype="float32")
+            emb /= np.linalg.norm(emb, axis=1, keepdims=True)
+            _idx.update(kind="onnx", bi=bi, emb=emb, cross=TextCrossEncoder(ONNX_CROSS, cache_dir=ONNX_CACHE), texts=texts)
+            return
+    if kind == "dense":
         import faiss
         from sentence_transformers import SentenceTransformer, CrossEncoder
-        dev = os.environ.get("TENNIS_DEVICE", "cpu")
+        dev = os.environ.get("TENNIS_DEVICE", "cuda" if MODE == "gpu" else "cpu")
         bi = SentenceTransformer(BI_ENCODER, device=dev)
         emb = np.asarray(bi.encode(texts, normalize_embeddings=True), dtype="float32")
         ix = faiss.IndexFlatIP(emb.shape[1]); ix.add(emb)
         _idx.update(kind="dense", bi=bi, faiss=ix, cross=CrossEncoder(CROSS_ENCODER, device=dev), texts=texts)
-    else:
+    if kind not in ("dense", "onnx"):
         from sklearn.feature_extraction.text import TfidfVectorizer
         vec = TfidfVectorizer(ngram_range=(1, 2), stop_words="english", sublinear_tf=True)
         _idx.update(kind="tfidf", vec=vec, X=vec.fit_transform(texts), texts=texts)
@@ -104,6 +132,8 @@ def backend_name() -> str:
     _build()
     if _idx["kind"] == "dense":
         return f"MiniLM-L6 bi-encoder + FAISS → ms-marco MiniLM cross-encoder rerank ({len(_idx['chunks'])} passages)"
+    if _idx["kind"] == "onnx":
+        return f"MiniLM-L6 bi-encoder → ms-marco MiniLM cross-encoder rerank, ONNX on CPU ({len(_idx['chunks'])} passages)"
     return f"TF-IDF cosine ranking ({len(_idx['chunks'])} passages)"
 
 
@@ -116,6 +146,14 @@ def retrieve(query: str, k_dense: int = 8, k_final: int = 3) -> dict:
         sc, ix = _idx["faiss"].search(q, k_dense)
         cand = [dict(i=int(i), dense=float(s)) for i, s in zip(ix[0], sc[0])]
         ce = _idx["cross"].predict([(query, _idx["texts"][c["i"]]) for c in cand])
+        for c, s in zip(cand, ce):
+            c["rerank"] = float(s)
+        order = sorted(cand, key=lambda c: -c["rerank"])
+    elif _idx["kind"] == "onnx":
+        q = np.asarray(list(_idx["bi"].embed([query])), dtype="float32")[0]
+        sims = _idx["emb"] @ (q / np.linalg.norm(q))
+        cand = [dict(i=int(i), dense=float(sims[i])) for i in np.argsort(-sims)[:k_dense]]
+        ce = list(_idx["cross"].rerank(query, [_idx["texts"][c["i"]] for c in cand]))
         for c, s in zip(cand, ce):
             c["rerank"] = float(s)
         order = sorted(cand, key=lambda c: -c["rerank"])
@@ -133,7 +171,7 @@ def retrieve(query: str, k_dense: int = 8, k_final: int = 3) -> dict:
         return dict(id=x["id"], doc=x["doc"], doc_title=x["doc_title"], section=x["section"], text=x["text"],
                     dense=round(c["dense"], 3), rerank=round(c["rerank"], 2),
                     rank_dense=c["rank_dense"], rank_final=c["rank_final"])
-    return dict(query=query, stage1=_idx["kind"] == "dense", candidates=[pack(c) for c in cand],
+    return dict(query=query, stage1=_idx["kind"] != "tfidf", kind=_idx["kind"], candidates=[pack(c) for c in cand],
                 final=[pack(c) for c in order[:k_final]])
 
 

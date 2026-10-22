@@ -4,3 +4,4 @@ pandas
 scikit-learn
 opencv-python-headless
 mediapipe
+fastembed          # MiniLM + cross-encoder retrieval via ONNX (no torch)

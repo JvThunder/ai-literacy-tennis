@@ -2,10 +2,10 @@
 from __future__ import annotations
 import cv2
 import numpy as np
-from .config import MODEL_PATH
+from .config import MODEL_PATH, POSE_WIDTH
 
 MAX_FRAMES = 240          # keeps CPU cost low; longer clips are subsampled
-TARGET_W = 480
+TARGET_W = POSE_WIDTH
 
 
 def extract_pose(video_path: str, keep_frames: bool = True):

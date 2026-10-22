@@ -1,0 +1,1443 @@
+{
+ "generated": "2026-10-22",
+ "datasets": {
+  "thetis": {
+   "clips": 550,
+   "players": 55,
+   "forehand_clips": 330,
+   "mean_secs": 5.8
+  }
+ },
+ "stroke": {
+  "n": 550,
+  "labels": [
+   "forehand",
+   "backhand",
+   "serve"
+  ],
+  "preds": [
+   "forehand",
+   "backhand",
+   "serve",
+   "rejected"
+  ],
+  "confusion": {
+   "forehand": {
+    "forehand": 288,
+    "backhand": 31,
+    "serve": 11,
+    "rejected": 0
+   },
+   "backhand": {
+    "forehand": 10,
+    "backhand": 97,
+    "serve": 3,
+    "rejected": 0
+   },
+   "serve": {
+    "forehand": 8,
+    "backhand": 0,
+    "serve": 102,
+    "rejected": 0
+   }
+  },
+  "accuracy": 0.885,
+  "macro_f1": 0.874,
+  "majority_baseline": 0.6,
+  "gate": {
+   "precision": 0.941,
+   "recall": 0.873,
+   "specificity": 0.918,
+   "accuracy": 0.891
+  },
+  "forehand_recall_by_skill": {
+   "beginner": 0.849,
+   "expert": 0.903
+  },
+  "method": "learned",
+  "cv": {
+   "folds": 5,
+   "accuracy": 0.885,
+   "rules_accuracy": 0.815
+  }
+ },
+ "skill": {
+  "n_clips": 288,
+  "n_beginner": 158,
+  "n_expert": 130,
+  "folds": 6,
+  "analysed_share": 0.873,
+  "clip_auc": {
+   "auc": 0.482,
+   "ci": [
+    0.387,
+    0.576
+   ]
+  },
+  "player_auc": {
+   "auc": 0.453,
+   "ci": [
+    0.293,
+    0.614
+   ]
+  },
+  "any_flag": {
+   "beginner": 0.854,
+   "expert": 0.877
+  },
+  "mean_flagged": {
+   "beginner": 1.64,
+   "expert": 1.56
+  },
+  "mean_fault": {
+   "beginner": 0.319,
+   "expert": 0.327
+  },
+  "per_issue": {
+   "contact": {
+    "flag_beginner": 0.335,
+    "flag_expert": 0.4,
+    "median_beginner": 0.47,
+    "median_expert": 0.54,
+    "auc": 0.544,
+    "ci": [
+     0.436,
+     0.655
+    ]
+   },
+   "elbow": {
+    "flag_beginner": 0.563,
+    "flag_expert": 0.431,
+    "median_beginner": 128.29,
+    "median_expert": 128.54,
+    "auc": 0.579,
+    "ci": [
+     0.493,
+     0.65
+    ]
+   },
+   "follow": {
+    "flag_beginner": 0.165,
+    "flag_expert": 0.223,
+    "median_beginner": 0.92,
+    "median_expert": 0.83,
+    "auc": 0.458,
+    "ci": [
+     0.357,
+     0.573
+    ]
+   },
+   "knee": {
+    "flag_beginner": 0.222,
+    "flag_expert": 0.254,
+    "median_beginner": 126.5,
+    "median_expert": 128.21,
+    "auc": 0.47,
+    "ci": [
+     0.351,
+     0.579
+    ]
+   },
+   "lean": {
+    "flag_beginner": 0.354,
+    "flag_expert": 0.254,
+    "median_beginner": 14.75,
+    "median_expert": 13.26,
+    "auc": 0.547,
+    "ci": [
+     0.409,
+     0.669
+    ]
+   },
+   "turn": {
+    "flag_beginner": 0.0,
+    "flag_expert": 0.0,
+    "median_beginner": 28.03,
+    "median_expert": 19.4,
+    "auc": 0.421,
+    "ci": [
+     0.314,
+     0.532
+    ]
+   }
+  },
+  "hist": {
+   "beginner": [
+    0.161,
+    0.439,
+    0.439,
+    0.692,
+    0.545,
+    0.408,
+    0.164,
+    0.157,
+    0.121,
+    0,
+    0,
+    0,
+    0.784,
+    0.059,
+    0.008,
+    0.026,
+    0.376,
+    0.459,
+    0,
+    0,
+    0,
+    0.677,
+    0.338,
+    0.645,
+    0,
+    0,
+    0,
+    0.382,
+    0.086,
+    0.016,
+    0.562,
+    0.636,
+    0.21,
+    0.559,
+    1.109,
+    0.588,
+    0.516,
+    0.022,
+    0,
+    0.026,
+    0,
+    0.363,
+    0.716,
+    0.459,
+    0.911,
+    0.016,
+    0.08,
+    0.778,
+    0.018,
+    0.517,
+    0.157,
+    0.3,
+    0.397,
+    0.163,
+    0.6,
+    0.702,
+    0.656,
+    0.127,
+    0.16,
+    0.147,
+    0.698,
+    0.0,
+    0.459,
+    0.634,
+    0.59,
+    0.092,
+    0.09,
+    0.148,
+    0.052,
+    0.628,
+    0.076,
+    0.048,
+    0.0,
+    1.281,
+    0.26,
+    1.071,
+    0.075,
+    0.521,
+    0.028,
+    0.518,
+    0.172,
+    0.126,
+    0.0,
+    0.096,
+    0,
+    0.615,
+    0,
+    0.09,
+    0.074,
+    0.205,
+    0.385,
+    0.776,
+    0.6,
+    0.677,
+    0.546,
+    0.236,
+    0.349,
+    0.418,
+    0.648,
+    0.035,
+    0.166,
+    0,
+    0,
+    0.086,
+    1.811,
+    1.264,
+    1.499,
+    0.303,
+    0.412,
+    0.412,
+    0.26,
+    0.09,
+    0.704,
+    0.384,
+    0.862,
+    0.351,
+    0.069,
+    0.0,
+    0.425,
+    0.082,
+    0.906,
+    0.736,
+    0.81,
+    0.597,
+    0.909,
+    0,
+    0.062,
+    0.083,
+    0,
+    0.103,
+    0.031,
+    0.028,
+    0.2,
+    0.136,
+    0.281,
+    0.466,
+    0.4,
+    0,
+    0.033,
+    0,
+    0.215,
+    0.072,
+    0.352,
+    0,
+    0.092,
+    0.011,
+    0,
+    0.407,
+    0,
+    0.425,
+    0,
+    0.081,
+    0.878,
+    0.329,
+    0.728,
+    0.02,
+    0.038,
+    0.031
+   ],
+   "expert": [
+    0.985,
+    0.564,
+    0.587,
+    1.393,
+    0.6,
+    0.253,
+    0.107,
+    0.167,
+    0.277,
+    0.164,
+    0.267,
+    0.537,
+    0,
+    0.631,
+    0.673,
+    0,
+    0.316,
+    0.238,
+    0.094,
+    0.0,
+    0.073,
+    0.34,
+    0.32,
+    0.621,
+    0.258,
+    0.39,
+    0.528,
+    0.011,
+    0.163,
+    0.495,
+    0.029,
+    0.451,
+    1.097,
+    1.497,
+    0.025,
+    0.073,
+    0.073,
+    0.011,
+    0.028,
+    0.0,
+    0.854,
+    0.506,
+    0.658,
+    0.685,
+    0.256,
+    0.097,
+    0.043,
+    0.28,
+    0.082,
+    0.538,
+    0.069,
+    0.626,
+    0.081,
+    0.013,
+    0.142,
+    0.465,
+    0.428,
+    0.214,
+    0,
+    0.346,
+    0.39,
+    0.258,
+    0.275,
+    0.031,
+    0.064,
+    0.599,
+    0.533,
+    0.088,
+    0.016,
+    0.159,
+    0.023,
+    0.554,
+    0.412,
+    0.612,
+    0.356,
+    0.257,
+    0,
+    0.479,
+    0.647,
+    0.363,
+    0.585,
+    0.777,
+    0.043,
+    0.239,
+    0.162,
+    0.113,
+    0.186,
+    0.03,
+    0.361,
+    0.402,
+    0,
+    0.643,
+    0.445,
+    0,
+    0.097,
+    0.333,
+    0.332,
+    0.499,
+    0.531,
+    0.507,
+    0,
+    0.227,
+    0,
+    0.212,
+    0.189,
+    0.806,
+    0.23,
+    1.377,
+    0.237,
+    0,
+    0.081,
+    0,
+    0.548,
+    0.715,
+    0.945,
+    0,
+    0,
+    0,
+    0,
+    0.356,
+    0,
+    0.145,
+    0.095,
+    0,
+    0.231,
+    0.216,
+    0.122,
+    0.581,
+    1.064,
+    1.064
+   ]
+  }
+ },
+ "reliability": {
+  "beginner": {
+   "pairs": 140,
+   "top_agree": 0.514,
+   "top_kappa": 0.369,
+   "flagged_jaccard": 0.47,
+   "icc": {
+    "contact": 0.365,
+    "elbow": 0.387,
+    "follow": 0.26,
+    "knee": 0.747,
+    "lean": 0.793,
+    "turn": 0.283
+   }
+  },
+  "all": {
+   "pairs": 260,
+   "top_agree": 0.465,
+   "top_kappa": 0.325,
+   "flagged_jaccard": 0.461,
+   "icc": {
+    "contact": 0.406,
+    "elbow": 0.361,
+    "follow": 0.358,
+    "knee": 0.725,
+    "lean": 0.783,
+    "turn": 0.491
+   }
+  }
+ },
+ "hub": {
+  "n": 288,
+  "features": [
+   "contact",
+   "turn",
+   "follow",
+   "elbow",
+   "knee",
+   "lean"
+  ],
+  "rho": [
+   [
+    1.0,
+    0.11,
+    -0.05,
+    0.06,
+    0.0,
+    -0.04
+   ],
+   [
+    0.11,
+    1.0,
+    0.18,
+    0.09,
+    -0.08,
+    0.04
+   ],
+   [
+    -0.05,
+    0.18,
+    1.0,
+    0.02,
+    0.16,
+    0.18
+   ],
+   [
+    0.06,
+    0.09,
+    0.02,
+    1.0,
+    -0.13,
+    0.24
+   ],
+   [
+    0.0,
+    -0.08,
+    0.16,
+    -0.13,
+    1.0,
+    -0.06
+   ],
+   [
+    -0.04,
+    0.04,
+    0.18,
+    0.24,
+    -0.06,
+    1.0
+   ]
+  ],
+  "mean_abs": {
+   "contact": 0.053,
+   "turn": 0.1,
+   "follow": 0.117,
+   "elbow": 0.108,
+   "knee": 0.087,
+   "lean": 0.112
+  },
+  "most_connected": "follow"
+ },
+ "retrieval": {
+  "n": 16,
+  "passages": 56,
+  "methods": [
+   {
+    "name": "TF-IDF (CPU, before)",
+    "r1": 0.562,
+    "r3": 0.812,
+    "mrr": 0.703
+   },
+   {
+    "name": "MiniLM ONNX (CPU)",
+    "r1": 0.562,
+    "r3": 0.875,
+    "mrr": 0.745
+   },
+   {
+    "name": "MiniLM ONNX + rerank (live uploads, CPU)",
+    "r1": 0.75,
+    "r3": 1.0,
+    "mrr": 0.875
+   },
+   {
+    "name": "MiniLM bi-encoder + FAISS",
+    "r1": 0.562,
+    "r3": 0.875,
+    "mrr": 0.745
+   },
+   {
+    "name": "+ cross-encoder rerank (precomputed)",
+    "r1": 0.75,
+    "r3": 1.0,
+    "mrr": 0.875
+   }
+  ],
+  "backend": "MiniLM-L6 bi-encoder \u2192 ms-marco MiniLM cross-encoder rerank, ONNX on CPU (56 passages)"
+ },
+ "answers": [
+  {
+   "model": "google/gemini-2.5-flash-lite via OpenRouter \u00b7 prompt v2 (now: demo cases and uploads)",
+   "n": 40,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 126,
+   "numbers_supported": 1.0,
+   "within_limit": 0.95,
+   "on_issue": 1.0,
+   "external_cue": 1.0,
+   "internal_only": 0.0,
+   "untraceable_examples": [],
+   "mean_words": 110.0
+  },
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct (precomputed, GPU) (before)",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.08,
+   "valid_cites": 1.0,
+   "numbers": 134,
+   "numbers_supported": 0.94,
+   "within_limit": 0.9,
+   "on_issue": 1.0,
+   "external_cue": 0.74,
+   "internal_only": 0.22,
+   "untraceable_examples": [
+    "t at contact, aiming for an elbow angle closer to 110 degrees. Practice w",
+    "nd power transfer. Focus on keeping your arm at a 90-degree angle at con",
+    "t at contact, aiming for an elbow angle closer to 110 degrees. Next sessi",
+    "nee bend needs improvement. Aim for a bend around 100 degrees. Your curre"
+   ],
+   "mean_words": 95.8
+  },
+  {
+   "model": "qwen/qwen-2.5-7b-instruct \u00b7 prompt v1, live uploads (before)",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.98,
+   "valid_cites": 1.0,
+   "numbers": 96,
+   "numbers_supported": 0.833,
+   "within_limit": 0.96,
+   "on_issue": 1.0,
+   "external_cue": 0.68,
+   "internal_only": 0.32,
+   "untraceable_examples": [
+    "t depths, aiming for a relaxed elbow angle around 110-120 degrees. Next t",
+    "pths, aiming for a relaxed elbow angle around 110-120 degrees. Next time,",
+    "ntact. Check if your knee bend improves to around 120-130 degrees next ti",
+    "t. Check if your knee bend improves to around 120-130 degrees next time."
+   ],
+   "mean_words": 89.7
+  }
+ ],
+ "pose": {
+  "n_images": 2000,
+  "joints": [
+   "nose",
+   "l_shoulder",
+   "r_shoulder",
+   "l_elbow",
+   "r_elbow",
+   "l_wrist",
+   "r_wrist",
+   "l_hip",
+   "r_hip",
+   "l_knee",
+   "r_knee",
+   "l_ankle",
+   "r_ankle"
+  ],
+  "modes": {
+   "full": {
+    "detected": 0.878,
+    "pck": {
+     "0.1": 0.485,
+     "0.2": 0.783,
+     "0.3": 0.876
+    },
+    "median_err": 0.103,
+    "per_joint": {
+     "nose": {
+      "pck02": 0.855,
+      "median": 0.099
+     },
+     "l_shoulder": {
+      "pck02": 0.858,
+      "median": 0.094
+     },
+     "r_shoulder": {
+      "pck02": 0.841,
+      "median": 0.085
+     },
+     "l_elbow": {
+      "pck02": 0.715,
+      "median": 0.129
+     },
+     "r_elbow": {
+      "pck02": 0.694,
+      "median": 0.125
+     },
+     "l_wrist": {
+      "pck02": 0.643,
+      "median": 0.133
+     },
+     "r_wrist": {
+      "pck02": 0.696,
+      "median": 0.12
+     },
+     "l_hip": {
+      "pck02": 0.801,
+      "median": 0.132
+     },
+     "r_hip": {
+      "pck02": 0.695,
+      "median": 0.154
+     },
+     "l_knee": {
+      "pck02": 0.854,
+      "median": 0.079
+     },
+     "r_knee": {
+      "pck02": 0.841,
+      "median": 0.074
+     },
+     "l_ankle": {
+      "pck02": 0.846,
+      "median": 0.08
+     },
+     "r_ankle": {
+      "pck02": 0.846,
+      "median": 0.068
+     }
+    },
+    "per_action": {
+     "backhand": 0.758,
+     "forehand": 0.821,
+     "ready_position": 0.89,
+     "serve": 0.647
+    },
+    "all": {
+     "pck": {
+      "0.1": 0.426,
+      "0.2": 0.687,
+      "0.3": 0.769
+     },
+     "per_joint": {
+      "nose": 0.751,
+      "l_shoulder": 0.753,
+      "r_shoulder": 0.738,
+      "l_elbow": 0.628,
+      "r_elbow": 0.609,
+      "l_wrist": 0.565,
+      "r_wrist": 0.611,
+      "l_hip": 0.703,
+      "r_hip": 0.61,
+      "l_knee": 0.75,
+      "r_knee": 0.738,
+      "l_ankle": 0.743,
+      "r_ankle": 0.743
+     },
+     "per_action": {
+      "backhand": 0.666,
+      "forehand": 0.721,
+      "ready_position": 0.781,
+      "serve": 0.568
+     }
+    }
+   },
+   "crop": {
+    "detected": 0.997,
+    "pck": {
+     "0.1": 0.61,
+     "0.2": 0.894,
+     "0.3": 0.956
+    },
+    "median_err": 0.082,
+    "per_joint": {
+     "nose": {
+      "pck02": 0.928,
+      "median": 0.078
+     },
+     "l_shoulder": {
+      "pck02": 0.948,
+      "median": 0.086
+     },
+     "r_shoulder": {
+      "pck02": 0.934,
+      "median": 0.074
+     },
+     "l_elbow": {
+      "pck02": 0.827,
+      "median": 0.094
+     },
+     "r_elbow": {
+      "pck02": 0.823,
+      "median": 0.09
+     },
+     "l_wrist": {
+      "pck02": 0.767,
+      "median": 0.089
+     },
+     "r_wrist": {
+      "pck02": 0.831,
+      "median": 0.081
+     },
+     "l_hip": {
+      "pck02": 0.914,
+      "median": 0.12
+     },
+     "r_hip": {
+      "pck02": 0.845,
+      "median": 0.137
+     },
+     "l_knee": {
+      "pck02": 0.963,
+      "median": 0.066
+     },
+     "r_knee": {
+      "pck02": 0.937,
+      "median": 0.062
+     },
+     "l_ankle": {
+      "pck02": 0.961,
+      "median": 0.058
+     },
+     "r_ankle": {
+      "pck02": 0.948,
+      "median": 0.052
+     }
+    },
+    "per_action": {
+     "backhand": 0.853,
+     "forehand": 0.902,
+     "ready_position": 0.935,
+     "serve": 0.887
+    },
+    "all": {
+     "pck": {
+      "0.1": 0.608,
+      "0.2": 0.891,
+      "0.3": 0.953
+     },
+     "per_joint": {
+      "nose": 0.925,
+      "l_shoulder": 0.945,
+      "r_shoulder": 0.931,
+      "l_elbow": 0.825,
+      "r_elbow": 0.821,
+      "l_wrist": 0.765,
+      "r_wrist": 0.829,
+      "l_hip": 0.911,
+      "r_hip": 0.842,
+      "l_knee": 0.96,
+      "r_knee": 0.934,
+      "l_ankle": 0.958,
+      "r_ankle": 0.945
+     },
+     "per_action": {
+      "backhand": 0.85,
+      "forehand": 0.899,
+      "ready_position": 0.932,
+      "serve": 0.884
+     }
+    }
+   }
+  },
+  "model": "full",
+  "width": 480,
+  "ms_per_frame": 81.8
+ },
+ "pose_models": [
+  {
+   "model": "full",
+   "width": 480,
+   "ms": 81.8,
+   "detected": 0.878,
+   "pck02": 0.687,
+   "forehand": 0.721
+  },
+  {
+   "model": "full",
+   "width": 960,
+   "ms": 75.3,
+   "detected": 0.891,
+   "pck02": 0.702,
+   "forehand": 0.733
+  },
+  {
+   "model": "heavy",
+   "width": 960,
+   "ms": 180.2,
+   "detected": 0.917,
+   "pck02": 0.741,
+   "forehand": 0.79
+  },
+  {
+   "model": "lite",
+   "width": 480,
+   "ms": null,
+   "detected": 0.915,
+   "pck02": 0.628,
+   "forehand": 0.658
+  },
+  {
+   "model": "lite",
+   "width": 960,
+   "ms": 63.0,
+   "detected": 0.913,
+   "pck02": 0.645,
+   "forehand": 0.675
+  }
+ ],
+ "llm_bakeoff": [
+  {
+   "model": "qwen/qwen-2.5-7b-instruct",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.96,
+   "valid_cites": 1.0,
+   "numbers": 102,
+   "numbers_supported": 0.824,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.7,
+   "internal_only": 0.28,
+   "untraceable_examples": [
+    "Check if your elbow is relaxed and bent at about 110 degrees next time.",
+    "stance where your arm can naturally bend at about 120-130 degrees. Practi",
+    "ce where your arm can naturally bend at about 120-130 degrees. Practice w",
+    "tact.\" Check if your knee bend improves to around 120 degrees next time."
+   ],
+   "mean_words": 88.4,
+   "failed": 0,
+   "cost_per_1k": 0.073,
+   "ms": 1494
+  },
+  {
+   "model": "qwen/qwen-2.5-7b-instruct",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.86,
+   "valid_cites": 1.0,
+   "numbers": 96,
+   "numbers_supported": 0.979,
+   "within_limit": 0.88,
+   "on_issue": 1.0,
+   "external_cue": 0.96,
+   "internal_only": 0.04,
+   "untraceable_examples": [
+    "e turn. Check if your knees are bent to around 90-120 degrees next time y",
+    "or slowing down the feed. Once you succeed about 70% of the time, add m"
+   ],
+   "mean_words": 104.1,
+   "failed": 0,
+   "cost_per_1k": 0.083,
+   "ms": 1460
+  },
+  {
+   "model": "qwen/qwen3.7-flash",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 129,
+   "numbers_supported": 1.0,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.76,
+   "internal_only": 0.24,
+   "untraceable_examples": [],
+   "mean_words": 113.3,
+   "failed": 0,
+   "cost_per_1k": 0.035,
+   "ms": 2822
+  },
+  {
+   "model": "qwen/qwen3.7-flash",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 164,
+   "numbers_supported": 1.0,
+   "within_limit": 0.94,
+   "on_issue": 1.0,
+   "external_cue": 1.0,
+   "internal_only": 0.0,
+   "untraceable_examples": [],
+   "mean_words": 134.8,
+   "failed": 0,
+   "cost_per_1k": 0.042,
+   "ms": 3035
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 0.58,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 89,
+   "numbers_supported": 1.0,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.16,
+   "internal_only": 0.4,
+   "untraceable_examples": [],
+   "mean_words": 61.7,
+   "failed": 0,
+   "cost_per_1k": 0.065,
+   "ms": 3884
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 145,
+   "numbers_supported": 0.986,
+   "within_limit": 0.96,
+   "on_issue": 0.975,
+   "external_cue": 1.0,
+   "internal_only": 0.0,
+   "untraceable_examples": [
+    "Practice shadow turn and point for 5 minutes. You have l",
+    "Do the shadow turn and point drill for 5 minutes. Excess tru"
+   ],
+   "mean_words": 54.1,
+   "failed": 0,
+   "cost_per_1k": 0.073,
+   "ms": 5798
+  },
+  {
+   "model": "mistralai/mistral-small-3.2-24b-instruct",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 238,
+   "numbers_supported": 0.929,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.8,
+   "internal_only": 0.2,
+   "untraceable_examples": [
+    "axed arm at contact. Cue: \"Bend your elbow like a 90\u00b0 stop sign.\" Check",
+    "nt arm. Next time, check if your elbow stays near 120\u00b0 at contact.",
+    "grees, then push up through contact. Do 3 sets of 10 reps per session. Y",
+    "as you turn.\" Check: Bend knees slightly (aim for 120\u00b0) during prep. Next"
+   ],
+   "mean_words": 97.1,
+   "failed": 0,
+   "cost_per_1k": 0.088,
+   "ms": 13216
+  },
+  {
+   "model": "mistralai/mistral-small-3.2-24b-instruct",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 187,
+   "numbers_supported": 0.941,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.98,
+   "internal_only": 0.02,
+   "untraceable_examples": [
+    "front hip and hit it into the service box. Repeat 10-15 times. Focus on",
+    "lying with short, stationary feeds first. Aim for 7/10 successful hits",
+    "ing with short, stationary feeds first. Aim for 7/10 successful hits bef",
+    "feeding balls at waist height. Check: Can you hit 7/10 cleanly? If yes,"
+   ],
+   "mean_words": 102.4,
+   "failed": 0,
+   "cost_per_1k": 0.094,
+   "ms": 8057
+  },
+  {
+   "model": "qwen/qwen3-30b-a3b-instruct-2507",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 173,
+   "numbers_supported": 0.873,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.74,
+   "internal_only": 0.26,
+   "untraceable_examples": [
+    ", check if your elbow stays relaxed and closer to 120\u2013130\u00b0 at contact.",
+    "eck if your elbow stays relaxed and closer to 120\u2013130\u00b0 at contact.",
+    "ly bent. Check next time: is your elbow closer to 130\u00b0 at contact? Is the",
+    "ody.\u201d Next time, check if your elbow is closer to 130\u00b0 at contact."
+   ],
+   "mean_words": 117.7,
+   "failed": 0,
+   "cost_per_1k": 0.094,
+   "ms": 8028
+  },
+  {
+   "model": "qwen/qwen3-30b-a3b-instruct-2507",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 173,
+   "numbers_supported": 0.931,
+   "within_limit": 0.92,
+   "on_issue": 1.0,
+   "external_cue": 0.96,
+   "internal_only": 0.04,
+   "untraceable_examples": [
+    "Use your 15 minutes to do three sets of 10 shadow turns, focus",
+    "tner or against a wall, alternating sides every 3\u20135 shots. Use Fed ball",
+    "Do a 5-minute shadow turn",
+    "5-minute shadow turn and point drill, followed by 5 minutes of shadow s"
+   ],
+   "mean_words": 128.9,
+   "failed": 0,
+   "cost_per_1k": 0.104,
+   "ms": 7996
+  },
+  {
+   "model": "google/gemma-3-27b-it",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 152,
+   "numbers_supported": 0.868,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.7,
+   "internal_only": 0.3,
+   "untraceable_examples": [
+    ", film again and check if your angle is closer to 130 degrees.",
+    "again and check if your elbow angle is closer to 115-130 degrees.",
+    "in and check if your elbow angle is closer to 115-130 degrees.",
+    "to your legs *as* the ball comes towards you. Hit 10 balls focusing *onl"
+   ],
+   "mean_words": 111.7,
+   "failed": 0,
+   "cost_per_1k": 0.065,
+   "ms": 7674
+  },
+  {
+   "model": "google/gemma-3-27b-it",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 184,
+   "numbers_supported": 0.973,
+   "within_limit": 0.98,
+   "on_issue": 1.0,
+   "external_cue": 0.96,
+   "internal_only": 0.02,
+   "untraceable_examples": [
+    "in the service box on your friend\u2019s side. Aim for 7 successful shots ou",
+    "friend\u2019s side. Aim for 7 successful shots out of 10. Your video showed",
+    "*. Check next session if you can consistently hit 7/10 forehands cross-",
+    "Check next session if you can consistently hit 7/10 forehands cross-cou"
+   ],
+   "mean_words": 122.9,
+   "failed": 0,
+   "cost_per_1k": 0.089,
+   "ms": 8297
+  },
+  {
+   "model": "openai/gpt-4.1-nano",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 134,
+   "numbers_supported": 0.933,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.66,
+   "internal_only": 0.34,
+   "untraceable_examples": [
+    ", check if your knees are more bent (closer to 90\u2013100\u00b0) and feel yourself",
+    "deal, as most beginners should have around 95\u00b0 to 105\u00b0. Standing tall red",
+    "time, check if your knees are more flexed (around 100\u00b0) and feel balanced",
+    "s more during your forehand, aiming for around 20-30 degrees of bend, as"
+   ],
+   "mean_words": 118.1,
+   "failed": 0,
+   "cost_per_1k": 0.11,
+   "ms": 1754
+  },
+  {
+   "model": "openai/gpt-4.1-nano",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.98,
+   "valid_cites": 1.0,
+   "numbers": 121,
+   "numbers_supported": 0.959,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.98,
+   "internal_only": 0.02,
+   "untraceable_examples": [
+    "e. Incorporate alternating sides and rallying for 10-15 shots at a time,",
+    "Incorporate alternating sides and rallying for 10-15 shots at a time, gr",
+    "an imaginary ball out in front. Repeat for about 10 minutes, then do so",
+    "about 10 minutes, then do some free forehands for 5 minutes. Since your"
+   ],
+   "mean_words": 120.7,
+   "failed": 0,
+   "cost_per_1k": 0.116,
+   "ms": 1494
+  },
+  {
+   "model": "google/gemini-2.5-flash-lite",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 69,
+   "numbers_supported": 0.957,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.56,
+   "internal_only": 0.44,
+   "untraceable_examples": [
+    "ng solid contact. Next time, check if you can hit 7/10 balls in the cou",
+    "solid contact. Next time, check if you can hit 7/10 balls in the court.",
+    ". Next time, check if you can sustain a rally for 5 shots."
+   ],
+   "mean_words": 81.6,
+   "failed": 0,
+   "cost_per_1k": 0.094,
+   "ms": 925
+  },
+  {
+   "model": "google/gemini-2.5-flash-lite",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 144,
+   "numbers_supported": 0.986,
+   "within_limit": 1.0,
+   "on_issue": 1.0,
+   "external_cue": 0.96,
+   "internal_only": 0.04,
+   "untraceable_examples": [
+    "lay. Practice rallying with fed balls, aiming for 7 out of 10 successfu",
+    "tice rallying with fed balls, aiming for 7 out of 10 successful rallies."
+   ],
+   "mean_words": 105.7,
+   "failed": 0,
+   "cost_per_1k": 0.116,
+   "ms": 1058
+  },
+  {
+   "model": "anthropic/claude-haiku-5.5",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 162,
+   "numbers_supported": 0.951,
+   "within_limit": 0.92,
+   "on_issue": 1.0,
+   "external_cue": 0.98,
+   "internal_only": 0.02,
+   "untraceable_examples": [
+    "e, check whether your knee angle drops toward the 100-120 degree range du",
+    "heck whether your knee angle drops toward the 100-120 degree range during",
+    "ether your measured knee angle drops toward about 120 degrees and whether",
+    "e short sessions: first hit fed balls until about 7 of 10 land well, th"
+   ],
+   "mean_words": 133.9,
+   "failed": 0,
+   "cost_per_1k": 0.205,
+   "ms": 1918
+  },
+  {
+   "model": "anthropic/claude-haiku-5.5",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 1.0,
+   "valid_cites": 1.0,
+   "numbers": 209,
+   "numbers_supported": 0.947,
+   "within_limit": 0.16,
+   "on_issue": 1.0,
+   "external_cue": 0.98,
+   "internal_only": 0.02,
+   "untraceable_examples": [
+    "then meet the ball out in front of your body. Hit 10 minutes of friend-f",
+    "o your legs, aiming for a knee angle nearer 95 to 120 degrees. Let the sw",
+    "meet the ball out in front of your body. Practice 10 easy shadow swings",
+    "iking distance before swinging. Each session, hit 10 balls in a row and"
+   ],
+   "mean_words": 160.2,
+   "failed": 0,
+   "cost_per_1k": 0.236,
+   "ms": 2029
+  },
+  {
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "prompt": "v1",
+   "n": 48,
+   "complete": 0.479,
+   "cited": 0.583,
+   "valid_cites": 1.0,
+   "numbers": 104,
+   "numbers_supported": 0.971,
+   "within_limit": 0.771,
+   "on_issue": 0.605,
+   "external_cue": 0.458,
+   "internal_only": 0.021,
+   "untraceable_examples": [
+    "\u201d Next time, check if your knees bend to about 90\u2013100\u00b0 during the turn.",
+    "arly rallying supports better skill transfer. Hit 10 balls in a row rall",
+    "ctice with drop-feed turn and hit drill\u20143 sets of 8 balls\u2014to lock in ti"
+   ],
+   "mean_words": 81.0,
+   "failed": 2,
+   "cost_per_1k": 0.124,
+   "ms": 8593
+  },
+  {
+   "model": "qwen/qwen3-235b-a22b-2507",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 0.26,
+   "cited": 0.42,
+   "valid_cites": 1.0,
+   "numbers": 87,
+   "numbers_supported": 0.954,
+   "within_limit": 0.78,
+   "on_issue": 0.425,
+   "external_cue": 0.26,
+   "internal_only": 0.02,
+   "untraceable_examples": [
+    "ally skills better than static drills. Success in 7 of 10 attempts show",
+    "skills better than static drills. Success in 7 of 10 attempts shows read"
+   ],
+   "mean_words": 74.2,
+   "failed": 0,
+   "cost_per_1k": 0.121,
+   "ms": 5565
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "prompt": "v1",
+   "n": 50,
+   "complete": 0.86,
+   "cited": 0.98,
+   "valid_cites": 1.0,
+   "numbers": 107,
+   "numbers_supported": 0.879,
+   "within_limit": 0.24,
+   "on_issue": 1.0,
+   "external_cue": 0.6,
+   "internal_only": 0.26,
+   "untraceable_examples": [
+    "rd through contact. Aim for a knee bend closer to 100 degrees for better",
+    "Next time, check if your elbow angle is closer to 120-135 degrees at cont",
+    "with your elbow slightly bent, aiming for around 120-130 degrees. Next t",
+    "h your elbow slightly bent, aiming for around 120-130 degrees. Next time,"
+   ],
+   "mean_words": 181.1,
+   "failed": 0,
+   "cost_per_1k": 0.147,
+   "ms": 2859
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "prompt": "v2",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.94,
+   "valid_cites": 1.0,
+   "numbers": 134,
+   "numbers_supported": 1.0,
+   "within_limit": 0.96,
+   "on_issue": 1.0,
+   "external_cue": 0.92,
+   "internal_only": 0.08,
+   "untraceable_examples": [],
+   "mean_words": 114.1,
+   "failed": 0,
+   "cost_per_1k": 0.164,
+   "ms": 2842
+  }
+ ],
+ "pose_model": "full",
+ "baseline": {
+  "pose": 0.628,
+  "pose_crop": 0.835,
+  "gate": 0.815,
+  "player_auc": 0.461,
+  "kappa": 0.235,
+  "icc": {
+   "contact": 0.141,
+   "elbow": 0.504,
+   "follow": 0.337,
+   "knee": 0.831,
+   "lean": 0.768,
+   "turn": 0.409
+  },
+  "r3_live": 0.812,
+  "live_answers": {
+   "model": "qwen/qwen-2.5-7b-instruct (live uploads, OpenRouter)",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.98,
+   "valid_cites": 1.0,
+   "numbers": 96,
+   "numbers_supported": 0.833,
+   "within_limit": 0.96,
+   "on_issue": 1.0,
+   "external_cue": 0.68,
+   "internal_only": 0.32,
+   "mean_words": 89.7
+  }
+ }
+}

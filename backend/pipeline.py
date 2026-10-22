@@ -4,7 +4,7 @@ import time
 import cv2
 import numpy as np
 from . import pose, features, reasoning, rag
-from .config import ISSUES
+from .config import ISSUES, POSE_MODEL
 
 
 def run(video_path: str, player: dict, out_dir, explain_fn=None) -> dict:
@@ -16,7 +16,7 @@ def run(video_path: str, player: dict, out_dir, explain_fn=None) -> dict:
 
     s = time.time()
     seq = pose.extract_pose(video_path)
-    stage("Video decoding + pose estimation", "OpenCV + MediaPipe Pose Landmarker (BlazePose, 33 keypoints)", "ran",
+    stage("Video decoding + pose estimation", f"OpenCV + MediaPipe Pose Landmarker (BlazePose {POSE_MODEL}, 33 keypoints)", "ran",
           f"{len(seq['world'])} frames sampled at ~{seq['fps']:.0f} fps, 33 keypoints each", s)
     s = time.time()
     seq = pose.clean(seq)
@@ -27,11 +27,12 @@ def run(video_path: str, player: dict, out_dir, explain_fn=None) -> dict:
     res = features.compute(seq, player.get("dominant", "right"))
     warnings = []
     if not res["ok"]:
-        stage("Stroke check + features", "Pose-sequence classifier (rule-based)", "ran", res["reason"], s)
+        stage("Stroke check + features", "Pose-sequence stroke classifier", "ran", res["reason"], s)
         return dict(status="rejected", reason=res["reason"], stages=stages,
                     capture_tips=capture_tips(seq), warnings=[res["reason"]], issues=[], frames=[])
     cls = res["cls"]
-    stage("Stroke check + features", "Pose-sequence classifier (rule-based) + NumPy/pandas features", "ran",
+    stage("Stroke check + features", ("Learned pose-sequence classifier (logistic regression)" if cls.get("method") == "learned"
+                                      else "Pose-sequence classifier (rule-based)") + " + NumPy/pandas features", "ran",
           f"{cls['label']} ({cls['confidence']*100:.0f}%); contact at {res['t'][res['contact']]:.2f} s", s)
     if cls["label"] != "forehand":
         out_dir.mkdir(parents=True, exist_ok=True)

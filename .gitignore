@@ -9,3 +9,6 @@ __pycache__/
 # copyrighted source material: never commit (excerpt is cached in data/cache/pdf_chunks.json)
 Serious tennis*.pdf
 *.log
+data/eval/cache/
+data/reviews/
+.cache/

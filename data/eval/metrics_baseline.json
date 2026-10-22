@@ -1,0 +1,769 @@
+{
+ "generated": "2026-10-22",
+ "datasets": {
+  "thetis": {
+   "clips": 550,
+   "players": 55,
+   "forehand_clips": 330,
+   "mean_secs": 4.7
+  }
+ },
+ "stroke": {
+  "n": 550,
+  "labels": [
+   "forehand",
+   "backhand",
+   "serve"
+  ],
+  "preds": [
+   "forehand",
+   "backhand",
+   "serve",
+   "rejected"
+  ],
+  "confusion": {
+   "forehand": {
+    "forehand": 279,
+    "backhand": 46,
+    "serve": 5,
+    "rejected": 0
+   },
+   "backhand": {
+    "forehand": 29,
+    "backhand": 78,
+    "serve": 3,
+    "rejected": 0
+   },
+   "serve": {
+    "forehand": 22,
+    "backhand": 2,
+    "serve": 86,
+    "rejected": 0
+   }
+  },
+  "accuracy": 0.805,
+  "macro_f1": 0.783,
+  "majority_baseline": 0.6,
+  "gate": {
+   "precision": 0.845,
+   "recall": 0.845,
+   "specificity": 0.768,
+   "accuracy": 0.815
+  },
+  "forehand_recall_by_skill": {
+   "beginner": 0.839,
+   "expert": 0.854
+  }
+ },
+ "skill": {
+  "n_clips": 279,
+  "n_beginner": 156,
+  "n_expert": 123,
+  "folds": 6,
+  "analysed_share": 0.845,
+  "clip_auc": {
+   "auc": 0.472,
+   "ci": [
+    0.377,
+    0.569
+   ]
+  },
+  "player_auc": {
+   "auc": 0.461,
+   "ci": [
+    0.307,
+    0.629
+   ]
+  },
+  "any_flag": {
+   "beginner": 0.808,
+   "expert": 0.772
+  },
+  "mean_flagged": {
+   "beginner": 1.46,
+   "expert": 1.36
+  },
+  "mean_fault": {
+   "beginner": 0.296,
+   "expert": 0.314
+  },
+  "per_issue": {
+   "contact": {
+    "flag_beginner": 0.288,
+    "flag_expert": 0.285,
+    "median_beginner": 0.47,
+    "median_expert": 0.53,
+    "auc": 0.557,
+    "ci": [
+     0.449,
+     0.659
+    ]
+   },
+   "elbow": {
+    "flag_beginner": 0.577,
+    "flag_expert": 0.366,
+    "median_beginner": 131.83,
+    "median_expert": 128.55,
+    "auc": 0.591,
+    "ci": [
+     0.489,
+     0.676
+    ]
+   },
+   "follow": {
+    "flag_beginner": 0.103,
+    "flag_expert": 0.268,
+    "median_beginner": 0.9,
+    "median_expert": 0.77,
+    "auc": 0.382,
+    "ci": [
+     0.281,
+     0.497
+    ]
+   },
+   "knee": {
+    "flag_beginner": 0.173,
+    "flag_expert": 0.187,
+    "median_beginner": 126.98,
+    "median_expert": 130.06,
+    "auc": 0.452,
+    "ci": [
+     0.309,
+     0.575
+    ]
+   },
+   "lean": {
+    "flag_beginner": 0.321,
+    "flag_expert": 0.252,
+    "median_beginner": 15.42,
+    "median_expert": 14.1,
+    "auc": 0.567,
+    "ci": [
+     0.442,
+     0.687
+    ]
+   },
+   "turn": {
+    "flag_beginner": 0.0,
+    "flag_expert": 0.0,
+    "median_beginner": 31.01,
+    "median_expert": 18.78,
+    "auc": 0.427,
+    "ci": [
+     0.332,
+     0.529
+    ]
+   }
+  },
+  "hist": {
+   "beginner": [
+    0,
+    0,
+    0.0,
+    0.128,
+    0.07,
+    0,
+    0,
+    0,
+    0.0,
+    0.46,
+    0.481,
+    0,
+    0.527,
+    0.407,
+    0.0,
+    0.0,
+    0.0,
+    0,
+    0,
+    0.025,
+    0.09,
+    0.507,
+    0.535,
+    0.104,
+    0.007,
+    0.74,
+    0.987,
+    0.858,
+    0.417,
+    0.195,
+    0.121,
+    0.373,
+    0.0,
+    0.204,
+    0.054,
+    1.172,
+    0.425,
+    0,
+    0.096,
+    0.199,
+    0.211,
+    0.625,
+    0,
+    0,
+    1.133,
+    0.347,
+    0.11,
+    0.0,
+    0.071,
+    0.102,
+    0.0,
+    0,
+    0.383,
+    0.419,
+    0.629,
+    0.599,
+    0.905,
+    0.766,
+    0.582,
+    0.297,
+    0.906,
+    0.278,
+    0.393,
+    0.394,
+    0.573,
+    0,
+    0.477,
+    1.426,
+    0.377,
+    1.55,
+    0.048,
+    0,
+    0.166,
+    0.264,
+    0.649,
+    0.406,
+    0.381,
+    0.721,
+    0.081,
+    0.107,
+    0,
+    0.409,
+    0.255,
+    0.539,
+    0.379,
+    0.271,
+    0.864,
+    0.125,
+    0.961,
+    1.098,
+    0.007,
+    0.027,
+    0,
+    0.0,
+    0.425,
+    0,
+    0.667,
+    0.2,
+    0.201,
+    0.013,
+    0.023,
+    0.465,
+    0,
+    0,
+    0.029,
+    0.119,
+    0,
+    1.021,
+    0.203,
+    0.455,
+    0.379,
+    0.024,
+    0.554,
+    0.029,
+    0.088,
+    0,
+    0,
+    0.038,
+    0.231,
+    0,
+    1.345,
+    0.965,
+    0.604,
+    0.573,
+    0.105,
+    0.017,
+    0.059,
+    0.066,
+    0.193,
+    0.042,
+    0.042,
+    0.724,
+    0.875,
+    0,
+    0.0,
+    0,
+    0,
+    0,
+    0.042,
+    0.149,
+    0.066,
+    0.007,
+    0,
+    0,
+    0.8,
+    0.732,
+    0.671,
+    0.488,
+    0.142,
+    0.401,
+    0.277,
+    0.829,
+    0.196,
+    0.03,
+    0,
+    0.006
+   ],
+   "expert": [
+    0.6,
+    0.6,
+    0.6,
+    0.6,
+    0.598,
+    0.071,
+    0.426,
+    0.123,
+    0.039,
+    0.056,
+    0,
+    0,
+    0,
+    0.26,
+    0.078,
+    0,
+    0.119,
+    0,
+    0.877,
+    0.37,
+    0,
+    0,
+    0,
+    0.861,
+    0.219,
+    0.471,
+    1.025,
+    0.089,
+    1.099,
+    1.358,
+    0.734,
+    0.118,
+    0.061,
+    0.258,
+    0.515,
+    0.163,
+    0.255,
+    0.218,
+    1.245,
+    0.172,
+    0.272,
+    0,
+    0,
+    0.029,
+    0,
+    0.539,
+    0.164,
+    0.586,
+    0.074,
+    0.177,
+    0.021,
+    0.351,
+    0.728,
+    0,
+    0,
+    0.121,
+    0,
+    0.131,
+    0.07,
+    0.781,
+    0.376,
+    0.132,
+    0.382,
+    0.266,
+    0.592,
+    0.05,
+    0.193,
+    0.634,
+    0.576,
+    0,
+    0,
+    0.079,
+    0.033,
+    0.343,
+    0.645,
+    0,
+    0.2,
+    0.176,
+    0.396,
+    0.348,
+    0.01,
+    0.475,
+    0.531,
+    0.466,
+    0,
+    0,
+    0.097,
+    0.06,
+    0.122,
+    0,
+    0.127,
+    0.129,
+    0,
+    0.54,
+    0.569,
+    0.5,
+    0.13,
+    0,
+    0,
+    0.05,
+    0.429,
+    0.321,
+    0.37,
+    1.203,
+    1.034,
+    0.821,
+    0.716,
+    1.229,
+    0,
+    0,
+    0,
+    0.415,
+    0.489,
+    0.517,
+    0.177,
+    0.191,
+    0,
+    0,
+    0.411,
+    0.122,
+    0.601,
+    1.01,
+    1.01
+   ]
+  }
+ },
+ "reliability": {
+  "beginner": {
+   "pairs": 142,
+   "top_agree": 0.408,
+   "top_kappa": 0.235,
+   "flagged_jaccard": 0.473,
+   "icc": {
+    "contact": 0.141,
+    "elbow": 0.504,
+    "follow": 0.337,
+    "knee": 0.831,
+    "lean": 0.768,
+    "turn": 0.409
+   }
+  },
+  "all": {
+   "pairs": 250,
+   "top_agree": 0.448,
+   "top_kappa": 0.309,
+   "flagged_jaccard": 0.485,
+   "icc": {
+    "contact": 0.328,
+    "elbow": 0.48,
+    "follow": 0.437,
+    "knee": 0.841,
+    "lean": 0.755,
+    "turn": 0.469
+   }
+  }
+ },
+ "hub": {
+  "n": 279,
+  "features": [
+   "contact",
+   "turn",
+   "follow",
+   "elbow",
+   "knee",
+   "lean"
+  ],
+  "rho": [
+   [
+    1.0,
+    0.01,
+    0.03,
+    0.0,
+    -0.04,
+    0.03
+   ],
+   [
+    0.01,
+    1.0,
+    0.12,
+    0.04,
+    0.01,
+    0.12
+   ],
+   [
+    0.03,
+    0.12,
+    1.0,
+    0.1,
+    0.09,
+    0.3
+   ],
+   [
+    0.0,
+    0.04,
+    0.1,
+    1.0,
+    0.02,
+    0.17
+   ],
+   [
+    -0.04,
+    0.01,
+    0.09,
+    0.02,
+    1.0,
+    -0.25
+   ],
+   [
+    0.03,
+    0.12,
+    0.3,
+    0.17,
+    -0.25,
+    1.0
+   ]
+  ],
+  "mean_abs": {
+   "contact": 0.022,
+   "turn": 0.059,
+   "follow": 0.128,
+   "elbow": 0.066,
+   "knee": 0.08,
+   "lean": 0.174
+  },
+  "most_connected": "lean"
+ },
+ "retrieval": {
+  "n": 16,
+  "passages": 56,
+  "methods": [
+   {
+    "name": "TF-IDF (live uploads, CPU)",
+    "r1": 0.562,
+    "r3": 0.812,
+    "mrr": 0.703
+   },
+   {
+    "name": "MiniLM bi-encoder + FAISS",
+    "r1": 0.562,
+    "r3": 0.875,
+    "mrr": 0.745
+   },
+   {
+    "name": "+ cross-encoder rerank (precomputed)",
+    "r1": 0.75,
+    "r3": 1.0,
+    "mrr": 0.875
+   }
+  ],
+  "backend": "TF-IDF cosine ranking (56 passages)"
+ },
+ "answers": [
+  {
+   "model": "Qwen/Qwen2.5-3B-Instruct (precomputed, GPU)",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.08,
+   "valid_cites": 1.0,
+   "numbers": 134,
+   "numbers_supported": 0.94,
+   "within_limit": 0.9,
+   "on_issue": 1.0,
+   "external_cue": 0.74,
+   "internal_only": 0.22,
+   "untraceable_examples": [
+    "t at contact, aiming for an elbow angle closer to 110 degrees. Practice w",
+    "nd power transfer. Focus on keeping your arm at a 90-degree angle at con",
+    "t at contact, aiming for an elbow angle closer to 110 degrees. Next sessi",
+    "nee bend needs improvement. Aim for a bend around 100 degrees. Your curre"
+   ],
+   "mean_words": 95.8
+  },
+  {
+   "model": "qwen/qwen-2.5-7b-instruct (live uploads, OpenRouter)",
+   "n": 50,
+   "complete": 1.0,
+   "cited": 0.98,
+   "valid_cites": 1.0,
+   "numbers": 96,
+   "numbers_supported": 0.833,
+   "within_limit": 0.96,
+   "on_issue": 1.0,
+   "external_cue": 0.68,
+   "internal_only": 0.32,
+   "untraceable_examples": [
+    "t depths, aiming for a relaxed elbow angle around 110-120 degrees. Next t",
+    "pths, aiming for a relaxed elbow angle around 110-120 degrees. Next time,",
+    "ntact. Check if your knee bend improves to around 120-130 degrees next ti",
+    "t. Check if your knee bend improves to around 120-130 degrees next time."
+   ],
+   "mean_words": 89.7
+  }
+ ],
+ "pose": {
+  "n_images": 2000,
+  "joints": [
+   "nose",
+   "l_shoulder",
+   "r_shoulder",
+   "l_elbow",
+   "r_elbow",
+   "l_wrist",
+   "r_wrist",
+   "l_hip",
+   "r_hip",
+   "l_knee",
+   "r_knee",
+   "l_ankle",
+   "r_ankle"
+  ],
+  "modes": {
+   "full": {
+    "detected": 0.915,
+    "pck": {
+     "0.1": 0.397,
+     "0.2": 0.686,
+     "0.3": 0.803
+    },
+    "median_err": 0.126,
+    "per_joint": {
+     "nose": {
+      "pck02": 0.781,
+      "median": 0.116
+     },
+     "l_shoulder": {
+      "pck02": 0.786,
+      "median": 0.1
+     },
+     "r_shoulder": {
+      "pck02": 0.774,
+      "median": 0.089
+     },
+     "l_elbow": {
+      "pck02": 0.575,
+      "median": 0.165
+     },
+     "r_elbow": {
+      "pck02": 0.53,
+      "median": 0.186
+     },
+     "l_wrist": {
+      "pck02": 0.567,
+      "median": 0.169
+     },
+     "r_wrist": {
+      "pck02": 0.554,
+      "median": 0.172
+     },
+     "l_hip": {
+      "pck02": 0.723,
+      "median": 0.144
+     },
+     "r_hip": {
+      "pck02": 0.643,
+      "median": 0.161
+     },
+     "l_knee": {
+      "pck02": 0.749,
+      "median": 0.1
+     },
+     "r_knee": {
+      "pck02": 0.744,
+      "median": 0.094
+     },
+     "l_ankle": {
+      "pck02": 0.756,
+      "median": 0.099
+     },
+     "r_ankle": {
+      "pck02": 0.739,
+      "median": 0.09
+     }
+    },
+    "per_action": {
+     "backhand": 0.638,
+     "forehand": 0.719,
+     "ready_position": 0.851,
+     "serve": 0.523
+    }
+   },
+   "crop": {
+    "detected": 0.997,
+    "pck": {
+     "0.1": 0.528,
+     "0.2": 0.838,
+     "0.3": 0.924
+    },
+    "median_err": 0.095,
+    "per_joint": {
+     "nose": {
+      "pck02": 0.918,
+      "median": 0.089
+     },
+     "l_shoulder": {
+      "pck02": 0.92,
+      "median": 0.094
+     },
+     "r_shoulder": {
+      "pck02": 0.903,
+      "median": 0.076
+     },
+     "l_elbow": {
+      "pck02": 0.705,
+      "median": 0.124
+     },
+     "r_elbow": {
+      "pck02": 0.702,
+      "median": 0.12
+     },
+     "l_wrist": {
+      "pck02": 0.681,
+      "median": 0.117
+     },
+     "r_wrist": {
+      "pck02": 0.719,
+      "median": 0.106
+     },
+     "l_hip": {
+      "pck02": 0.884,
+      "median": 0.125
+     },
+     "r_hip": {
+      "pck02": 0.826,
+      "median": 0.134
+     },
+     "l_knee": {
+      "pck02": 0.924,
+      "median": 0.076
+     },
+     "r_knee": {
+      "pck02": 0.894,
+      "median": 0.073
+     },
+     "l_ankle": {
+      "pck02": 0.92,
+      "median": 0.072
+     },
+     "r_ankle": {
+      "pck02": 0.904,
+      "median": 0.065
+     }
+    },
+    "per_action": {
+     "backhand": 0.777,
+     "forehand": 0.83,
+     "ready_position": 0.929,
+     "serve": 0.817
+    }
+   }
+  }
+ }
+}

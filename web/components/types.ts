@@ -1,5 +1,5 @@
 export type Passage = { id: string; doc: string; doc_title: string; section: string; text: string; dense: number; rerank: number; rank_dense: number; rank_final: number };
-export type Retrieval = { query: string; stage1: boolean; candidates: Passage[]; final: Passage[] };
+export type Retrieval = { query: string; stage1: boolean; kind?: string; candidates: Passage[]; final: Passage[] };
 export type Issue = {
   id: string; title: string; phase: string; value: number; unit: string; reference: string; deviation: number;
   confidence: number; consistency: number; relevance: number; score: number; time_s: number; frame: number;
@@ -9,7 +9,7 @@ export type Issue = {
 };
 export type Img = { label: string; file: string; time_s?: number; idx?: number };
 export type Stage = { name: string; tool: string; status: string; detail: string; ms: number };
-export type QA = { question: string; retrieval: Retrieval; answer: string; why: string; improve: string; model: string };
+export type QA = { question: string; retrieval?: Retrieval; answer?: string; why?: string; improve?: string; model: string };
 export type Feature = { value: number; unit: string; confidence: number; reference?: string; expert_median?: number; expert_p10?: number; expert_p90?: number; percentile?: number; z?: number };
 export type Report = {
   status: "ok" | "not_forehand" | "rejected"; reason?: string;

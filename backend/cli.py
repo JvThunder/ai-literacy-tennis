@@ -1,5 +1,6 @@
 """CLI used by the Next.js API routes. Prints the result as JSON after a @@JSON@@ marker.
-usage: python -m backend.cli <video> <profile.json> <out_dir>    analyse one clip (also writes out_dir/report.json)
+usage: python -m backend.cli <video> <profile.json> <out_dir>    analyse one clip (also writes out_dir/report.json;
+                                                                 an out_dir/watch.csv smartwatch export is analysed too)
        python -m backend.cli ask <case_dir> <question>           answer one question about an analysed clip"""
 import json, os, sys
 from pathlib import Path
@@ -12,6 +13,14 @@ def analyse(video, profile, out):
     from . import pipeline
     rep = pipeline.run(video, json.loads(Path(profile).read_text()), out)
     out.mkdir(parents=True, exist_ok=True)
+    csv = out / "watch.csv"          # optional smartwatch export uploaded with the clip; the raw file is not kept
+    if csv.exists():
+        from . import watch
+        try:
+            rep["watch"] = watch.analyse(csv, rep)
+        except watch.BadCSV as e:
+            rep["watch"] = dict(error=str(e))
+        csv.unlink()
     (out / "report.json").write_text(json.dumps(rep))
     return rep
 

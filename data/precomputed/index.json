@@ -9,17 +9,8 @@
   "n_issues": 2
  },
  {
-  "id": "clip_training_1_left",
+  "id": "clip_training_1",
   "title": "Practice session 2",
-  "top": [
-   "Arm cramped or locked at contact",
-   "Contact too close to / behind the body"
-  ],
-  "n_issues": 2
- },
- {
-  "id": "clip_training_2",
-  "title": "Practice session 3",
   "top": [
    "Short follow-through",
    "Not enough knee bend"
@@ -27,8 +18,8 @@
   "n_issues": 2
  },
  {
-  "id": "clip_training_3",
-  "title": "Practice session 4",
+  "id": "clip_training_2",
+  "title": "Practice session 3",
   "top": [
    "Contact too close to / behind the body",
    "Excess trunk lean"

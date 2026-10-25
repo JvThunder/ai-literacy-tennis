@@ -8,6 +8,8 @@ Forehand feedback for beginner players: upload a phone clip, ask a question, get
 | Pose estimation | MediaPipe Pose Landmarker (BlazePose full, TFLite; `TENNIS_POSE_MODEL`), OpenCV |
 | Cleaning + features | NumPy, pandas: confidence flagging, interpolation, smoothing, torso-length normalisation, wrist-speed phase detection |
 | Stroke check | Logistic regression on 9 trajectory features, degree 2 (`models/stroke_classifier.json`, trained by `evaluate.py stroke`); rule-based fallback |
+| Racket detection | MediaPipe Object Detector, EfficientDet-Lite0 (COCO "tennis racket", `models/efficientdet_lite0.tflite`) on a full-resolution crop around the player per swing frame; low-to-high racket path, shown but not ranked (`TENNIS_RACKET=0` turns it off) |
+| Smartwatch (optional) | Sensor Logger WristMotion CSV uploaded with the clip (`backend/watch.py`): aligned by matching watch rotation speed to video wrist speed; impact jolt = ball hit, compared with the video's contact moment |
 | Expert benchmark | Feature distribution of 130 THETIS expert forehands (`evaluate.py reference`); measurements reported as expert percentiles |
 | Retrieval (RAG) | Two-stage: `all-MiniLM-L6-v2` bi-encoder + FAISS `IndexFlatIP` (top-8) → `cross-encoder/ms-marco-MiniLM-L-6-v2` rerank (top-3) over passage-level chunks of 5 coaching guides plus a short cited excerpt (5 pages) of *Serious Tennis* (Williams & Petersen), listed in `knowledge/sources.json` |
 | Generation | `google/gemini-2.5-flash-lite` via OpenRouter (prompt v2; GPU mode: local `Qwen/Qwen2.5-3B-Instruct`), grounded on measurements + retrieved passages, cited as [n] |
@@ -51,10 +53,12 @@ A dedicated page compares the system with human labels; numbers come from `evalu
 | Is the impact point the hub? | team framework analysis (`Forehand_four_frameworks_GroupK5_1012.xlsx`): Spearman correlations |
 | Does retrieval find the right passage? | 16 hand-labelled queries |
 | Are answers grounded? | automatic checks: citations, traceable numbers, external-focus cue (Qwen-3B vs live API model) |
+| Is contact timed right? | wrist-worn watch impacts in the team's paired recordings (`evaluate.py watch Tennis_Paired_Data_20261022`) |
 | Is the feedback right for the player? | blinded coach review on the page (needs `REVIEW_CODE` in `.env`) |
 
     .venv/bin/pip install remotezip && .venv/bin/python evaluate.py extract      # ~550 THETIS clips, cached
     .venv/bin/python evaluate.py pose <kaggle_dir>   # optional: Kaggle keypoints
+    .venv/bin/python evaluate.py watch <paired_dir>  # optional: video vs smartwatch impacts
     .venv/bin/python evaluate.py metrics             # writes data/eval/metrics.json
 
 ## Layout

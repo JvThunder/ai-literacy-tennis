@@ -29,6 +29,10 @@ QUESTIONS = [  # forehand-only question bank (id, text)
     ("q_followthrough", "How do I know if my follow-through is right?"),
 ]
 
+# opening question of each example session (varied so the examples do not all ask the same thing); answered first
+OPENERS = ["What can I improve on?", "What should I fix first in my forehand?", "Is there anything wrong with my swing?",
+           "How can I make my forehand better?"]
+
 # labelled retrieval sanity set: query -> section id that should be retrieved
 RAG_EVAL = [
     ("my shoulders don't turn before I swing", "01_forehand_technique_guide#unit-turn-and-shoulder-rotation"),
@@ -90,19 +94,19 @@ def main():
     gen, model = llm.load()                     # local Qwen (gpu) or OpenRouter (api)
     explain = llm.explainer(gen, model)
     cases = []
-    for v in sorted((ROOT / "clips").glob("*.mp4")):
+    for n_case, v in enumerate(sorted((ROOT / "clips").glob("*.mp4"))):
         cid = "clip_" + re.sub(r"(thetis_|_s1_auto|_auto)", "", v.stem)
         t = time.time()
         d = OUT / cid; shutil.rmtree(d, ignore_errors=True)
         hand = re.search(r"_(left|right)$", v.stem)            # filename suffix sets the hitting hand (left-handers: auto can pick the wrong arm)
         player = dict(level="NTRP 2.0 (adult beginner)", dominant=hand.group(1) if hand else "auto", goal="Rally consistently with friends",
-                      question=QUESTIONS[0][1], sessions_per_week=3, minutes=20, court_access="sometimes", partner=False)
+                      question=OPENERS[n_case % len(OPENERS)], sessions_per_week=3, minutes=20, court_access="sometimes", partner=False)
         rep = pipeline.run(str(v), player, d, explain_fn=explain)
         if rep["status"] != "ok":
             shutil.rmtree(d, ignore_errors=True); print("skip (not a forehand):", cid); continue
         issues = rep["issues"]
         qa = {}
-        for qid, qtext in QUESTIONS:
+        for qid, qtext in [("q_open", player["question"])] + QUESTIONS:      # q_open first: shown when the session opens
             ret = rag.retrieve(llm.question_query(qtext, issues), k_dense=8, k_final=3)
             parts, raw = llm.answer(gen, qtext, player, issues, ret)
             qa[qid] = dict(question=qtext, retrieval=ret, **parts, model=model)

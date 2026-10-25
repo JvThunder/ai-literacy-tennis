@@ -38,7 +38,8 @@ It finishes by curling `/api/cases`.
 
 ## Verify
 - `curl -s localhost:3000/api/cases` returns the example sessions; `/` renders the app (tabs: Coach, Upload a video, Models & frameworks, Evaluation, About).
-- Upload test: POST a clip from `clips/` to `/api/analyze` (multipart `video`, `profile` JSON) and expect `report.status` = `ok`.
+- Upload test: POST a clip from `clips/` to `/api/analyze` (multipart `video`, `profile` JSON, optional `sensor` = smartwatch
+  WristMotion CSV) and expect `report.status` = `ok` (`report.watch` when a CSV was sent; `report.racket` from the racket detector).
 - `/eval` renders the evaluation page from the committed `data/eval/metrics.json`; coach reviews are stored in `data/reviews/` (Docker volume `reviews`) and need `REVIEW_CODE` in `.env`.
 - Question test: POST `{"id": <id from analyze>, "question": "..."}` to `/api/ask`; `model` names the LLM used
   (`Template explainer (...)` means no LLM was reached - check the key).

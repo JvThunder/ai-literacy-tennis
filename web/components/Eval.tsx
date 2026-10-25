@@ -8,6 +8,18 @@ const f2 = (x?: number | null) => (x == null ? "–" : x.toFixed(2));
 const NAMES: Record<string, string> = { turn: "Shoulder rotation", contact: "Contact in front of hip", follow: "Follow-through", elbow: "Elbow at contact", knee: "Knee bend", lean: "Trunk lean" };
 const JOINTS: Record<string, string> = { nose: "Nose", l_shoulder: "L shoulder", r_shoulder: "R shoulder", l_elbow: "L elbow", r_elbow: "R elbow", l_wrist: "L wrist", r_wrist: "R wrist", l_hip: "L hip", r_hip: "R hip", l_knee: "L knee", r_knee: "R knee", l_ankle: "L ankle", r_ankle: "R ankle" };
 
+// "01_forehand_technique_guide#contact-point" -> "Forehand technique guide › Contact point"; "serious_tennis#p16-2" -> "Serious Tennis, p. 16"
+function passageName(id: string) {
+  const [doc, sec] = id.split("#");
+  if (doc === "serious_tennis") return `Serious Tennis, p. ${sec.replace(/^p(\d+).*/, "$1")}`;
+  const cap = (x: string) => x.charAt(0).toUpperCase() + x.slice(1);
+  return `${cap(doc.replace(/^\d+_/, "").replace(/_/g, " "))} › ${cap(sec.replace(/-/g, " "))}`;
+}
+
+const METHOD: Record<string, string> = { "TF-IDF (CPU, before)": "Keyword search, TF-IDF (before)", "MiniLM ONNX (CPU)": "MiniLM search only (CPU)",
+  "MiniLM ONNX + rerank (live uploads, CPU)": "MiniLM + re-ranker (CPU)", "MiniLM bi-encoder + FAISS": "MiniLM search only (original GPU setup)",
+  "+ cross-encoder rerank (precomputed)": "MiniLM + re-ranker (original GPU setup)" };
+
 const TORSO_CM = 50;    // adult shoulder-midpoint to hip-midpoint, used only to translate torso lengths into centimetres
 const cm = (torsoFrac: number) => Math.round(torsoFrac * TORSO_CM);
 
@@ -48,6 +60,8 @@ function Findings({ m }: { m: any }) {
         <li><b>The forehand check is right {pct(m.stroke.gate.accuracy)} of the time</b> on players it has never seen: {pct(m.stroke.gate.precision)} of the clips it accepts are
           forehands and it turns away {pct(m.stroke.gate.specificity)} of backhands and serves.</li>
         {liveR && <li><b>The coaching search finds the right passage in its top 3 every time</b> ({pct(liveR.r3)} of {m.retrieval.n} hand-labelled questions), now also for uploads on this CPU server.</li>}
+        {m.watch?.by_view?.front && <li><b>Filmed from the front, the video finds {pct(m.watch.by_view.front.recall)} of the ball hits a smartwatch records</b> at the right moment
+          (within {m.watch.tolerance_ms} ms), on the team's own court recordings.</li>}
         {live && <li><b>Answers are grounded:</b> {pct(live.numbers_supported)} of numbers trace back to a measurement or source, {pct(live.cited)} cite a source and
           {" "}{pct(live.external_cue)} give a ball/target cue.</li>}
       </ul>
@@ -135,8 +149,10 @@ function Bars({ rows, max = 1, fmt = pct, tick }: { rows: { label: string; v: nu
 export default function Eval() {
   const [d, setD] = useState<{ metrics: any; frameworks: any } | null>(null);
   const [rv, setRv] = useState<ReviewData | null>(null);
+  const [rag, setRag] = useState<any>(null);
   useEffect(() => {
     fetch("/api/eval").then((r) => r.json()).then(setD);
+    fetch("/api/rag-eval").then((r) => r.json()).then(setRag);
     fetch("/api/reviews").then((r) => r.json()).then(setRv);
   }, []);
   const m = d?.metrics, fw = d?.frameworks;
@@ -160,6 +176,7 @@ export default function Eval() {
             {m.pose && <Tile v={pct(m.pose.modes.crop.all.pck["0.2"])} l={`Joints within ~${cm(0.2)} cm of a person's mark`} s={<>player filling the frame{m.baseline?.pose_crop != null && <>; was {pct(m.baseline.pose_crop)}</>}</>} />}
             <Tile v={pct(m.stroke.gate.accuracy)} l="Forehand check accuracy" s={<>on unseen players{m.baseline && <>; was {pct(m.baseline.gate)}</>}</>} />
             {liveR && <Tile v={pct(liveR.r3)} l="Right passage in top 3" s={<>coaching search; was {pct(tfidf?.r3)}</>} />}
+            {m.watch?.by_view?.front && <Tile v={pct(m.watch.by_view.front.recall)} l="Ball hits found on video" s="vs a smartwatch, filmed from the front" />}
             {live && <Tile v={pct(live.numbers_supported)} l="Numbers traceable" s={<>coach answers{m.baseline?.live_answers?.numbers_supported != null && <>; was {pct(m.baseline.live_answers.numbers_supported)}</>}</>} />}
             {live && <Tile v={pct(live.external_cue)} l="Ball/target cue" s={<>coach answers{m.baseline?.live_answers?.external_cue != null && <>; was {pct(m.baseline.live_answers.external_cue)}</>}</>} />}
           </div>
@@ -181,7 +198,7 @@ export default function Eval() {
             <Legend items={[["var(--s2)", "Player fills the frame"], ["var(--s1)", "Distant player in a wide 1280×720 shot"]]} />
             <Bars rows={m.pose.joints.map((j: string) => ({ label: JOINTS[j] ?? j, v: [m.pose.modes.full.all.per_joint[j], m.pose.modes.crop.all.per_joint[j]] }))} />
             <p className="small">Wrists and elbows move fastest and are often blurred or hidden by the racket, so they are the hardest joints; they are also the ones the forehand measurements rely on most.
-              That is why the app asks for a close, side-on clip.</p>
+              That is why the app asks for a close clip filmed from the front.</p>
           </Sec>}
 
           <Sec id="stroke" title={`${m.pose ? 2 : 1} · Forehand check vs human stroke labels`} gt={`THETIS action labels, ${m.stroke.n} clips`}
@@ -205,10 +222,25 @@ export default function Eval() {
             </div>
           </Sec>
 
-          <Sec id="retrieval" title={`${m.pose ? 3 : 2} · Coaching search vs hand-labelled passages`} gt={`${m.retrieval.n} queries with a hand-picked correct passage (${m.retrieval.passages} passages)`}
-            lead="Does the knowledge search put the passage a person picked as correct at the top? The app now runs MiniLM retrieval plus a cross-encoder rerank on the CPU server (ONNX), matching the original GPU pipeline exactly; TF-IDF is the earlier setup.">
-            {(["r1", "r3", "mrr"] as const).map((k) => <div key={k}><h4>{k === "r1" ? "Recall@1" : k === "r3" ? "Recall@3" : "Mean reciprocal rank"}</h4>
-              <Bars rows={m.retrieval.methods.map((x: any) => ({ label: x.name, v: [x[k]] }))} fmt={k === "mrr" ? f2 : pct} /></div>)}
+          <Sec id="retrieval" title={`${m.pose ? 3 : 2} · Coaching search quality`} gt={`${m.retrieval.n} test questions, each with the passage a person picked as the right answer (${m.retrieval.passages} passages in the library)`}
+            lead={<>Before answering, the coach searches its library of coaching texts for evidence. We asked {m.retrieval.n} test questions and checked where the
+              search ranks the passage a person picked as correct. The app now uses MiniLM search plus a cross-encoder re-ranker on the CPU server (ONNX), the same models as the original GPU setup.</>}>
+            <div className="tscroll"><table>
+              <thead><tr><th>Search method</th><th>Right passage ranked 1st</th><th>Right passage in top 3</th><th>Mean reciprocal rank</th></tr></thead>
+              <tbody>{m.retrieval.methods.map((x: any) => {
+                const live = x.name.includes("live");
+                const cell = (v: number, f: (n: number) => string) => <td><div className="cellbar"><i style={{ width: `${v * 100}%` }} /></div>{f(v)}</td>;
+                return <tr key={x.name} style={live ? { background: "var(--brand-soft)" } : undefined}><td>{METHOD[x.name] ?? x.name}{live && <b> · used by the app</b>}</td>
+                  {cell(x.r1, pct)}{cell(x.r3, pct)}{cell(x.mrr, f2)}</tr>;
+              })}</tbody>
+            </table></div>
+            <p className="small">Mean reciprocal rank: 1.0 if the right passage is always first, 0.5 if it is usually second.</p>
+            {rag?.rows?.length > 0 && <details style={{ marginTop: 8 }}><summary className="small">The {rag.rows.length} test questions and where the app ranked the right passage</summary>
+              <div className="tscroll"><table style={{ marginTop: 8 }}>
+                <thead><tr><th>Test question</th><th>Passage a person picked</th><th>Rank before re-ranking</th><th>Final rank</th></tr></thead>
+                <tbody>{rag.rows.map((r: any) => <tr key={r.query}><td>{r.query}</td><td className="small">{passageName(r.gold)}</td>
+                  <td>{r.dense_rank ?? "not in top 8"}</td><td><b>{r.final_rank ?? "–"}</b></td></tr>)}</tbody>
+              </table></div></details>}
           </Sec>
 
           <Sec id="answers" title={`${m.pose ? 4 : 3} · Answer grounding`} gt={`automatic checks against the case's measurements and retrieved passages, ${live?.n} answers per row`}
@@ -223,6 +255,16 @@ export default function Eval() {
                 <tr><td>Mean length (words)</td>{m.answers.map((a: any) => <td key={a.model}>{a.mean_words}</td>)}</tr></tbody>
             </table></div>
           </Sec>
+
+          {m.watch?.by_view?.front && (() => { const w = m.watch.by_view.front; return (
+            <Sec id="watch" title={`${m.pose ? 5 : 4} · Contact timing vs a smartwatch`}
+              gt={`a wrist-worn watch (100 Hz motion sensor) during ${w.videos} of the team's practice recordings, ${w.impacts} ball hits`}
+              lead={<>The app places ball contact at the peak of wrist speed in the video. A watch on the hitting wrist feels the impact itself as a sharp jolt,
+                so it gives an independent clock for every hit. Running the app's own pipeline over the videos, filmed from the front, it finds{" "}
+                <b>{pct(w.recall)} of the hits</b> ({w.found} of {w.impacts}) within {m.watch.tolerance_ms} ms of the watch.</>}>
+              <p className="small">The phone stores its start time only to the second, so one clock offset per video (between 0 and 1 s) is fitted before comparing.
+                No sync event was recorded, so this is an alignment by the hits themselves, not a frame-level synchronisation.</p>
+            </Sec>); })()}
         </>}
 
         {fw && <Sec id="coverage" title="Limitations" src={fw.source}
@@ -249,7 +291,7 @@ export default function Eval() {
             <li>Kaggle keypoints follow OpenPose/COCO conventions; MediaPipe's hip and shoulder points sit slightly differently, so the scores are conservative. Licence: check the dataset page before redistribution.</li>
             <li>The forehand check is scored on THETIS clips of players the classifier never saw during training (5-fold, grouped by player).</li>
             <li>Answer checks are keyword and number matching: they catch invented targets and missing citations, not whether the advice is good. Only the coach review measures that.</li>
-            <li>Contact is approximated by peak wrist speed; the coach's marked contact frame is the only direct check of that approximation.</li>
+            <li>Contact is approximated by peak wrist speed; the smartwatch recordings and the coach's marked contact frame are the direct checks of that approximation.</li>
           </ul>
         </Sec>
       </div>

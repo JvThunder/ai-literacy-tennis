@@ -2,12 +2,14 @@
 
   .venv/bin/pip install remotezip && .venv/bin/python evaluate.py extract   # THETIS pose+features (~20 min, cached)
   .venv/bin/python evaluate.py pose <kaggle_dir>                           # MediaPipe vs human keypoints (optional)
+  .venv/bin/python evaluate.py watch <paired_dir>                          # video vs smartwatch (optional, ~10 min)
   .venv/bin/python evaluate.py metrics                                     # everything else, writes metrics.json
 
 Ground truth comes from human labels, never from the system itself:
   THETIS (Gourgari et al. 2013): stroke type and skill level (expert / beginner) of every clip, 3 repetitions per player.
   Tennis Player Actions (Kaggle, orvile): hand-annotated COCO keypoints + action label per image.
   knowledge/ section ids: hand-labelled gold passage per retrieval query (precompute.RAG_EVAL).
+  Group K5 paired recordings (22 Oct 2026): phone video + wrist-worn watch IMU; the watch's impact spike marks ball contact.
 """
 from __future__ import annotations
 import json, os, re, sys, time
@@ -163,6 +165,106 @@ def pose_eval(kaggle_dir: str):
                         for act in sorted({r["action"] for r in rows})})
     (OUT / f"pose_eval_{POSE_MODEL}_{TARGET_W}.json").write_text(json.dumps(out, indent=1))
     print(json.dumps({m: {k: v for k, v in o.items() if k in ("detected", "pck", "median_err")} for m, o in out["modes"].items()}))
+
+
+# --------------------------------------------------------------- smartwatch --
+# camera view of each paired recording, labelled by watching the videos
+WATCH_VIEWS = dict(IMG_7692="behind", IMG_7693="behind", IMG_7694="behind", IMG_7695="behind", IMG_7696="behind",
+                   IMG_7697="side", IMG_7698="side", IMG_7699="front", IMG_7700="front", IMG_7701="front", IMG_7702="front")
+
+
+def watch_eval(paired_dir: str, tol=0.1):
+    """Contact timing and swing detection against a wrist-worn watch (Sensor Logger WristMotion CSV, 100 Hz).
+    Ball impact = sharp spike in watch user-acceleration. The phone's capture time is stored to the second, so one clock
+    offset per video is fitted in [-0.2, 1.1] s (the value that lines up most swings); everything else is the app's own
+    pipeline: swings = wrist-speed peaks, 3 s window per swing, contact = features.compute on the window."""
+    import cv2, pandas as pd
+    from scipy.signal import find_peaks
+    from scipy.stats import spearmanr
+    import make_examples as me
+    from backend import pose, features, racket
+    from backend.config import LM
+    me.FPS = 30.0
+    root = Path(paired_dir) / "paired_recordings"
+    wcache = ACACHE / "watch"; wcache.mkdir(parents=True, exist_ok=True)
+    vids, pooled = [], []
+    for d in sorted(p for p in root.iterdir() if p.is_dir()):
+        v = d.name; mov = d / f"{v}.MOV"; csv = d / f"{v}_WristMotion.csv"
+        if not (mov.exists() and csv.exists()):
+            continue
+        cf = wcache / f"{v}.npz"
+        if cf.exists():
+            z = np.load(cf); seq = dict(world=z["world"], img=z["img"], vis=z["vis"], t=z["t"], fps=float(z["fps"]), frames={})
+        else:
+            seq = me.track(mov)
+            np.savez_compressed(cf, **{k: seq[k] for k in ("world", "img", "vis", "t")}, fps=seq["fps"])
+        w = pd.read_csv(csv)
+        tw = w.video_time_seconds_coarse.values
+        acc = np.linalg.norm(w[["accelerationX", "accelerationY", "accelerationZ"]].values, axis=1)
+        gyr = np.linalg.norm(w[["rotationRateX", "rotationRateY", "rotationRateZ"]].values, axis=1)
+        pk, _ = find_peaks(acc, height=max(2.0, 0.5 * np.percentile(acc, 99)), distance=120)
+        ti = tw[pk]; gi = np.array([gyr[max(0, k - 30):k + 5].max() for k in pk])
+        sw = []
+        for k in me.swings(seq):
+            sub, _, _ = me.window(seq, k)
+            if len(sub["t"]) < 12:
+                continue
+            cl = pose.clean(sub); r = features.compute(cl, "auto")
+            if r.get("ok") and not any(abs(x["t"] - cl["t"][r["contact"]]) < 0.05 for x in sw):
+                a0, b0 = r["phases"]["preparation"][0], r["phases"]["follow_through"][1]
+                sw.append(dict(t=float(cl["t"][r["contact"]]), label=r["cls"]["label"], speed=r["peak_speed"],
+                               hand=r["dominant_used"], win=(sub, a0, b0)))
+        tv = np.array([x["t"] for x in sw])
+        offs = np.arange(-0.2, 1.1, 0.005)
+        fit = [np.clip(tol - np.abs(tv[:, None] + o - ti[None, :]).min(1), 0, None).sum() for o in offs]
+        off = float(offs[int(np.argmax(fit))])
+        err = tv[:, None] + off - ti[None, :]; j = np.abs(err).argmin(1); e = err[np.arange(len(tv)), j]
+        hit = np.abs(e) <= tol
+        # racket: detected on full-resolution frames over each matched swing, and at the watch's impact frame
+        cap = cv2.VideoCapture(str(mov)); fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
+        want, rk = {}, {}
+        for n in np.where(hit)[0]:
+            sub, a0, b0 = sw[n]["win"]
+            want.update({int(round(sub["t"][q] * fps)): (n, q) for q in range(a0, b0 + 1)})
+        f, last = 0, max(want) if want else -1
+        while f <= last:
+            ok, fr = cap.read()
+            if not ok:
+                break
+            if f in want:
+                n, q = want[f]; wrist = LM["l_wr"] if sw[n]["hand"] == "left" else LM["r_wr"]
+                rk[(n, q)] = racket.detect_frame(fr, sw[n]["win"][0]["img"][q], wrist) is not None
+            f += 1
+        cap.release()
+        rows = []
+        for n in np.where(hit)[0]:
+            sub, a0, b0 = sw[n]["win"]
+            qi = int(np.argmin(np.abs(sub["t"] - (ti[j[n]] - off))))
+            rows.append(dict(err_ms=round(1000 * float(e[n])), label=sw[n]["label"], video_speed=round(float(sw[n]["speed"]), 2),
+                             watch_gyro=round(float(gi[j[n]]), 2),
+                             racket_swing=round(float(np.mean([rk.get((n, q), False) for q in range(a0, b0 + 1)])), 2),
+                             racket_impact=bool(any(rk.get((n, q), False) for q in range(qi - 1, qi + 2)))))
+        pooled += rows
+        vids.append(dict(video=v, view=WATCH_VIEWS.get(v, "unknown"), secs=round(float(seq["t"][-1]), 1), impacts=len(ti), swings=len(tv),
+                         found=len(set(j[hit])), offset_s=round(off, 3), rows=rows))
+        print(v, vids[-1]["view"], f"{vids[-1]['found']}/{len(ti)} impacts found, offset {off:+.2f}s", flush=True)
+
+    def summ(vs):
+        rs = [r for x in vs for r in x["rows"]]; e = np.abs([r["err_ms"] for r in rs]); imp = sum(x["impacts"] for x in vs)
+        mean = lambda xs: round(float(np.mean(xs)), 3) if len(rs) else None
+        return dict(videos=len(vs), impacts=imp, swings=sum(x["swings"] for x in vs), found=sum(x["found"] for x in vs),
+                    recall=round(sum(x["found"] for x in vs) / imp, 3) if imp else None,
+                    precision=round(len(rs) / max(1, sum(x["swings"] for x in vs)), 3),
+                    median_err_ms=int(np.median(e)) if len(e) else None, within_1_frame=mean(e <= 34), within_2_frames=mean(e <= 67),
+                    forehand=mean([r["label"] == "forehand" for r in rs]), racket_swing=mean([r["racket_swing"] for r in rs]),
+                    racket_impact=mean([r["racket_impact"] for r in rs]))
+    out = dict(source="Group K5 paired recordings, 22 Oct 2026 (iPhone 30 fps video + wrist-worn watch, Sensor Logger WristMotion 100 Hz)",
+               tolerance_ms=int(tol * 1000), all=summ(vids),
+               by_view={vw: summ([x for x in vids if x["view"] == vw]) for vw in ("front", "side", "behind") if any(x["view"] == vw for x in vids)},
+               speed_rank=round(float(spearmanr([r["video_speed"] for r in pooled], [r["watch_gyro"] for r in pooled])[0]), 2) if len(pooled) > 3 else None,
+               videos=[{k: v for k, v in x.items() if k != "rows"} for x in vids])
+    (OUT / "watch_eval.json").write_text(json.dumps(out, indent=1))
+    print(json.dumps({k: v for k, v in out.items() if k != "videos"}, indent=1))
 
 
 # ------------------------------------------------------------------- metrics ---
@@ -568,6 +670,9 @@ def metrics():
         m["pose_models"].append(dict(model=md, width=int(w), ms=d.get("ms_per_frame"), detected=d["modes"]["full"]["detected"],
                                      pck02=round(d["modes"]["full"]["pck"]["0.2"] * d["modes"]["full"]["detected"], 3),
                                      forehand=round(d["modes"]["full"]["per_action"].get("forehand", 0) * d["modes"]["full"]["detected"], 3)))
+    wf = OUT / "watch_eval.json"
+    if wf.exists():
+        m["watch"] = json.loads(wf.read_text())
     bf = OUT / "llm_bakeoff.json"
     if bf.exists():
         m["llm_bakeoff"] = json.loads(bf.read_text())
@@ -598,6 +703,8 @@ if __name__ == "__main__":
         extract()
     elif cmd == "pose":
         pose_eval(sys.argv[2])
+    elif cmd == "watch":
+        watch_eval(sys.argv[2])
     elif cmd == "bakeoff":
         bakeoff()
     elif cmd == "stroke":

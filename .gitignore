@@ -12,3 +12,5 @@ Serious tennis*.pdf
 data/eval/cache/
 data/reviews/
 .cache/
+# raw team recordings (identifiable people; large): kept out of git
+Tennis_Paired_Data_*/

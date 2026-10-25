@@ -29,6 +29,8 @@ MODE = os.environ.get("TENNIS_MODE", "api")
 POSE_MODEL = os.environ.get("TENNIS_POSE_MODEL", "full")          # lite | full | heavy; full chosen on /eval (accuracy vs CPU time)
 MODEL_PATH = ROOT / "models" / f"pose_landmarker_{POSE_MODEL}.task"
 POSE_WIDTH = int(os.environ.get("TENNIS_POSE_WIDTH", "480"))        # frames wider than this are downscaled
+RACKET_PATH = ROOT / "models" / "efficientdet_lite0.tflite"           # COCO object detector (class "tennis racket")
+RACKET = os.environ.get("TENNIS_RACKET", "1") != "0"                # racket detection on the swing frames
 
 # Landmark indices (MediaPipe BlazePose, 33 points)
 LM = dict(nose=0, l_sh=11, r_sh=12, l_el=13, r_el=14, l_wr=15, r_wr=16,

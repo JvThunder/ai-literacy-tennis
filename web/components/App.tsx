@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
-import type { CaseData, CaseItem, Question, RagEval, Reference } from "./types";
+import type { CaseData, CaseItem, Question, Reference } from "./types";
 import Chat from "./Chat";
 import ModelsPage from "./Stack";
 import Nav, { type Tab } from "./Nav";
 import About from "./About";
 
-const TIPS = ["Film from the side of your hitting arm, phone at hip height, about 4–6 m away.", "Keep your whole body in frame, head to feet, and fill most of the frame.",
+const TIPS = ["Film from the front, facing you, phone at hip height, about 4–6 m away.", "Keep your whole body in frame, head to feet, and fill most of the frame.",
   "Good light and a steady phone (lean it on something).", "One forehand per clip, 3–6 seconds long."];
 
 export default function App() {
@@ -14,11 +14,11 @@ export default function App() {
   const [active, setActive] = useState<string | null>(null);
   const [data, setData] = useState<CaseData | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [ragEval, setRagEval] = useState<RagEval | null>(null);
   const [ref, setRef] = useState<Reference | null>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const [file, setFile] = useState<File | null>(null);
+  const [sensor, setSensor] = useState<File | null>(null);
   const [up, setUp] = useState({ dominant: "auto", n: 3, m: 20, court: "sometimes", partner: false });
   const [tab, setTabState] = useState<Tab>("coach");
   function setTab(t: Tab) {
@@ -29,28 +29,29 @@ export default function App() {
   async function load(id: string) {
     setActive(id); setErr("");
     const c = await (await fetch(`/api/case/${id}`)).json();
-    setData({ id, title: c.title, blurb: c.blurb, player: c.player, report: c.report, plan: c.plan, base: `/api/pre/${id}/` });
+    setData({ id, title: c.title, blurb: c.blurb, player: c.player, report: c.report, plan: c.plan, base: `/api/pre/${id}/`, video: `/api/clip/${id}` });
   }
   useEffect(() => {
     const t = new URLSearchParams(location.search).get("tab");
     if (t === "upload" || t === "models" || t === "about") setTabState(t);
     fetch("/api/cases").then((r) => r.json()).then((cs: CaseItem[]) => { setCases(cs); if (cs[0]) load(cs.find((c) => c.n_issues)?.id ?? cs[0].id); });
     fetch("/api/questions").then((r) => r.json()).then(setQuestions);
-    fetch("/api/rag-eval").then((r) => r.json()).then(setRagEval);
     fetch("/api/reference").then((r) => r.json()).then(setRef);
   }, []);
 
   async function analyse() {
     if (!file) return setErr("Choose a video first.");
     setBusy(true); setErr("");
-    const profile = { dominant: up.dominant, question: "Why is my forehand inconsistent?", goal: "Improve my forehand", sessions_per_week: up.n, minutes: up.m, court_access: up.court, partner: up.partner, level: "NTRP below 3.0" };
+    const profile = { dominant: up.dominant, question: "What can I improve on?", goal: "Improve my forehand", sessions_per_week: up.n, minutes: up.m, court_access: up.court, partner: up.partner, level: "NTRP below 3.0" };
     const fd = new FormData(); fd.append("video", file); fd.append("profile", JSON.stringify(profile));
+    if (sensor) fd.append("sensor", sensor);
     try {
       const r = await fetch("/api/analyze", { method: "POST", body: fd });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error);
       setActive(null);
-      setData({ id: j.id, title: file.name, blurb: "Your upload", player: profile, report: j.report, plan: j.plan, base: `/api/pre/${j.id}/`, live: true });
+      // the upload is deleted on the server after analysis; replay it from the viewer's own copy
+      setData({ id: j.id, title: file.name, blurb: "Your upload", player: profile, report: j.report, plan: j.plan, base: `/api/pre/${j.id}/`, live: true, video: URL.createObjectURL(file) });
       setTab("coach");
     } catch (e: any) { setErr(e.message); } finally { setBusy(false); }
   }
@@ -65,6 +66,11 @@ export default function App() {
             <input type="file" accept="video/*" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
             <b>{file ? file.name : "Choose a video"}</b>
             <span className="small">{file ? `${(file.size / 1e6).toFixed(1)} MB` : "MP4 or MOV from your phone, up to 80 MB"}</span>
+          </label>
+          <label className="drop sm">
+            <input type="file" accept=".csv,text/csv" onChange={(e) => setSensor(e.target.files?.[0] ?? null)} />
+            <b>{sensor ? sensor.name : "Add smartwatch data (optional)"}</b>
+            <span className="small">{sensor ? `${(sensor.size / 1e6).toFixed(1)} MB` : "WristMotion CSV from Sensor Logger, recorded during this clip, up to 20 MB"}</span>
           </label>
           <label className="row">Dominant hand
             <select value={up.dominant} onChange={(e) => setUp({ ...up, dominant: e.target.value })}><option>auto</option><option>right</option><option>left</option></select></label>
@@ -105,7 +111,7 @@ export default function App() {
         {tab === "upload" ? <div className="thread">{upload}</div>
           : tab === "models" ? <div className="thread"><ModelsPage /></div>
           : tab === "about" ? <div className="thread"><About /></div>
-          : data ? <Chat key={(data.id ?? "") + data.title} d={data} questions={questions} ragEval={ragEval} reference={ref} />
+          : data ? <Chat key={(data.id ?? "") + data.title} d={data} questions={questions} reference={ref} />
           : <div className="empty">Loading sessions…</div>}
       </main>
     </div>

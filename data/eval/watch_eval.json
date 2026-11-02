@@ -1,0 +1,164 @@
+{
+ "source": "Group K5 paired recordings, 22 Oct 2026 (iPhone 30 fps video + wrist-worn watch, Sensor Logger WristMotion 100 Hz)",
+ "tolerance_ms": 100,
+ "all": {
+  "videos": 11,
+  "impacts": 124,
+  "swings": 120,
+  "found": 69,
+  "recall": 0.556,
+  "precision": 0.575,
+  "median_err_ms": 22,
+  "within_1_frame": 0.667,
+  "within_2_frames": 0.87,
+  "forehand": 0.841,
+  "racket_swing": 0.77,
+  "racket_impact": 0.971
+ },
+ "by_view": {
+  "front": {
+   "videos": 4,
+   "impacts": 38,
+   "swings": 37,
+   "found": 29,
+   "recall": 0.763,
+   "precision": 0.784,
+   "median_err_ms": 12,
+   "within_1_frame": 0.828,
+   "within_2_frames": 0.897,
+   "forehand": 0.966,
+   "racket_swing": 0.88,
+   "racket_impact": 1.0
+  },
+  "side": {
+   "videos": 2,
+   "impacts": 30,
+   "swings": 28,
+   "found": 14,
+   "recall": 0.467,
+   "precision": 0.5,
+   "median_err_ms": 41,
+   "within_1_frame": 0.357,
+   "within_2_frames": 0.786,
+   "forehand": 0.929,
+   "racket_swing": 0.66,
+   "racket_impact": 0.929
+  },
+  "behind": {
+   "videos": 5,
+   "impacts": 56,
+   "swings": 55,
+   "found": 26,
+   "recall": 0.464,
+   "precision": 0.473,
+   "median_err_ms": 24,
+   "within_1_frame": 0.654,
+   "within_2_frames": 0.885,
+   "forehand": 0.654,
+   "racket_swing": 0.707,
+   "racket_impact": 0.962
+  }
+ },
+ "speed_rank": 0.59,
+ "videos": [
+  {
+   "video": "IMG_7692",
+   "view": "behind",
+   "secs": 47.9,
+   "impacts": 18,
+   "swings": 17,
+   "found": 7,
+   "offset_s": -0.035
+  },
+  {
+   "video": "IMG_7693",
+   "view": "behind",
+   "secs": 31.3,
+   "impacts": 11,
+   "swings": 11,
+   "found": 2,
+   "offset_s": 0.225
+  },
+  {
+   "video": "IMG_7694",
+   "view": "behind",
+   "secs": 9.8,
+   "impacts": 4,
+   "swings": 3,
+   "found": 2,
+   "offset_s": 0.085
+  },
+  {
+   "video": "IMG_7695",
+   "view": "behind",
+   "secs": 27.2,
+   "impacts": 10,
+   "swings": 11,
+   "found": 4,
+   "offset_s": 0.805
+  },
+  {
+   "video": "IMG_7696",
+   "view": "behind",
+   "secs": 36.1,
+   "impacts": 13,
+   "swings": 13,
+   "found": 11,
+   "offset_s": 0.925
+  },
+  {
+   "video": "IMG_7697",
+   "view": "side",
+   "secs": 73.2,
+   "impacts": 25,
+   "swings": 23,
+   "found": 11,
+   "offset_s": 0.02
+  },
+  {
+   "video": "IMG_7698",
+   "view": "side",
+   "secs": 13.9,
+   "impacts": 5,
+   "swings": 5,
+   "found": 3,
+   "offset_s": 0.185
+  },
+  {
+   "video": "IMG_7699",
+   "view": "front",
+   "secs": 48.7,
+   "impacts": 15,
+   "swings": 14,
+   "found": 12,
+   "offset_s": 0.995
+  },
+  {
+   "video": "IMG_7700",
+   "view": "front",
+   "secs": 26.0,
+   "impacts": 8,
+   "swings": 8,
+   "found": 5,
+   "offset_s": 0.33
+  },
+  {
+   "video": "IMG_7701",
+   "view": "front",
+   "secs": 32.4,
+   "impacts": 9,
+   "swings": 9,
+   "found": 7,
+   "offset_s": 0.18
+  },
+  {
+   "video": "IMG_7702",
+   "view": "front",
+   "secs": 15.4,
+   "impacts": 6,
+   "swings": 6,
+   "found": 5,
+   "offset_s": 0.195
+  }
+ ]
+}

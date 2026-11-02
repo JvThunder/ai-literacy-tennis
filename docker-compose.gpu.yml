@@ -1,0 +1,13 @@
+# GPU variant: live uploads use dense retrieval + local Qwen2.5-3B on CUDA (host needs the NVIDIA Container Toolkit).
+#   docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d --build
+services:
+  app:
+    build:
+      args: { REQS: requirements-gpu.txt, TENNIS_MODE: gpu }
+    environment: { TENNIS_MODE: gpu }
+    volumes: ["hf:/root/.cache/huggingface"]
+    deploy:
+      resources:
+        reservations:
+          devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+volumes: { hf: {} }

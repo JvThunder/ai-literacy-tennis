@@ -1,0 +1,2614 @@
+{
+ "id": "clip_training_2",
+ "title": "Practice session 3",
+ "blurb": "Team practice video",
+ "player": {
+  "level": "NTRP 2.0 (adult beginner)",
+  "dominant": "auto",
+  "goal": "Rally consistently with friends",
+  "question": "Is there anything wrong with my swing?",
+  "sessions_per_week": 3,
+  "minutes": 20,
+  "court_access": "sometimes",
+  "partner": false
+ },
+ "report": {
+  "status": "ok",
+  "stroke": {
+   "label": "forehand",
+   "confidence": 1.0,
+   "scores": {
+    "backhand": 0.0,
+    "forehand": 1.0,
+    "serve": 0.0
+   },
+   "method": "learned",
+   "x": {
+    "crosses": 1.5543,
+    "start_side": -1.1748,
+    "end_side": 0.3796,
+    "reach_up": 0.2243,
+    "other_reach_up": -0.6721,
+    "hands_gap": 1.0209,
+    "other_speed": 0.0909,
+    "contact_height": -0.3872,
+    "duration": 0.7059
+   }
+  },
+  "issues": [
+   {
+    "id": "contact",
+    "title": "Contact too close to / behind the body",
+    "phase": "contact",
+    "value": -0.28,
+    "unit": "torso lengths",
+    "reference": "expert P10-P90: -0.58 to 0.78",
+    "deviation": 0.42,
+    "confidence": 0.82,
+    "consistency": 0.8,
+    "relevance": 1.0,
+    "frame": 28,
+    "time_s": 1.65,
+    "joints": [
+     16,
+     24
+    ],
+    "expert_median": 0.54,
+    "expert_p10": -0.58,
+    "expert_p90": 0.78,
+    "percentile": 28,
+    "z": 1.55,
+    "score": 0.28,
+    "retrieval": {
+     "query": "Is there anything wrong with my swing? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.715,
+       "rerank": 3.93,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.569,
+       "rerank": -0.13,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.561,
+       "rerank": -6.41,
+       "rank_dense": 3,
+       "rank_final": 7
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.543,
+       "rerank": -4.9,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.542,
+       "rerank": -0.35,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.532,
+       "rerank": -8.99,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.507,
+       "rerank": -4.65,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.499,
+       "rerank": 0.01,
+       "rank_dense": 8,
+       "rank_final": 2
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.715,
+       "rerank": 3.93,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.499,
+       "rerank": 0.01,
+       "rank_dense": 8,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.569,
+       "rerank": -0.13,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "references": [
+     {
+      "id": "02_common_beginner_faults#fault-late-contact",
+      "doc": "02_common_beginner_faults.md",
+      "doc_title": "Common Beginner Forehand Faults",
+      "section": "Fault: late contact",
+      "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+      "dense": 0.715,
+      "rerank": 3.93,
+      "rank_dense": 1,
+      "rank_final": 1
+     },
+     {
+      "id": "01_forehand_technique_guide#contact-point",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Contact point",
+      "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+      "dense": 0.499,
+      "rerank": 0.01,
+      "rank_dense": 8,
+      "rank_final": 2
+     },
+     {
+      "id": "01_forehand_technique_guide#preparation-timing",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Preparation timing",
+      "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+      "dense": 0.569,
+      "rerank": -0.13,
+      "rank_dense": 2,
+      "rank_final": 3
+     }
+    ],
+    "reasoning": [
+     {
+      "step": "Observed",
+      "text": "Contact too close to / behind the body: measured -0.28 torso lengths at 1.65 s (contact phase)."
+     },
+     {
+      "step": "Compared with target",
+      "text": "Target expert P10-P90: -0.58 to 0.78; deviation 0.42 on a 0-1 scale."
+     },
+     {
+      "step": "Trust",
+      "text": "Joint tracking confidence 0.82; the deviation held on 80% of the frames checked."
+     },
+     {
+      "step": "Prioritised",
+      "text": "score = 0.42 \u00d7 0.82 \u00d7 0.80 \u00d7 1.00 = 0.280, ranked 1 of 2 candidate issues."
+     }
+    ],
+    "explanation": "You're hitting the ball a bit too close to your body, which makes it hard to control [1, 2]. This can lead to open or closed racket faces and unpredictable shots [1]. Try to imagine the ball is a little further out in front of you, like you're reaching for it [2].",
+    "explanation_source": "google/gemini-2.5-flash-lite via OpenRouter, grounded on retrieved passages",
+    "cue": "Meet the ball out in front, about a racket's length ahead of your front hip."
+   },
+   {
+    "id": "lean",
+    "title": "Excess trunk lean",
+    "phase": "contact",
+    "value": 17.02,
+    "unit": "deg",
+    "reference": "expert P10-P90: 8.18 to 21.03",
+    "deviation": 0.03,
+    "confidence": 1.0,
+    "consistency": 0.0,
+    "relevance": 0.6,
+    "frame": 28,
+    "time_s": 1.65,
+    "joints": [
+     11,
+     12,
+     23,
+     24
+    ],
+    "expert_median": 13.26,
+    "expert_p10": 8.18,
+    "expert_p90": 21.03,
+    "percentile": 75,
+    "z": 0.75,
+    "score": 0.0,
+    "retrieval": {
+     "query": "Is there anything wrong with my swing? Excess trunk lean trunk lean balance posture head stable",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.584,
+       "rerank": -2.83,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.527,
+       "rerank": 0.18,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.492,
+       "rerank": -8.89,
+       "rank_dense": 3,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-leaning-away",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: leaning away",
+       "text": "Tipping the trunk away from the ball at contact pulls the head and racket off line. It often appears when players try to generate power by throwing the body at the ball. Keep the head still and let the racket swing past it.",
+       "dense": 0.476,
+       "rerank": -2.15,
+       "rank_dense": 4,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#head-still-shadow-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Head-still shadow swing",
+       "text": "Fix the eyes on a mark at head height in a mirror while swinging. The head should stay on the mark through contact. Helps beginners who lean away from the ball.",
+       "dense": 0.451,
+       "rerank": -7.02,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.436,
+       "rerank": -8.42,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Unit turn and shoulder rotation",
+       "text": "The forehand starts with the unit turn: the shoulders and hips rotate together so the chest faces the side fence and the non-racket hand guides the racket back. A full shoulder rotation stores energy in the trunk and lets the body, not just the arm, accelerate the racket. A swing with little rotation relies on the arm alone and loses both power and consistency.",
+       "dense": 0.428,
+       "rerank": -5.39,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.424,
+       "rerank": -8.49,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.527,
+       "rerank": 0.18,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-leaning-away",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: leaning away",
+       "text": "Tipping the trunk away from the ball at contact pulls the head and racket off line. It often appears when players try to generate power by throwing the body at the ball. Keep the head still and let the racket swing past it.",
+       "dense": 0.476,
+       "rerank": -2.15,
+       "rank_dense": 4,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#sit-and-swing",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Sit and swing",
+       "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+       "dense": 0.584,
+       "rerank": -2.83,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "references": [
+     {
+      "id": "01_forehand_technique_guide#balance-and-posture",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Balance and posture",
+      "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+      "dense": 0.527,
+      "rerank": 0.18,
+      "rank_dense": 2,
+      "rank_final": 1
+     },
+     {
+      "id": "02_common_beginner_faults#fault-leaning-away",
+      "doc": "02_common_beginner_faults.md",
+      "doc_title": "Common Beginner Forehand Faults",
+      "section": "Fault: leaning away",
+      "text": "Tipping the trunk away from the ball at contact pulls the head and racket off line. It often appears when players try to generate power by throwing the body at the ball. Keep the head still and let the racket swing past it.",
+      "dense": 0.476,
+      "rerank": -2.15,
+      "rank_dense": 4,
+      "rank_final": 2
+     },
+     {
+      "id": "03_beginner_drill_library#sit-and-swing",
+      "doc": "03_beginner_drill_library.md",
+      "doc_title": "Beginner Drill Library",
+      "section": "Sit and swing",
+      "text": "Bend the knees about twenty degrees, shadow swing while staying low and rise through contact. Trains the habit of using the legs and keeps the trunk upright.",
+      "dense": 0.584,
+      "rerank": -2.83,
+      "rank_dense": 1,
+      "rank_final": 3
+     }
+    ],
+    "reasoning": [
+     {
+      "step": "Observed",
+      "text": "Excess trunk lean: measured 17.02 deg at 1.65 s (contact phase)."
+     },
+     {
+      "step": "Compared with target",
+      "text": "Target expert P10-P90: 8.18 to 21.03; deviation 0.03 on a 0-1 scale."
+     },
+     {
+      "step": "Trust",
+      "text": "Joint tracking confidence 1.00; the deviation held on 0% of the frames checked."
+     },
+     {
+      "step": "Prioritised",
+      "text": "score = 0.03 \u00d7 1.00 \u00d7 0.00 \u00d7 0.60 = 0.000, ranked 2 of 2 candidate issues."
+     }
+    ],
+    "explanation": "You're leaning a bit too much away from the ball when you swing, which can make it harder to hit it consistently [2]. Try to keep your trunk closer to vertical, like you're \"sitting\" into the shot [3]. Focus on hitting the ball *in front* of you [1].",
+    "explanation_source": "google/gemini-2.5-flash-lite via OpenRouter, grounded on retrieved passages",
+    "cue": "Keep your head still and over your base while the racket swings past it."
+   }
+  ],
+  "other_candidates": [],
+  "features": {
+   "turn": {
+    "value": 37.93,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 3.37 to 89.16",
+    "expert_median": 19.4,
+    "expert_p10": 3.37,
+    "expert_p90": 89.16,
+    "percentile": 65,
+    "z": -0.55
+   },
+   "elbow": {
+    "value": 137.33,
+    "unit": "deg",
+    "confidence": 0.84,
+    "reference": "expert P10-P90: 108.73 to 142.27",
+    "expert_median": 128.54,
+    "expert_p10": 108.73,
+    "expert_p90": 142.27,
+    "percentile": 78,
+    "z": 0.67
+   },
+   "knee": {
+    "value": 140.52,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 102.79 to 152.09",
+    "expert_median": 128.21,
+    "expert_p10": 102.79,
+    "expert_p90": 152.09,
+    "percentile": 72,
+    "z": 0.64
+   },
+   "lean": {
+    "value": 17.02,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 8.18 to 21.03",
+    "expert_median": 13.26,
+    "expert_p10": 8.18,
+    "expert_p90": 21.03,
+    "percentile": 75,
+    "z": 0.75
+   },
+   "contact": {
+    "value": -0.28,
+    "unit": "torso lengths",
+    "confidence": 0.82,
+    "reference": "expert P10-P90: -0.58 to 0.78",
+    "expert_median": 0.54,
+    "expert_p10": -0.58,
+    "expert_p90": 0.78,
+    "percentile": 28,
+    "z": 1.55
+   },
+   "follow": {
+    "value": 0.95,
+    "unit": "torso lengths",
+    "confidence": 0.53,
+    "reference": "expert P10-P90: 0.49 to 1.34",
+    "expert_median": 0.83,
+    "expert_p10": 0.49,
+    "expert_p90": 1.34,
+    "percentile": 59,
+    "z": -0.37
+   }
+  },
+  "phases": {
+   "preparation_s": [
+    1.29,
+    1.65
+   ],
+   "contact_s": 1.65,
+   "follow_through_s": [
+    1.65,
+    2.0
+   ]
+  },
+  "wrist_speed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.42,
+   1.05,
+   1.67,
+   2.35,
+   3.57,
+   5.03,
+   6.27,
+   6.6,
+   5.66,
+   3.94,
+   2.18,
+   1.04,
+   0.43,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "t": [
+   0.0,
+   0.059,
+   0.118,
+   0.176,
+   0.235,
+   0.294,
+   0.353,
+   0.412,
+   0.471,
+   0.529,
+   0.588,
+   0.647,
+   0.706,
+   0.765,
+   0.824,
+   0.882,
+   0.941,
+   1.0,
+   1.059,
+   1.118,
+   1.176,
+   1.235,
+   1.294,
+   1.353,
+   1.412,
+   1.471,
+   1.529,
+   1.588,
+   1.647,
+   1.706,
+   1.765,
+   1.824,
+   1.882,
+   1.941,
+   2.0,
+   2.059,
+   2.118,
+   2.176,
+   2.235,
+   2.294,
+   2.353,
+   2.412,
+   2.471,
+   2.529,
+   2.588,
+   2.647,
+   2.706,
+   2.765,
+   2.824,
+   2.882,
+   2.941
+  ],
+  "contact_idx": 28,
+  "frames": [
+   {
+    "label": "Preparation",
+    "file": "frame_0.jpg",
+    "time_s": 1.29
+   },
+   {
+    "label": "Contact",
+    "file": "frame_1.jpg",
+    "time_s": 1.65
+   },
+   {
+    "label": "Follow-through",
+    "file": "frame_2.jpg",
+    "time_s": 2.0
+   }
+  ],
+  "strip": [
+   {
+    "label": "1.29s",
+    "file": "strip_0.jpg",
+    "time_s": 1.29
+   },
+   {
+    "label": "1.35s",
+    "file": "strip_1.jpg",
+    "time_s": 1.35
+   },
+   {
+    "label": "1.47s",
+    "file": "strip_2.jpg",
+    "time_s": 1.47
+   },
+   {
+    "label": "1.59s",
+    "file": "strip_3.jpg",
+    "time_s": 1.59
+   },
+   {
+    "label": "1.65s",
+    "file": "strip_4.jpg",
+    "time_s": 1.65
+   },
+   {
+    "label": "1.76s",
+    "file": "strip_5.jpg",
+    "time_s": 1.76
+   },
+   {
+    "label": "1.88s",
+    "file": "strip_6.jpg",
+    "time_s": 1.88
+   },
+   {
+    "label": "2.00s",
+    "file": "strip_7.jpg",
+    "time_s": 2.0
+   }
+  ],
+  "scrub": [
+   {
+    "label": "0.00s",
+    "file": "scrub_0.jpg",
+    "time_s": 0.0,
+    "idx": 0
+   },
+   {
+    "label": "0.06s",
+    "file": "scrub_1.jpg",
+    "time_s": 0.06,
+    "idx": 1
+   },
+   {
+    "label": "0.12s",
+    "file": "scrub_2.jpg",
+    "time_s": 0.12,
+    "idx": 2
+   },
+   {
+    "label": "0.18s",
+    "file": "scrub_3.jpg",
+    "time_s": 0.18,
+    "idx": 3
+   },
+   {
+    "label": "0.29s",
+    "file": "scrub_4.jpg",
+    "time_s": 0.29,
+    "idx": 5
+   },
+   {
+    "label": "0.35s",
+    "file": "scrub_5.jpg",
+    "time_s": 0.35,
+    "idx": 6
+   },
+   {
+    "label": "0.41s",
+    "file": "scrub_6.jpg",
+    "time_s": 0.41,
+    "idx": 7
+   },
+   {
+    "label": "0.47s",
+    "file": "scrub_7.jpg",
+    "time_s": 0.47,
+    "idx": 8
+   },
+   {
+    "label": "0.59s",
+    "file": "scrub_8.jpg",
+    "time_s": 0.59,
+    "idx": 10
+   },
+   {
+    "label": "0.65s",
+    "file": "scrub_9.jpg",
+    "time_s": 0.65,
+    "idx": 11
+   },
+   {
+    "label": "0.71s",
+    "file": "scrub_10.jpg",
+    "time_s": 0.71,
+    "idx": 12
+   },
+   {
+    "label": "0.82s",
+    "file": "scrub_11.jpg",
+    "time_s": 0.82,
+    "idx": 14
+   },
+   {
+    "label": "0.88s",
+    "file": "scrub_12.jpg",
+    "time_s": 0.88,
+    "idx": 15
+   },
+   {
+    "label": "0.94s",
+    "file": "scrub_13.jpg",
+    "time_s": 0.94,
+    "idx": 16
+   },
+   {
+    "label": "1.00s",
+    "file": "scrub_14.jpg",
+    "time_s": 1.0,
+    "idx": 17
+   },
+   {
+    "label": "1.12s",
+    "file": "scrub_15.jpg",
+    "time_s": 1.12,
+    "idx": 19
+   },
+   {
+    "label": "1.18s",
+    "file": "scrub_16.jpg",
+    "time_s": 1.18,
+    "idx": 20
+   },
+   {
+    "label": "1.24s",
+    "file": "scrub_17.jpg",
+    "time_s": 1.24,
+    "idx": 21
+   },
+   {
+    "label": "1.35s",
+    "file": "scrub_18.jpg",
+    "time_s": 1.35,
+    "idx": 23
+   },
+   {
+    "label": "1.41s",
+    "file": "scrub_19.jpg",
+    "time_s": 1.41,
+    "idx": 24
+   },
+   {
+    "label": "1.47s",
+    "file": "scrub_20.jpg",
+    "time_s": 1.47,
+    "idx": 25
+   },
+   {
+    "label": "1.53s",
+    "file": "scrub_21.jpg",
+    "time_s": 1.53,
+    "idx": 26
+   },
+   {
+    "label": "1.65s",
+    "file": "scrub_22.jpg",
+    "time_s": 1.65,
+    "idx": 28
+   },
+   {
+    "label": "1.71s",
+    "file": "scrub_23.jpg",
+    "time_s": 1.71,
+    "idx": 29
+   },
+   {
+    "label": "1.76s",
+    "file": "scrub_24.jpg",
+    "time_s": 1.76,
+    "idx": 30
+   },
+   {
+    "label": "1.88s",
+    "file": "scrub_25.jpg",
+    "time_s": 1.88,
+    "idx": 32
+   },
+   {
+    "label": "1.94s",
+    "file": "scrub_26.jpg",
+    "time_s": 1.94,
+    "idx": 33
+   },
+   {
+    "label": "2.00s",
+    "file": "scrub_27.jpg",
+    "time_s": 2.0,
+    "idx": 34
+   },
+   {
+    "label": "2.06s",
+    "file": "scrub_28.jpg",
+    "time_s": 2.06,
+    "idx": 35
+   },
+   {
+    "label": "2.18s",
+    "file": "scrub_29.jpg",
+    "time_s": 2.18,
+    "idx": 37
+   },
+   {
+    "label": "2.24s",
+    "file": "scrub_30.jpg",
+    "time_s": 2.24,
+    "idx": 38
+   },
+   {
+    "label": "2.29s",
+    "file": "scrub_31.jpg",
+    "time_s": 2.29,
+    "idx": 39
+   },
+   {
+    "label": "2.41s",
+    "file": "scrub_32.jpg",
+    "time_s": 2.41,
+    "idx": 41
+   },
+   {
+    "label": "2.47s",
+    "file": "scrub_33.jpg",
+    "time_s": 2.47,
+    "idx": 42
+   },
+   {
+    "label": "2.53s",
+    "file": "scrub_34.jpg",
+    "time_s": 2.53,
+    "idx": 43
+   },
+   {
+    "label": "2.59s",
+    "file": "scrub_35.jpg",
+    "time_s": 2.59,
+    "idx": 44
+   },
+   {
+    "label": "2.71s",
+    "file": "scrub_36.jpg",
+    "time_s": 2.71,
+    "idx": 46
+   },
+   {
+    "label": "2.76s",
+    "file": "scrub_37.jpg",
+    "time_s": 2.76,
+    "idx": 47
+   },
+   {
+    "label": "2.82s",
+    "file": "scrub_38.jpg",
+    "time_s": 2.82,
+    "idx": 48
+   },
+   {
+    "label": "2.94s",
+    "file": "scrub_39.jpg",
+    "time_s": 2.94,
+    "idx": 50
+   }
+  ],
+  "warnings": [],
+  "stages": [
+   {
+    "name": "Video decoding + pose estimation",
+    "tool": "OpenCV + MediaPipe Pose Landmarker (BlazePose full, 33 keypoints)",
+    "status": "ran",
+    "detail": "51 frames sampled at ~17 fps, 33 keypoints each",
+    "ms": 2802
+   },
+   {
+    "name": "Keypoint cleaning",
+    "tool": "NumPy: confidence flagging, gap interpolation, smoothing",
+    "status": "ran",
+    "detail": "person detected in 100% of frames; mean visibility 0.81",
+    "ms": 27
+   },
+   {
+    "name": "Stroke check + features",
+    "tool": "Learned pose-sequence classifier (logistic regression) + NumPy/pandas features",
+    "status": "ran",
+    "detail": "forehand (100%); contact at 1.65 s",
+    "ms": 1
+   },
+   {
+    "name": "Issue detection + prioritisation",
+    "tool": "Reference-range comparison; score = deviation x confidence x consistency x relevance",
+    "status": "ran",
+    "detail": "2 candidate issue(s); top: Contact too close to / behind the body",
+    "ms": 0
+   },
+   {
+    "name": "Retrieval + rerank + explanation",
+    "tool": "MiniLM-L6 bi-encoder \u2192 ms-marco MiniLM cross-encoder rerank, ONNX on CPU (56 passages)",
+    "status": "ran",
+    "detail": "6 passages selected as evidence",
+    "ms": 2361
+   }
+  ],
+  "capture_tips": [],
+  "total_ms": 5616,
+  "qa": {
+   "q_open": {
+    "question": "Is there anything wrong with my swing?",
+    "retrieval": {
+     "query": "Is there anything wrong with my swing? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.715,
+       "rerank": 3.93,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.569,
+       "rerank": -0.13,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.561,
+       "rerank": -6.41,
+       "rank_dense": 3,
+       "rank_final": 7
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.543,
+       "rerank": -4.9,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.542,
+       "rerank": -0.35,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.532,
+       "rerank": -8.99,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.507,
+       "rerank": -4.65,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.499,
+       "rerank": 0.01,
+       "rank_dense": 8,
+       "rank_final": 2
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.715,
+       "rerank": 3.93,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.499,
+       "rerank": 0.01,
+       "rank_dense": 8,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.569,
+       "rerank": -0.13,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Yes, there are a couple of things to work on with your forehand swing. [1][2]",
+    "why": "Your contact point is measured at -0.28 torso lengths, which is a bit too close to or behind your body. [1][2] This can make it harder to control the racket face. [1] Your trunk lean is 17.02 degrees, which is within the expert range of 8.18 to 21.03 degrees. [2]",
+    "improve": "Focus on meeting the ball out in front of your body. [2] Try to make contact roughly an arm and racket length from you. [2] Next time, check if you are reaching out to hit the ball before it gets too close. [1][3]",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_inconsistent": {
+    "question": "Why is my forehand inconsistent?",
+    "retrieval": {
+     "query": "Why is my forehand inconsistent? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.579,
+       "rerank": -0.03,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.556,
+       "rerank": 0.33,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.536,
+       "rerank": -5.11,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.527,
+       "rerank": -10.28,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p49-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (2)",
+       "text": "Chandra Rubin demonstrates the two-handed backhand. Transfer on the ground strokes can and does occur from open and closed stances. How much you choose to transfer your weight into your shots depends on your shot intent and the amount of time you have to move into the shot. Forehand. Rotation may be the primary source of power on ground strokes, but there is still weight being transferred. For a right-handed forehand, the transfer occurs from the right foot to the left as the player steps into the stroke. In a closed stance, the weight transfer is even stronger, occurring before contact with the ball.",
+       "dense": 0.513,
+       "rerank": -6.99,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.509,
+       "rerank": -7.02,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.504,
+       "rerank": -6.58,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.5,
+       "rerank": -9.37,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.556,
+       "rerank": 0.33,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.579,
+       "rerank": -0.03,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.536,
+       "rerank": -5.11,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your forehand is inconsistent because you are often hitting the ball too close to or behind your body. This makes it difficult to control the racket face and direct the ball accurately. [1][2]",
+    "why": "Your measurement of -0.28 torso lengths for contact point is outside the expert range of -0.58 to 0.78 torso lengths. This late contact point means the racket face is likely open or closed when it meets the ball, leading to unpredictable results. [1][2]",
+    "improve": "Focus on meeting the ball out in front of your body. Start your preparation earlier so you can turn before the ball bounces. Next time, check if you are making contact well in front of your leading hip. [1][3]",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_unstable": {
+    "question": "Why is my forehand unstable?",
+    "retrieval": {
+     "query": "Why is my forehand unstable? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.585,
+       "rerank": -0.58,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.543,
+       "rerank": -0.46,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.534,
+       "rerank": -10.54,
+       "rank_dense": 3,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.523,
+       "rerank": -6.93,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.509,
+       "rerank": -4.94,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p49-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (2)",
+       "text": "Chandra Rubin demonstrates the two-handed backhand. Transfer on the ground strokes can and does occur from open and closed stances. How much you choose to transfer your weight into your shots depends on your shot intent and the amount of time you have to move into the shot. Forehand. Rotation may be the primary source of power on ground strokes, but there is still weight being transferred. For a right-handed forehand, the transfer occurs from the right foot to the left as the player steps into the stroke. In a closed stance, the weight transfer is even stronger, occurring before contact with the ball.",
+       "dense": 0.505,
+       "rerank": -7.24,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.494,
+       "rerank": -7.34,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.493,
+       "rerank": -6.12,
+       "rank_dense": 8,
+       "rank_final": 4
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.543,
+       "rerank": -0.46,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.585,
+       "rerank": -0.58,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.509,
+       "rerank": -4.94,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your forehand is unstable because you are hitting the ball too close to or behind your body, which makes it hard to control the racket face [1][2].",
+    "why": "Your contact point is measured at -0.28 torso lengths, which is behind the ideal range of -0.58 to 0.78 torso lengths [1]. This late contact forces your wrist to compensate, leading to unpredictable direction and an unstable forehand [1][2].",
+    "improve": "Focus on meeting the ball out in front of your body. Start your turn as soon as the ball leaves your opponent's racket to allow for early preparation and a contact point in front of your hip [2][3]. Check your contact point in your next video.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_first": {
+    "question": "What should I work on first?",
+    "retrieval": {
+     "query": "What should I work on first? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.552,
+       "rerank": -0.03,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.505,
+       "rerank": -0.2,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.495,
+       "rerank": -2.76,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p16-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (4)",
+       "text": "When should you start to coil? There are two schools of thought on this. Some players such as Venus and Serena Williams coil immediately before the approaching ball crosses the net. Others\u2014clay-court players and those with excellent timing and whip-like strokes\u2014coil when the ball bounces. Each method of coiling has advantages and disadvantages. An advantage to coiling before the ball crosses the net is if you want to transfer weight into your shot by moving toward it, then your racquet is already in position before the ball bounces. You also can hide your shot from your opponent, holding the backswing and delaying the racquet arm from coming through until the last possible second. This can help",
+       "dense": 0.415,
+       "rerank": -9.38,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.405,
+       "rerank": -5.64,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.395,
+       "rerank": -8.63,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.379,
+       "rerank": -8.28,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.376,
+       "rerank": -6.06,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.552,
+       "rerank": -0.03,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.505,
+       "rerank": -0.2,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.495,
+       "rerank": -2.76,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Work on making contact with the ball further in front of your body. This is the most important thing to focus on first.",
+    "why": "Your video shows you are contacting the ball too close to or behind your body (-0.28 torso lengths). This makes it hard to control the racket face and direct the ball accurately [1][2]. The expert range for contact point is -0.58 to 0.78 torso lengths [1].",
+    "improve": "Focus on meeting the ball out in front of your body. Try to make contact with the ball roughly an arm and racket length from your body [1]. Next time, check if you are consistently hitting the ball in front of your leading hip.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_week": {
+    "question": "What should I practise this week?",
+    "retrieval": {
+     "query": "What should I practise this week? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.525,
+       "rerank": -2.04,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.471,
+       "rerank": -4.46,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.435,
+       "rerank": -1.95,
+       "rank_dense": 3,
+       "rank_final": 1
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.401,
+       "rerank": -9.83,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p24-5",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (5)",
+       "text": "Now that we've discussed the tightness of your grip, let's learn about the various types of grips. Each grip has areas and shots where it works well and others where it doesn't. For instance, if you have a full western grip, you're probably comfortable taking high balls or executing a swinging volley. With a continental grip you'll be more comfortable with lower balls, and you'll have some trouble with balls above shoulder level because your hand is in a weaker position\u2014it's more on top of the grip instead of behind it. The position of your hand helps some shots and hurt others. You'll want to make your grip choices to go along with your strike zone and contact point preferences. Tables 1.2 through 1.4 present the advantages and disadvantages of various grips.",
+       "dense": 0.397,
+       "rerank": -10.07,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.397,
+       "rerank": -7.73,
+       "rank_dense": 6,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.376,
+       "rerank": -8.18,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-turn-and-point",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow turn and point",
+       "text": "No court or ball needed. Stand side-on to a mirror or wall and turn the shoulders until the non-racket hand points at the side fence. Hold for two seconds and return. Three sets of ten repetitions train the unit turn and can be done at home in five minutes.",
+       "dense": 0.364,
+       "rerank": -11.18,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.435,
+       "rerank": -1.95,
+       "rank_dense": 3,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.525,
+       "rerank": -2.04,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.471,
+       "rerank": -4.46,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "This week, focus your 20-minute sessions on making contact with the ball further in front of your body. Aim to hit the ball out in front of your leading hip.",
+    "why": "Your video shows contact is too close to/behind your body (-0.28 torso lengths) [1]. This often leads to late contact [1][2]. Making contact in front of your hip is key for control and direction [2].",
+    "improve": "Practice hitting the ball in front of your leading hip. Aim to meet the ball out in front. Next time, check if your contact point is further forward.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_late": {
+    "question": "Why do I hit the ball late?",
+    "retrieval": {
+     "query": "Why do I hit the ball late? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.708,
+       "rerank": 5.24,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.639,
+       "rerank": 1.0,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.628,
+       "rerank": 2.1,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-cramped-or-locked-elbow",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: cramped or locked elbow",
+       "text": "A hitting arm that is jammed against the body or fully straight reduces the margin for error. The cause is almost always footwork: the player did not move to a comfortable distance from the ball. Fix spacing with fed balls at varied depth, asking the player to adjust the feet first.",
+       "dense": 0.549,
+       "rerank": -4.86,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.523,
+       "rerank": -3.27,
+       "rank_dense": 5,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-leaning-away",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: leaning away",
+       "text": "Tipping the trunk away from the ball at contact pulls the head and racket off line. It often appears when players try to generate power by throwing the body at the ball. Keep the head still and let the racket swing past it.",
+       "dense": 0.515,
+       "rerank": -2.01,
+       "rank_dense": 6,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.509,
+       "rerank": -1.4,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "03_beginner_drill_library#drop-feed-turn-and-hit",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Drop-feed turn and hit",
+       "text": "A partner drops the ball from shoulder height so it bounces once. Turn before the bounce and hit crosscourt. This isolates preparation timing because the feed is slow and repeatable. Three sets of eight balls.",
+       "dense": 0.5,
+       "rerank": -3.46,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.708,
+       "rerank": 5.24,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.628,
+       "rerank": 2.1,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.639,
+       "rerank": 1.0,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "You are hitting the ball late because you are not preparing early enough, which causes you to make contact too close to your body [1][3].",
+    "why": "Your contact point is measured at -0.28 torso lengths, which is too close to your body. This is often caused by late preparation, meaning you start your turn too late after the ball leaves your opponent's racket [1][3].",
+    "improve": "Start your turn as soon as the ball leaves your opponent's racket. Aim to meet the ball out in front of your body. Next time, check if you are making contact in front of your hip [1][2].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_power": {
+    "question": "How can I get more power without swinging harder?",
+    "retrieval": {
+     "query": "How can I get more power without swinging harder? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.654,
+       "rerank": 3.72,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.556,
+       "rerank": -1.76,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.551,
+       "rerank": -7.8,
+       "rank_dense": 3,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.513,
+       "rerank": -4.4,
+       "rank_dense": 4,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.511,
+       "rerank": -1.94,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p16-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (3)",
+       "text": "Now let's take a look at different areas in which we can use the elasticity of our muscles to generate more power. Take the forehand, for instance. If you're a right- hander, your right hand draws the racquet back and your left hand extends in front of you or slightly to your right side, depending on how you prefer to line up. As your racquet arm starts to go back, it stretches the chest muscles. As the coiling continues, you feel the stretch in the legs, gluteal muscles, hips, torso, shoulders, arms, and even hands. When all those large muscles are stretched, they are primed and ready to be let loose. The sensation of elasticity can really be felt in the backhand. During a one-handed backhand, the body coils in the opposite direction. For right-handed players during the coiling, the left hand is on the throat of the racquet, pulling it back and stretching the muscles in the back of the shoulder. The energy is stored through the muscles in the back of the shoulder, the torso, gluteus, legs, and arms. The back of the shoulder actually points to the ball, with the chin resting on the right shoulder, giving the back a good stretch. As this energy is released, the right arm moves forward and the left arm counters to keep the shoulders balanced and aid the acceleration of the swing.",
+       "dense": 0.51,
+       "rerank": -2.75,
+       "rank_dense": 6,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p17-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (2)",
+       "text": "Later coiling can result in more power, since the racquet is actually still completing the backswing when the hips and shoulders start uncoiling. But the timing is more difficult\u037e if you don't get fully uncoiled in time, it will drastically affect your shot. Players who take the racquet back with the bounce can get into trouble if the ball comes deep or fast. In tennis, many movements are balanced by counter movements. For example, on a one-handed backhand, the free arm moves back toward the fence as the racquet arm swings forward. On a scissors smash, your body moves backward, reaching up for the smash, and your legs counter by going forward and scissoring. In the control phase of your rotation you have some muscle groups pulling and others pushing to balance one another. For a moment, your body is cocked, wound up, ready to spring\u2014but in perfect balance, awaiting the right moment to uncoil, releasing all that stored muscle elasticity into an effective swing.",
+       "dense": 0.494,
+       "rerank": -0.36,
+       "rank_dense": 7,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.477,
+       "rerank": -3.6,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.654,
+       "rerank": 3.72,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p17-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (2)",
+       "text": "Later coiling can result in more power, since the racquet is actually still completing the backswing when the hips and shoulders start uncoiling. But the timing is more difficult\u037e if you don't get fully uncoiled in time, it will drastically affect your shot. Players who take the racquet back with the bounce can get into trouble if the ball comes deep or fast. In tennis, many movements are balanced by counter movements. For example, on a one-handed backhand, the free arm moves back toward the fence as the racquet arm swings forward. On a scissors smash, your body moves backward, reaching up for the smash, and your legs counter by going forward and scissoring. In the control phase of your rotation you have some muscle groups pulling and others pushing to balance one another. For a moment, your body is cocked, wound up, ready to spring\u2014but in perfect balance, awaiting the right moment to uncoil, releasing all that stored muscle elasticity into an effective swing.",
+       "dense": 0.494,
+       "rerank": -0.36,
+       "rank_dense": 7,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.556,
+       "rerank": -1.76,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "To get more power without swinging harder, focus on your body's rotation and timing your contact point correctly [1]. This allows you to transfer energy efficiently into the ball.",
+    "why": "Your contact point is measured at -0.28 torso lengths, which is too close to or behind your body. This late contact means you're not using your body's rotation effectively to generate power [3]. Your excess trunk lean of 17.02 degrees also suggests you're not fully coiling and uncoiling your body.",
+    "improve": "Focus on meeting the ball in front of your body. Start your turn as soon as the ball leaves your opponent's racket and aim to contact the ball in front of your leading hip [3]. Check your video next time to see if you are making contact further in front.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_balance": {
+    "question": "How do I stay balanced when I hit?",
+    "retrieval": {
+     "query": "How do I stay balanced when I hit? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.629,
+       "rerank": -0.38,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.594,
+       "rerank": -0.82,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.547,
+       "rerank": -1.16,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.531,
+       "rerank": -3.54,
+       "rank_dense": 4,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.511,
+       "rerank": -3.95,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.48,
+       "rerank": -7.1,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.468,
+       "rerank": -8.99,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p17-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (4)",
+       "text": "In this process, you don't want to waste any energy, so keep your head still and your shoulders level. Let the uncoiling proceed evenly. Some experts speak of locking in the wrist and elbow, such that they each assume an angle of 70 to 90 degrees as you coil. Keep them at that angle until the last possible moment to ensure the whiplike motion of your racquet.",
+       "dense": 0.459,
+       "rerank": -9.71,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.629,
+       "rerank": -0.38,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.594,
+       "rerank": -0.82,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.547,
+       "rerank": -1.16,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "To stay balanced, focus on hitting the ball in front of your body and keeping your trunk upright [1][3].",
+    "why": "Your contact point is currently too close to or behind your body (-0.28 torso lengths), which can affect balance [1][2]. Also, your trunk lean (17.02 deg) is within the expert range, but keeping it closer to vertical helps maintain stability [3].",
+    "improve": "Meet the ball further in front. Next time, check if you are contacting the ball about an arm and racket length away from your body [1].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_net": {
+    "question": "Why does my forehand go into the net?",
+    "retrieval": {
+     "query": "Why does my forehand go into the net? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.6,
+       "rerank": -0.35,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.593,
+       "rerank": -1.44,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.567,
+       "rerank": -7.09,
+       "rank_dense": 3,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.522,
+       "rerank": -5.57,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.521,
+       "rerank": -2.46,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "04_motor_learning_and_feedback#external-focus-of-attention",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "External focus of attention",
+       "text": "Instructions that direct attention to the effect on the ball or target, such as clear the net by a metre, tend to improve performance and learning more than instructions about body parts. For beginners, cue the outcome of the shot rather than joint angles, for example let the racket sweep the ball toward the far corner.",
+       "dense": 0.504,
+       "rerank": -8.27,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.503,
+       "rerank": -3.76,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (2)",
+       "text": "Chandra Rubin demonstrates the two-handed backhand. Transfer on the ground strokes can and does occur from open and closed stances. How much you choose to transfer your weight into your shots depends on your shot intent and the amount of time you have to move into the shot. Forehand. Rotation may be the primary source of power on ground strokes, but there is still weight being transferred. For a right-handed forehand, the transfer occurs from the right foot to the left as the player steps into the stroke. In a closed stance, the weight transfer is even stronger, occurring before contact with the ball.",
+       "dense": 0.502,
+       "rerank": -5.76,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.6,
+       "rerank": -0.35,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.593,
+       "rerank": -1.44,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.521,
+       "rerank": -2.46,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your forehand might be going into the net because you are contacting the ball too late, too close to or behind your body [1][2].",
+    "why": "Your measurement of -0.28 torso lengths for contact point is outside the expert range of -0.58 to 0.78 torso lengths [1]. Contacting the ball beside or behind your hip forces your racket face to be unpredictable, often leading to the ball going into the net [1][2].",
+    "improve": "Focus on meeting the ball out in front of your body. Try the self-drop forehand drill, dropping the ball in front of your front hip [3]. Next session, check if you are making contact further in front.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_nocourt": {
+    "question": "I have 15 minutes and no court. What can I do?",
+    "retrieval": {
+     "query": "I have 15 minutes and no court. What can I do? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.547,
+       "rerank": -3.39,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.511,
+       "rerank": -7.08,
+       "rank_dense": 2,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.486,
+       "rerank": -4.05,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.458,
+       "rerank": -5.65,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-turn-and-point",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow turn and point",
+       "text": "No court or ball needed. Stand side-on to a mirror or wall and turn the shoulders until the non-racket hand points at the side fence. Hold for two seconds and return. Three sets of ten repetitions train the unit turn and can be done at home in five minutes.",
+       "dense": 0.416,
+       "rerank": -4.68,
+       "rank_dense": 5,
+       "rank_final": 5
+      },
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.414,
+       "rerank": -2.53,
+       "rank_dense": 6,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-swing-past-a-marker",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow swing past a marker",
+       "text": "Place a cone or bottle about a racket length in front of the front hip. Swing slowly and brush it with the strings at contact. The marker gives a visible target for the contact point and works without a court or partner.",
+       "dense": 0.397,
+       "rerank": -3.36,
+       "rank_dense": 7,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#over-the-net-by-a-metre-rally",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Over-the-net-by-a-metre rally",
+       "text": "Use a rope or imaginary line one metre above the net. Aim every forehand over the line and into the court. The target encourages a full swing and upward finish, and gives clear success counts.",
+       "dense": 0.391,
+       "rerank": -10.53,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "03_beginner_drill_library#self-drop-forehands",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Self-drop forehands",
+       "text": "Drop the ball in front of the front hip and hit it into the service box. The player controls the feed, so there is no rush and no partner is needed. Useful for repeating the contact point alone on a court.",
+       "dense": 0.414,
+       "rerank": -2.53,
+       "rank_dense": 6,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-swing-past-a-marker",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow swing past a marker",
+       "text": "Place a cone or bottle about a racket length in front of the front hip. Swing slowly and brush it with the strings at contact. The marker gives a visible target for the contact point and works without a court or partner.",
+       "dense": 0.397,
+       "rerank": -3.36,
+       "rank_dense": 7,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.547,
+       "rerank": -3.39,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "With 15 minutes and no court, focus on shadow swings. Practice your forehand motion, imagining hitting a ball in front of you. This helps build muscle memory for better timing and contact point. [2]",
+    "why": "Your contact point is too close to/behind your body (-0.28 torso lengths). Practicing without a ball helps you feel the correct swing path and contact zone. Your trunk lean is within the expert range, so we'll focus on the contact point. [1][2][3]",
+    "improve": "Place a marker (like a bottle) in front of your hip. Swing and brush the marker with your strings. Aim to meet the ball out in front. Next time, check if you're reaching forward to meet the imaginary ball. [2]",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_followthrough": {
+    "question": "How do I know if my follow-through is right?",
+    "retrieval": {
+     "query": "How do I know if my follow-through is right? Contact too close to / behind the body contact point in front late timing",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.564,
+       "rerank": 0.11,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.552,
+       "rerank": -1.15,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.535,
+       "rerank": -2.17,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.479,
+       "rerank": -5.23,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.447,
+       "rerank": -3.5,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.378,
+       "rerank": -8.05,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p16-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 16 (4)",
+       "text": "When should you start to coil? There are two schools of thought on this. Some players such as Venus and Serena Williams coil immediately before the approaching ball crosses the net. Others\u2014clay-court players and those with excellent timing and whip-like strokes\u2014coil when the ball bounces. Each method of coiling has advantages and disadvantages. An advantage to coiling before the ball crosses the net is if you want to transfer weight into your shot by moving toward it, then your racquet is already in position before the ball bounces. You also can hide your shot from your opponent, holding the backswing and delaying the racquet arm from coming through until the last possible second. This can help",
+       "dense": 0.367,
+       "rerank": -10.09,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#arm-spacing-at-contact",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Arm spacing at contact",
+       "text": "The hitting arm should be relaxed and slightly bent at contact, close to the elbow angle expert players show rather than fully straight. A cramped arm means the player is too close to the ball and jams the swing. A locked straight arm removes feel and shortens the useful swing path.",
+       "dense": 0.343,
+       "rerank": -7.51,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.564,
+       "rerank": 0.11,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#contact-point",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Contact point",
+       "text": "Contact the ball in front of the front hip, roughly an arm and racket length from the body, at about waist height. Contact beside or behind the hip forces the wrist to compensate and makes direction unpredictable. A contact point out in front also lets the racket travel through the ball toward the target.",
+       "dense": 0.552,
+       "rerank": -1.15,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.535,
+       "rerank": -2.17,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your follow-through is right if the racket continues forward, up, and across your body after hitting the ball, finishing near your opposite shoulder. This shows you accelerated through the ball [1].",
+    "why": "Your video shows your contact point is too close to or behind your body (-0.28 torso lengths) [2][3]. This often leads to a shorter follow-through because you might be slowing down before contact, affecting depth and control [1].",
+    "improve": "Focus on meeting the ball out in front of your body. Check your video next time to see if your racket travels forward and up across your body after contact [1].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   }
+  },
+  "racket": {
+   "frames": 13,
+   "detected": 10,
+   "detect_rate": 0.77,
+   "head_vs_hand_at_contact": -0.28,
+   "lowest_before_contact": -0.31,
+   "highest_after_contact": 1.22,
+   "low_to_high": 1.53
+  },
+  "view": "behind"
+ },
+ "plan": {
+  "focus": [
+   "contact",
+   "lean"
+  ],
+  "levels": {
+   "contact": 2,
+   "lean": 2
+  },
+  "sessions": [
+   {
+    "day": "Mon",
+    "at_court": true,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "contact2",
+      "issue": "contact",
+      "level": 2,
+      "name": "Self-drop forehands to a hoop",
+      "minutes": 10,
+      "court": true,
+      "partner": false,
+      "steps": "Drop the ball in front of your front hip, hit it into the cross-court service box. 3 sets of 8.",
+      "goal": "Ball contacted in front of the hip on 6 of 8."
+     },
+     {
+      "id": "lean1",
+      "issue": "lean",
+      "level": 1,
+      "name": "Head-still shadow swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Place a small sticker on a mirror at head height; keep your eyes on it while swinging. 3 sets of 10.",
+      "goal": "Head stays on the sticker on 8 of 10 swings."
+     }
+    ],
+    "label": "Court session"
+   },
+   {
+    "day": "Wed",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "contact1",
+      "issue": "contact",
+      "level": 1,
+      "name": "Shadow swing past a marker",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Put a cone or water bottle ~1 racket length in front of your front hip. Swing and brush it with the strings at contact. 3 sets of 10.",
+      "goal": "Strings pass the marker at the same point on 8 of 10 swings."
+     },
+     {
+      "id": "lean1",
+      "issue": "lean",
+      "level": 1,
+      "name": "Head-still shadow swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Place a small sticker on a mirror at head height; keep your eyes on it while swinging. 3 sets of 10.",
+      "goal": "Head stays on the sticker on 8 of 10 swings."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   },
+   {
+    "day": "Sat",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "lean1",
+      "issue": "lean",
+      "level": 1,
+      "name": "Head-still shadow swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Place a small sticker on a mirror at head height; keep your eyes on it while swinging. 3 sets of 10.",
+      "goal": "Head stays on the sticker on 8 of 10 swings."
+     },
+     {
+      "id": "contact1",
+      "issue": "contact",
+      "level": 1,
+      "name": "Shadow swing past a marker",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Put a cone or water bottle ~1 racket length in front of your front hip. Swing and brush it with the strings at contact. 3 sets of 10.",
+      "goal": "Strings pass the marker at the same point on 8 of 10 swings."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   }
+  ],
+  "rationale": "Focus: contact too close to / behind the body, then excess trunk lean. Built for 3 sessions/week of ~20 min, court access: sometimes, partner: no.",
+  "adjustments": []
+ }
+}

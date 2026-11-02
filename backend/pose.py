@@ -2,10 +2,10 @@
 from __future__ import annotations
 import cv2
 import numpy as np
-from .config import MODEL_PATH
+from .config import MODEL_PATH, POSE_WIDTH
 
 MAX_FRAMES = 240          # keeps CPU cost low; longer clips are subsampled
-TARGET_W = 480
+TARGET_W = POSE_WIDTH
 
 
 def extract_pose(video_path: str, keep_frames: bool = True):
@@ -110,8 +110,8 @@ SKELETON = [(11, 12), (11, 13), (13, 15), (12, 14), (14, 16), (11, 23), (12, 24)
             (23, 25), (25, 27), (24, 26), (26, 28)]
 
 
-def annotate(frame, img_pts, label: str, highlight=(), blur_face=True):
-    """Draw skeleton on a frame; blur face; label. img_pts are normalised coords."""
+def annotate(frame, img_pts, label: str, highlight=(), blur_face=False):
+    """Draw skeleton on a frame (optionally blur the face); label. img_pts are normalised coords."""
     f = frame.copy(); h, w = f.shape[:2]
     pts = {j: (int(img_pts[j][0] * w), int(img_pts[j][1] * h))
            for j in range(33) if not np.isnan(img_pts[j][0])}

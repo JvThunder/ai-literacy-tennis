@@ -1,6 +1,8 @@
 """Pose sequence -> stroke label, phases, forehand features (per Section 3)."""
 from __future__ import annotations
 import numpy as np
+import json, os
+from pathlib import Path
 from .config import LM, REF
 
 
@@ -25,6 +27,19 @@ def _interp_nan(a):
     if g.sum() == 0:
         return np.zeros_like(a)
     return np.interp(idx, idx[g], a[g])
+
+
+_MODEL = None
+
+
+def _stroke_model():
+    """Multinomial logistic regression on degree-2 trajectory features, trained by evaluate.py with player-grouped CV.
+    Stored as plain coefficients (no pickle). Missing file or TENNIS_STROKE=rules -> rule-based fallback."""
+    global _MODEL
+    if _MODEL is None:
+        f = Path(__file__).resolve().parent.parent / "models" / "stroke_classifier.json"
+        _MODEL = json.loads(f.read_text()) if f.exists() and os.environ.get("TENNIS_STROKE", "learned") == "learned" else False
+    return _MODEL
 
 
 def _compute(seq: dict, dominant: str = "right") -> dict:
@@ -95,7 +110,28 @@ def _compute(seq: dict, dominant: str = "right") -> dict:
     else:
         label = "forehand" if scores["forehand"] >= scores["backhand"] else "backhand"
         conf = max(scores["forehand"], scores["backhand"])
-    cls = dict(label=label, confidence=round(float(conf), 2), scores={k: round(v, 2) for k, v in scores.items()})
+    # trajectory features for the learned classifier (all in torso lengths or ratios, so camera distance drops out)
+    ow_n = np.stack([_interp_nan(P(oth["wr"])[:, k]) for k in range(3)], 1)
+    o_speed = np.convolve(np.linalg.norm(np.gradient(ow_n - hip_n, axis=0), axis=1) / dt / torso_len, k, "same")
+    sx = dict(crosses=crosses, start_side=start_side / torso_len, end_side=end_side / torso_len, reach_up=reach_up,
+              other_reach_up=float(np.nanmax((sh_c[:, 1] - ow_n[:, 1]) / torso_len)),
+              hands_gap=float(np.nanmedian(np.linalg.norm(wr_n[s:e + 1] - ow_n[s:e + 1], axis=1)) / torso_len),
+              other_speed=float(np.nanmax(o_speed[s:e + 1]) / peak),
+              contact_height=float((sh_c[c, 1] - wr_n[c, 1]) / torso_len) if np.isfinite(sh_c[c, 1]) else 0.0,
+              duration=float(t[e] - t[s]))
+    sx = {k_: (v if np.isfinite(v) else 0.0) for k_, v in sx.items()}
+    model = _stroke_model()
+    if model:
+        z = np.array([(sx[f] - m) / sd for f, m, sd in zip(model["features"], model["mean"], model["sd"])])
+        n = len(z)        # degree-2 terms in sklearn PolynomialFeatures order: 1, z_i, z_i*z_j (i <= j)
+        q = np.concatenate([[1.0], z, [z[i] * z[j] for i in range(n) for j in range(i, n)]])
+        q = (q - np.asarray(model["mean2"])) / np.asarray(model["sd2"])
+        logit = np.asarray(model["coef"]) @ q + np.asarray(model["intercept"])
+        prob = np.exp(logit - logit.max()); prob /= prob.sum()
+        scores = dict(zip(model["classes"], prob.tolist()))
+        label = model["classes"][int(np.argmax(prob))]; conf = float(prob.max())
+    cls = dict(label=label, confidence=round(float(conf), 2), scores={k_: round(v, 2) for k_, v in scores.items()},
+               method="learned" if model else "rules", x={k_: round(v, 4) for k_, v in sx.items()})
 
     # ---- features ----
     ang_el = _angle3(P(side["sh"]), P(side["el"]), P(side["wr"]))

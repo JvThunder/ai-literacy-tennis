@@ -1,31 +1,48 @@
-# Deployment brief for coding agents (CPU-only server)
+# Deployment brief for coding agents
 
-Goal: serve the AI Tennis Coach web app from this repo on a server **without a GPU**.
-Everything heavy (Qwen answers, FAISS/cross-encoder retrieval, reference benchmark) is already
-precomputed and committed under `data/`. At runtime only Next.js and MediaPipe/OpenCV on CPU are used.
+Goal: serve the AI Tennis Coach web app from this repo. Two modes, chosen by `TENNIS_MODE` in `.env`:
+
+| Mode | Server | Precomputed cases | Live uploads |
+|---|---|---|---|
+| `api` (default) | CPU only | served from `data/precomputed` | pose (BlazePose full) on CPU, MiniLM + cross-encoder retrieval via ONNX (`fastembed`), each question answered on demand by `google/gemini-2.5-flash-lite` via OpenRouter |
+| `gpu` | CUDA GPU | served from `data/precomputed` | pose, MiniLM+FAISS+cross-encoder retrieval and local Qwen2.5-3B, loaded per request |
+
+The example sessions (answers, retrieval, frames, browser-playable `clip.mp4`) and the expert benchmark are
+precomputed and committed under `data/`, so both modes serve them as-is.
+Setup: `cp .env.example .env` and set `OPENROUTER_API_KEY` (api mode). Without a key, uploads still work but
+answers fall back to the template explainer. Answers are cached per clip and capped by `MAX_QUESTIONS_PER_CLIP`.
 
 ## Fast path (Debian/Ubuntu, sudo available)
 ```bash
 git clone <REPO_URL> tennis-ai && cd tennis-ai
+cp .env.example .env && $EDITOR .env          # OpenRouter key
 DOMAIN=<your.domain> ./scripts/deploy.sh      # omit DOMAIN to skip HTTPS/Caddy
 ```
-The script: installs Node 22 locally if needed, creates `.venv` from `requirements.txt`,
-smoke-tests the pose pipeline on a bundled clip, runs `npm ci && next build`, installs the
+The script: installs Node 22 locally if needed, creates `.venv` from `requirements.txt` (`requirements-gpu.txt` in gpu mode),
+smoke-tests the pose pipeline and one live question on a bundled clip, runs `npm ci && next build`, installs the
 `tennis-ai` systemd unit (127.0.0.1:3000) and, if `DOMAIN` is set, installs Caddy with `deploy/Caddyfile`.
 It finishes by curling `/api/cases`.
 
 ## Alternatives
-- Docker: `docker compose up -d --build` (add `DOMAIN=... --profile https` for Caddy HTTPS).
+- Docker: `docker compose up -d --build` (reads `.env`; add `DOMAIN=... --profile https` for Caddy HTTPS).
+- GPU server: `TENNIS_MODE=gpu ./scripts/deploy.sh`, or `docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d --build` (NVIDIA Container Toolkit).
 - No systemd / no sudo: `NO_SYSTEMD=1 ./scripts/deploy.sh` (foreground on `PORT`, default 3000).
 
 ## Do not
-- Do not install torch, CUDA, transformers or `requirements-gpu.txt` - those are for `precompute.py` only.
-- Do not run `precompute.py` or `build_reference.py`; they need a GPU, HF downloads and the book PDF.
+- In api mode do not install torch, CUDA, transformers or `requirements-gpu.txt` - those are for gpu mode and `precompute.py` only.
+- Do not commit `.env` (API key); it is git- and docker-ignored.
+- Do not run `evaluate.py extract` on the server unless asked (downloads ~1 GB of THETIS, ~30 min CPU); its results are committed.
+- Do not run `precompute.py` unless asked: it rewrites the demo cases (GPU by default; `TENNIS_MODE=api` runs it on CPU with ~$0.01 of API calls).
+- Do not run `build_reference.py`; it re-renders the expert videos from THETIS downloads. The benchmark stats come from `evaluate.py reference`.
 - Do not commit `Serious tennis*.pdf`; the 5-page cited excerpt is cached in `data/cache/pdf_chunks.json`.
 
 ## Verify
-- `curl -s localhost:3000/api/cases` returns 5 cases; `/` renders the chat UI.
-- Upload test: POST a clip from `clips/` to `/api/analyze` (multipart `video`, `profile` JSON) and expect `report.status` = `ok`.
+- `curl -s localhost:3000/api/cases` returns the example sessions; `/` renders the app (tabs: Coach, Upload a video, Models & frameworks, Evaluation, About).
+- Upload test: POST a clip from `clips/` to `/api/analyze` (multipart `video`, `profile` JSON, optional `sensor` = smartwatch
+  WristMotion CSV) and expect `report.status` = `ok` (`report.watch` when a CSV was sent; `report.racket` from the racket detector).
+- `/eval` renders the evaluation page from the committed `data/eval/metrics.json`; coach reviews are stored in `data/reviews/` (Docker volume `reviews`) and need `REVIEW_CODE` in `.env`.
+- Question test: POST `{"id": <id from analyze>, "question": "..."}` to `/api/ask`; `model` names the LLM used
+  (`Template explainer (...)` means no LLM was reached - check the key).
 
 ## Troubleshooting
 - `ImportError: libGL.so.1` -> `apt install libgl1 libglib2.0-0`.

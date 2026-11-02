@@ -3,12 +3,34 @@
 NOTE: thresholds are starting values for the prototype. They must be validated /
 tuned with the coach review described in Section 5 of the proposal.
 """
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 KNOWLEDGE_DIR = ROOT / "knowledge"
-MODEL_PATH = ROOT / "models" / "pose_landmarker_lite.task"
+
+
+def _load_env(path: Path):
+    """KEY=VALUE lines from the repo-root .env; the real environment wins."""
+    if not path.exists():
+        return
+    for line in path.read_text().splitlines():
+        k, sep, v = line.strip().partition("=")
+        k = k.removeprefix("export ").strip()
+        if sep and k and not k.startswith("#"):
+            os.environ.setdefault(k, v.strip().strip("'\""))
+
+
+_load_env(ROOT / ".env")
+# api (default): CPU server; precomputed cases + live answers from a hosted LLM (OpenRouter)
+# gpu: live uploads run the offline stack (MiniLM + FAISS + cross-encoder, local Qwen) on CUDA
+MODE = os.environ.get("TENNIS_MODE", "api")
+POSE_MODEL = os.environ.get("TENNIS_POSE_MODEL", "full")          # lite | full | heavy; full chosen on /eval (accuracy vs CPU time)
+MODEL_PATH = ROOT / "models" / f"pose_landmarker_{POSE_MODEL}.task"
+POSE_WIDTH = int(os.environ.get("TENNIS_POSE_WIDTH", "480"))        # frames wider than this are downscaled
+RACKET_PATH = ROOT / "models" / "efficientdet_lite0.tflite"           # COCO object detector (class "tennis racket")
+RACKET = os.environ.get("TENNIS_RACKET", "1") != "0"                # racket detection on the swing frames
 
 # Landmark indices (MediaPipe BlazePose, 33 points)
 LM = dict(nose=0, l_sh=11, r_sh=12, l_el=13, r_el=14, l_wr=15, r_wr=16,

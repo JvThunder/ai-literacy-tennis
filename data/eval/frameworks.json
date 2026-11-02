@@ -1,0 +1,18 @@
+{
+ "source": "Forehand_four_frameworks_GroupK5_1012.xlsx (team analysis), sheets 1 and 3; SMARTS checked against Williams & Petersen (2000), Serious Tennis, ch. 1",
+ "faults": [
+  {"fault": "Impact point late / too close to body", "smarts": "Swing", "ta": "Impact phase (the hub)", "sheet": "Yes", "feature": "contact", "note": "Measured: wrist ahead of the front hip at peak wrist speed, in torso lengths."},
+  {"fault": "Trunk falls back at contact", "smarts": "Transfer / Swing", "ta": "Preparation / Balance", "sheet": "Yes", "feature": "lean", "note": "Measured: trunk lean from vertical at contact."},
+  {"fault": "Follow-through shortened", "smarts": "Swing", "ta": "Balance and Recovery", "sheet": "Yes", "feature": "follow", "note": "Measured: wrist travel after contact, in torso lengths."},
+  {"fault": "No knee bend / no leg drive", "smarts": "Transfer", "ta": "Backswing / Impact", "sheet": "Yes", "feature": "knee", "note": "Measured: minimum knee angle before contact."},
+  {"fault": "No shoulder-hip turn", "smarts": "Rotation", "ta": "Backswing (20 deg separation)", "sheet": "Yes but fragile", "feature": "turn", "note": "Partly: shoulder rotation only, not shoulder-hip separation; frontal THETIS camera loses depth."},
+  {"fault": "No forward weight shift", "smarts": "Transfer", "ta": "Backswing", "sheet": "Proxy only", "feature": null, "note": "Not measured."},
+  {"fault": "Swing path too steep / too flat", "smarts": "Rotation into Swing", "ta": "Forward swing", "sheet": "Needs a new feature", "feature": null, "note": "Not measured."},
+  {"fault": "Grip outside the acceptable range", "smarts": "Swing", "ta": "Preparation / Grip", "sheet": "No", "feature": null, "note": "Not visible to pose estimation."}
+ ],
+ "extra": [{"feature": "elbow", "fault": "Arm cramped or locked at contact", "note": "Measured by the system but not one of the eight faults in the framework analysis."}],
+ "smarts": [
+  {"skill": "Seeing", "covered": "no"}, {"skill": "Movement", "covered": "no"}, {"skill": "Adjusting", "covered": "no"},
+  {"skill": "Rotation", "covered": "partly"}, {"skill": "Transfer", "covered": "partly"}, {"skill": "Swing", "covered": "partly"}
+ ]
+}

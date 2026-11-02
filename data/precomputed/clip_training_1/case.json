@@ -1,0 +1,2687 @@
+{
+ "id": "clip_training_1",
+ "title": "Practice session 2",
+ "blurb": "Team practice video",
+ "player": {
+  "level": "NTRP 2.0 (adult beginner)",
+  "dominant": "auto",
+  "goal": "Rally consistently with friends",
+  "question": "What should I fix first in my forehand?",
+  "sessions_per_week": 3,
+  "minutes": 20,
+  "court_access": "sometimes",
+  "partner": false
+ },
+ "report": {
+  "status": "ok",
+  "stroke": {
+   "label": "forehand",
+   "confidence": 0.79,
+   "scores": {
+    "backhand": 0.21,
+    "forehand": 0.79,
+    "serve": 0.0
+   },
+   "method": "learned",
+   "x": {
+    "crosses": 0.2528,
+    "start_side": -1.1383,
+    "end_side": -0.8856,
+    "reach_up": -0.2072,
+    "other_reach_up": -0.0021,
+    "hands_gap": 0.7994,
+    "other_speed": 0.6405,
+    "contact_height": -0.5114,
+    "duration": 1.635
+   }
+  },
+  "issues": [
+   {
+    "id": "follow",
+    "title": "Short follow-through",
+    "phase": "follow-through",
+    "value": 0.51,
+    "unit": "torso lengths",
+    "reference": "expert P10-P90: 0.49 to 1.34",
+    "deviation": 0.14,
+    "confidence": 0.97,
+    "consistency": 0.8,
+    "relevance": 0.8,
+    "frame": 88,
+    "time_s": 2.94,
+    "joints": [
+     16
+    ],
+    "expert_median": 0.83,
+    "expert_p10": 0.49,
+    "expert_p90": 1.34,
+    "percentile": 12,
+    "z": 0.97,
+    "score": 0.084,
+    "retrieval": {
+     "query": "What should I fix first in my forehand? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.62,
+       "rerank": 2.15,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.598,
+       "rerank": -2.71,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.592,
+       "rerank": -2.46,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.555,
+       "rerank": -7.51,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.55,
+       "rerank": 0.46,
+       "rank_dense": 5,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.5,
+       "rerank": -5.98,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.494,
+       "rerank": -3.03,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Unit turn and shoulder rotation",
+       "text": "The forehand starts with the unit turn: the shoulders and hips rotate together so the chest faces the side fence and the non-racket hand guides the racket back. A full shoulder rotation stores energy in the trunk and lets the body, not just the arm, accelerate the racket. A swing with little rotation relies on the arm alone and loses both power and consistency.",
+       "dense": 0.483,
+       "rerank": -4.63,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.62,
+       "rerank": 2.15,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.55,
+       "rerank": 0.46,
+       "rank_dense": 5,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.592,
+       "rerank": -2.46,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "references": [
+     {
+      "id": "02_common_beginner_faults#fault-short-follow-through",
+      "doc": "02_common_beginner_faults.md",
+      "doc_title": "Common Beginner Forehand Faults",
+      "section": "Fault: short follow-through",
+      "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+      "dense": 0.62,
+      "rerank": 2.15,
+      "rank_dense": 1,
+      "rank_final": 1
+     },
+     {
+      "id": "01_forehand_technique_guide#follow-through",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Follow-through",
+      "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+      "dense": 0.55,
+      "rerank": 0.46,
+      "rank_dense": 5,
+      "rank_final": 2
+     },
+     {
+      "id": "serious_tennis#p49-4",
+      "doc": "serious_tennis.pdf",
+      "doc_title": "Serious Tennis (Williams & Petersen)",
+      "section": "p. 49 (4)",
+      "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+      "dense": 0.592,
+      "rerank": -2.46,
+      "rank_dense": 3,
+      "rank_final": 3
+     }
+    ],
+    "reasoning": [
+     {
+      "step": "Observed",
+      "text": "Short follow-through: measured 0.51 torso lengths at 2.94 s (follow-through phase)."
+     },
+     {
+      "step": "Compared with target",
+      "text": "Target expert P10-P90: 0.49 to 1.34; deviation 0.14 on a 0-1 scale."
+     },
+     {
+      "step": "Trust",
+      "text": "Joint tracking confidence 0.97; the deviation held on 80% of the frames checked."
+     },
+     {
+      "step": "Prioritised",
+      "text": "score = 0.14 \u00d7 0.97 \u00d7 0.80 \u00d7 0.80 = 0.084, ranked 1 of 2 candidate issues."
+     }
+    ],
+    "explanation": "Your follow-through is a bit short, meaning you might be guiding the ball instead of swinging through it [1]. This can make it harder to control your shots and hit them with good depth [2]. Try to imagine hitting the ball one meter above the net [1].",
+    "explanation_source": "google/gemini-2.5-flash-lite via OpenRouter, grounded on retrieved passages",
+    "cue": "Send the ball over the net by a metre or more and let your racket finish over your opposite shoulder."
+   },
+   {
+    "id": "knee",
+    "title": "Not enough knee bend",
+    "phase": "preparation",
+    "value": 145.39,
+    "unit": "deg",
+    "reference": "expert P10-P90: 102.79 to 152.09",
+    "deviation": 0.1,
+    "confidence": 0.99,
+    "consistency": 0.67,
+    "relevance": 0.6,
+    "frame": 43,
+    "time_s": 1.43,
+    "joints": [
+     24,
+     26,
+     28,
+     23,
+     25,
+     27
+    ],
+    "expert_median": 128.21,
+    "expert_p10": 102.79,
+    "expert_p90": 152.09,
+    "percentile": 82,
+    "z": 0.89,
+    "score": 0.038,
+    "retrieval": {
+     "query": "What should I fix first in my forehand? Not enough knee bend knee bend balance legs stability",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.61,
+       "rerank": -3.77,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.607,
+       "rerank": -4.73,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.515,
+       "rerank": -10.46,
+       "rank_dense": 3,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#ready-position-and-grip",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Ready position and grip",
+       "text": "Stand with feet shoulder-width apart, knees softly bent and the racket held in front with both hands. A semi-western or eastern forehand grip lets the strings meet the ball flat while the wrist stays relaxed. Beginners often grip too tightly; hold the racket at about a four out of ten effort so the arm can swing freely.",
+       "dense": 0.514,
+       "rerank": -7.42,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.492,
+       "rerank": -6.18,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.491,
+       "rerank": -10.87,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.482,
+       "rerank": -7.22,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.465,
+       "rerank": -6.82,
+       "rank_dense": 8,
+       "rank_final": 4
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-staying-tall",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: staying tall",
+       "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+       "dense": 0.61,
+       "rerank": -3.77,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Legs and weight transfer",
+       "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+       "dense": 0.607,
+       "rerank": -4.73,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.492,
+       "rerank": -6.18,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "references": [
+     {
+      "id": "02_common_beginner_faults#fault-staying-tall",
+      "doc": "02_common_beginner_faults.md",
+      "doc_title": "Common Beginner Forehand Faults",
+      "section": "Fault: staying tall",
+      "text": "Straight legs reduce balance and make low balls difficult. Many beginners bend at the waist instead of the knees. Cue a small sit into the legs during the turn and a push up through contact.",
+      "dense": 0.61,
+      "rerank": -3.77,
+      "rank_dense": 1,
+      "rank_final": 1
+     },
+     {
+      "id": "01_forehand_technique_guide#legs-and-weight-transfer",
+      "doc": "01_forehand_technique_guide.md",
+      "doc_title": "Forehand Technique Guide for Beginners",
+      "section": "Legs and weight transfer",
+      "text": "Bend the knees slightly during preparation and push up and forward through the stroke. A small knee bend lowers the centre of gravity, helps with low balls and allows weight to move toward the target. Standing tall with straight legs makes the shot arm-dominated and unstable.",
+      "dense": 0.607,
+      "rerank": -4.73,
+      "rank_dense": 2,
+      "rank_final": 2
+     },
+     {
+      "id": "serious_tennis#p49-3",
+      "doc": "serious_tennis.pdf",
+      "doc_title": "Serious Tennis (Williams & Petersen)",
+      "section": "p. 49 (3)",
+      "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+      "dense": 0.492,
+      "rerank": -6.18,
+      "rank_dense": 5,
+      "rank_final": 3
+     }
+    ],
+    "reasoning": [
+     {
+      "step": "Observed",
+      "text": "Not enough knee bend: measured 145.39 deg at 1.43 s (preparation phase)."
+     },
+     {
+      "step": "Compared with target",
+      "text": "Target expert P10-P90: 102.79 to 152.09; deviation 0.10 on a 0-1 scale."
+     },
+     {
+      "step": "Trust",
+      "text": "Joint tracking confidence 0.99; the deviation held on 67% of the frames checked."
+     },
+     {
+      "step": "Prioritised",
+      "text": "score = 0.10 \u00d7 0.99 \u00d7 0.67 \u00d7 0.60 = 0.038, ranked 2 of 2 candidate issues."
+     }
+    ],
+    "explanation": "You're standing a bit too tall when you hit the ball, which makes it harder to balance and reach low shots [1, 2]. Bending your knees more will help you stay stable and get to those tricky balls [2]. Imagine you're sitting down slightly into the shot [1].",
+    "explanation_source": "google/gemini-2.5-flash-lite via OpenRouter, grounded on retrieved passages",
+    "cue": "Sit slightly into your legs so you can push up through the ball."
+   }
+  ],
+  "other_candidates": [],
+  "features": {
+   "turn": {
+    "value": 21.6,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 3.37 to 89.16",
+    "expert_median": 19.4,
+    "expert_p10": 3.37,
+    "expert_p90": 89.16,
+    "percentile": 54,
+    "z": -0.07
+   },
+   "elbow": {
+    "value": 121.79,
+    "unit": "deg",
+    "confidence": 0.99,
+    "reference": "expert P10-P90: 108.73 to 142.27",
+    "expert_median": 128.54,
+    "expert_p10": 108.73,
+    "expert_p90": 142.27,
+    "percentile": 33,
+    "z": 0.52
+   },
+   "knee": {
+    "value": 145.39,
+    "unit": "deg",
+    "confidence": 0.99,
+    "reference": "expert P10-P90: 102.79 to 152.09",
+    "expert_median": 128.21,
+    "expert_p10": 102.79,
+    "expert_p90": 152.09,
+    "percentile": 82,
+    "z": 0.89
+   },
+   "lean": {
+    "value": 11.11,
+    "unit": "deg",
+    "confidence": 1.0,
+    "reference": "expert P10-P90: 8.18 to 21.03",
+    "expert_median": 13.26,
+    "expert_p10": 8.18,
+    "expert_p90": 21.03,
+    "percentile": 26,
+    "z": -0.43
+   },
+   "contact": {
+    "value": 0.84,
+    "unit": "torso lengths",
+    "confidence": 0.99,
+    "reference": "expert P10-P90: -0.58 to 0.78",
+    "expert_median": 0.54,
+    "expert_p10": -0.58,
+    "expert_p90": 0.78,
+    "percentile": 95,
+    "z": -0.57
+   },
+   "follow": {
+    "value": 0.51,
+    "unit": "torso lengths",
+    "confidence": 0.97,
+    "reference": "expert P10-P90: 0.49 to 1.34",
+    "expert_median": 0.83,
+    "expert_p10": 0.49,
+    "expert_p90": 1.34,
+    "percentile": 12,
+    "z": 0.97
+   }
+  },
+  "phases": {
+   "preparation_s": [
+    1.3,
+    1.57
+   ],
+   "contact_s": 1.57,
+   "follow_through_s": [
+    1.57,
+    2.94
+   ]
+  },
+  "wrist_speed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.39,
+   0.94,
+   1.61,
+   2.13,
+   2.28,
+   2.18,
+   1.89,
+   1.97,
+   2.33,
+   2.62,
+   2.74,
+   2.92,
+   3.1,
+   3.15,
+   3.02,
+   2.91,
+   2.69,
+   2.27,
+   1.95,
+   2.11,
+   2.65,
+   3.02,
+   3.17,
+   2.9,
+   2.27,
+   1.61,
+   1.28,
+   1.48,
+   1.72,
+   1.97,
+   2.28,
+   2.86,
+   3.92,
+   5.4,
+   6.84,
+   7.68,
+   7.55,
+   6.51,
+   4.98,
+   3.53,
+   2.54,
+   2.08,
+   1.89,
+   1.78,
+   1.78,
+   1.98,
+   2.44,
+   2.59,
+   2.52,
+   2.31,
+   2.32,
+   2.59,
+   2.73,
+   2.82,
+   2.6,
+   2.52,
+   2.56,
+   2.72,
+   2.76,
+   2.6,
+   2.45,
+   2.44,
+   2.5,
+   2.54,
+   2.54,
+   2.56,
+   2.54,
+   2.54,
+   2.61,
+   2.74,
+   2.81,
+   2.79,
+   2.63,
+   2.49,
+   2.26,
+   1.99,
+   1.19
+  ],
+  "t": [
+   0.0,
+   0.033,
+   0.067,
+   0.1,
+   0.133,
+   0.167,
+   0.2,
+   0.234,
+   0.267,
+   0.3,
+   0.334,
+   0.367,
+   0.4,
+   0.434,
+   0.467,
+   0.501,
+   0.534,
+   0.567,
+   0.601,
+   0.634,
+   0.667,
+   0.701,
+   0.734,
+   0.767,
+   0.801,
+   0.834,
+   0.868,
+   0.901,
+   0.934,
+   0.968,
+   1.001,
+   1.034,
+   1.068,
+   1.101,
+   1.134,
+   1.168,
+   1.201,
+   1.235,
+   1.268,
+   1.301,
+   1.335,
+   1.368,
+   1.401,
+   1.435,
+   1.468,
+   1.502,
+   1.535,
+   1.568,
+   1.602,
+   1.635,
+   1.668,
+   1.702,
+   1.735,
+   1.768,
+   1.802,
+   1.835,
+   1.869,
+   1.902,
+   1.935,
+   1.969,
+   2.002,
+   2.035,
+   2.069,
+   2.102,
+   2.135,
+   2.169,
+   2.202,
+   2.236,
+   2.269,
+   2.302,
+   2.336,
+   2.369,
+   2.402,
+   2.436,
+   2.469,
+   2.502,
+   2.536,
+   2.569,
+   2.603,
+   2.636,
+   2.669,
+   2.703,
+   2.736,
+   2.769,
+   2.803,
+   2.836,
+   2.87,
+   2.903,
+   2.936
+  ],
+  "contact_idx": 47,
+  "frames": [
+   {
+    "label": "Preparation",
+    "file": "frame_0.jpg",
+    "time_s": 1.3
+   },
+   {
+    "label": "Contact",
+    "file": "frame_1.jpg",
+    "time_s": 1.57
+   },
+   {
+    "label": "Follow-through",
+    "file": "frame_2.jpg",
+    "time_s": 2.94
+   }
+  ],
+  "strip": [
+   {
+    "label": "1.30s",
+    "file": "strip_0.jpg",
+    "time_s": 1.3
+   },
+   {
+    "label": "1.53s",
+    "file": "strip_1.jpg",
+    "time_s": 1.53
+   },
+   {
+    "label": "1.77s",
+    "file": "strip_2.jpg",
+    "time_s": 1.77
+   },
+   {
+    "label": "2.00s",
+    "file": "strip_3.jpg",
+    "time_s": 2.0
+   },
+   {
+    "label": "2.24s",
+    "file": "strip_4.jpg",
+    "time_s": 2.24
+   },
+   {
+    "label": "2.47s",
+    "file": "strip_5.jpg",
+    "time_s": 2.47
+   },
+   {
+    "label": "2.70s",
+    "file": "strip_6.jpg",
+    "time_s": 2.7
+   },
+   {
+    "label": "2.94s",
+    "file": "strip_7.jpg",
+    "time_s": 2.94
+   }
+  ],
+  "scrub": [
+   {
+    "label": "0.00s",
+    "file": "scrub_0.jpg",
+    "time_s": 0.0,
+    "idx": 0
+   },
+   {
+    "label": "0.07s",
+    "file": "scrub_1.jpg",
+    "time_s": 0.07,
+    "idx": 2
+   },
+   {
+    "label": "0.13s",
+    "file": "scrub_2.jpg",
+    "time_s": 0.13,
+    "idx": 4
+   },
+   {
+    "label": "0.20s",
+    "file": "scrub_3.jpg",
+    "time_s": 0.2,
+    "idx": 6
+   },
+   {
+    "label": "0.30s",
+    "file": "scrub_4.jpg",
+    "time_s": 0.3,
+    "idx": 9
+   },
+   {
+    "label": "0.37s",
+    "file": "scrub_5.jpg",
+    "time_s": 0.37,
+    "idx": 11
+   },
+   {
+    "label": "0.43s",
+    "file": "scrub_6.jpg",
+    "time_s": 0.43,
+    "idx": 13
+   },
+   {
+    "label": "0.50s",
+    "file": "scrub_7.jpg",
+    "time_s": 0.5,
+    "idx": 15
+   },
+   {
+    "label": "0.60s",
+    "file": "scrub_8.jpg",
+    "time_s": 0.6,
+    "idx": 18
+   },
+   {
+    "label": "0.67s",
+    "file": "scrub_9.jpg",
+    "time_s": 0.67,
+    "idx": 20
+   },
+   {
+    "label": "0.73s",
+    "file": "scrub_10.jpg",
+    "time_s": 0.73,
+    "idx": 22
+   },
+   {
+    "label": "0.80s",
+    "file": "scrub_11.jpg",
+    "time_s": 0.8,
+    "idx": 24
+   },
+   {
+    "label": "0.90s",
+    "file": "scrub_12.jpg",
+    "time_s": 0.9,
+    "idx": 27
+   },
+   {
+    "label": "0.97s",
+    "file": "scrub_13.jpg",
+    "time_s": 0.97,
+    "idx": 29
+   },
+   {
+    "label": "1.03s",
+    "file": "scrub_14.jpg",
+    "time_s": 1.03,
+    "idx": 31
+   },
+   {
+    "label": "1.10s",
+    "file": "scrub_15.jpg",
+    "time_s": 1.1,
+    "idx": 33
+   },
+   {
+    "label": "1.20s",
+    "file": "scrub_16.jpg",
+    "time_s": 1.2,
+    "idx": 36
+   },
+   {
+    "label": "1.27s",
+    "file": "scrub_17.jpg",
+    "time_s": 1.27,
+    "idx": 38
+   },
+   {
+    "label": "1.33s",
+    "file": "scrub_18.jpg",
+    "time_s": 1.33,
+    "idx": 40
+   },
+   {
+    "label": "1.40s",
+    "file": "scrub_19.jpg",
+    "time_s": 1.4,
+    "idx": 42
+   },
+   {
+    "label": "1.50s",
+    "file": "scrub_20.jpg",
+    "time_s": 1.5,
+    "idx": 45
+   },
+   {
+    "label": "1.57s",
+    "file": "scrub_21.jpg",
+    "time_s": 1.57,
+    "idx": 47
+   },
+   {
+    "label": "1.63s",
+    "file": "scrub_22.jpg",
+    "time_s": 1.63,
+    "idx": 49
+   },
+   {
+    "label": "1.70s",
+    "file": "scrub_23.jpg",
+    "time_s": 1.7,
+    "idx": 51
+   },
+   {
+    "label": "1.80s",
+    "file": "scrub_24.jpg",
+    "time_s": 1.8,
+    "idx": 54
+   },
+   {
+    "label": "1.87s",
+    "file": "scrub_25.jpg",
+    "time_s": 1.87,
+    "idx": 56
+   },
+   {
+    "label": "1.94s",
+    "file": "scrub_26.jpg",
+    "time_s": 1.94,
+    "idx": 58
+   },
+   {
+    "label": "2.00s",
+    "file": "scrub_27.jpg",
+    "time_s": 2.0,
+    "idx": 60
+   },
+   {
+    "label": "2.10s",
+    "file": "scrub_28.jpg",
+    "time_s": 2.1,
+    "idx": 63
+   },
+   {
+    "label": "2.17s",
+    "file": "scrub_29.jpg",
+    "time_s": 2.17,
+    "idx": 65
+   },
+   {
+    "label": "2.24s",
+    "file": "scrub_30.jpg",
+    "time_s": 2.24,
+    "idx": 67
+   },
+   {
+    "label": "2.30s",
+    "file": "scrub_31.jpg",
+    "time_s": 2.3,
+    "idx": 69
+   },
+   {
+    "label": "2.40s",
+    "file": "scrub_32.jpg",
+    "time_s": 2.4,
+    "idx": 72
+   },
+   {
+    "label": "2.47s",
+    "file": "scrub_33.jpg",
+    "time_s": 2.47,
+    "idx": 74
+   },
+   {
+    "label": "2.54s",
+    "file": "scrub_34.jpg",
+    "time_s": 2.54,
+    "idx": 76
+   },
+   {
+    "label": "2.60s",
+    "file": "scrub_35.jpg",
+    "time_s": 2.6,
+    "idx": 78
+   },
+   {
+    "label": "2.70s",
+    "file": "scrub_36.jpg",
+    "time_s": 2.7,
+    "idx": 81
+   },
+   {
+    "label": "2.77s",
+    "file": "scrub_37.jpg",
+    "time_s": 2.77,
+    "idx": 83
+   },
+   {
+    "label": "2.84s",
+    "file": "scrub_38.jpg",
+    "time_s": 2.84,
+    "idx": 85
+   },
+   {
+    "label": "2.94s",
+    "file": "scrub_39.jpg",
+    "time_s": 2.94,
+    "idx": 88
+   }
+  ],
+  "warnings": [],
+  "stages": [
+   {
+    "name": "Video decoding + pose estimation",
+    "tool": "OpenCV + MediaPipe Pose Landmarker (BlazePose full, 33 keypoints)",
+    "status": "ran",
+    "detail": "89 frames sampled at ~30 fps, 33 keypoints each",
+    "ms": 4946
+   },
+   {
+    "name": "Keypoint cleaning",
+    "tool": "NumPy: confidence flagging, gap interpolation, smoothing",
+    "status": "ran",
+    "detail": "person detected in 85% of frames; mean visibility 0.76",
+    "ms": 33
+   },
+   {
+    "name": "Stroke check + features",
+    "tool": "Learned pose-sequence classifier (logistic regression) + NumPy/pandas features",
+    "status": "ran",
+    "detail": "forehand (79%); contact at 1.57 s",
+    "ms": 3
+   },
+   {
+    "name": "Issue detection + prioritisation",
+    "tool": "Reference-range comparison; score = deviation x confidence x consistency x relevance",
+    "status": "ran",
+    "detail": "2 candidate issue(s); top: Short follow-through",
+    "ms": 0
+   },
+   {
+    "name": "Retrieval + rerank + explanation",
+    "tool": "MiniLM-L6 bi-encoder \u2192 ms-marco MiniLM cross-encoder rerank, ONNX on CPU (56 passages)",
+    "status": "ran",
+    "detail": "6 passages selected as evidence",
+    "ms": 2425
+   }
+  ],
+  "capture_tips": [],
+  "total_ms": 8017,
+  "qa": {
+   "q_open": {
+    "question": "What should I fix first in my forehand?",
+    "retrieval": {
+     "query": "What should I fix first in my forehand? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.62,
+       "rerank": 2.15,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.598,
+       "rerank": -2.71,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.592,
+       "rerank": -2.46,
+       "rank_dense": 3,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.555,
+       "rerank": -7.51,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.55,
+       "rerank": 0.46,
+       "rank_dense": 5,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.5,
+       "rerank": -5.98,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.494,
+       "rerank": -3.03,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Unit turn and shoulder rotation",
+       "text": "The forehand starts with the unit turn: the shoulders and hips rotate together so the chest faces the side fence and the non-racket hand guides the racket back. A full shoulder rotation stores energy in the trunk and lets the body, not just the arm, accelerate the racket. A swing with little rotation relies on the arm alone and loses both power and consistency.",
+       "dense": 0.483,
+       "rerank": -4.63,
+       "rank_dense": 8,
+       "rank_final": 6
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.62,
+       "rerank": 2.15,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.55,
+       "rerank": 0.46,
+       "rank_dense": 5,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.592,
+       "rerank": -2.46,
+       "rank_dense": 3,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Focus on your follow-through first.",
+    "why": "Your follow-through is shorter than typical for experts [1]. This suggests you might be guiding the ball instead of swinging through it, which can affect depth and control [2].",
+    "improve": "Imagine swinging to hit the ball one meter above the net and finishing over your opposite shoulder [1]. Check your video next time to see if your follow-through is longer.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_inconsistent": {
+    "question": "Why is my forehand inconsistent?",
+    "retrieval": {
+     "query": "Why is my forehand inconsistent? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.621,
+       "rerank": 3.22,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.565,
+       "rerank": 1.38,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.56,
+       "rerank": -2.57,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.554,
+       "rerank": -3.81,
+       "rank_dense": 4,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.54,
+       "rerank": -7.93,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.505,
+       "rerank": -1.68,
+       "rank_dense": 6,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Unit turn and shoulder rotation",
+       "text": "The forehand starts with the unit turn: the shoulders and hips rotate together so the chest faces the side fence and the non-racket hand guides the racket back. A full shoulder rotation stores energy in the trunk and lets the body, not just the arm, accelerate the racket. A swing with little rotation relies on the arm alone and loses both power and consistency.",
+       "dense": 0.5,
+       "rerank": -2.68,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.474,
+       "rerank": -7.48,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.621,
+       "rerank": 3.22,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.565,
+       "rerank": 1.38,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.505,
+       "rerank": -1.68,
+       "rank_dense": 6,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your forehand inconsistency is likely due to stopping your swing too early and not bending your knees enough. [1][2]",
+    "why": "Your follow-through is shorter than typical for a good swing, measuring 0.51 torso lengths, which suggests you might be guiding the ball instead of swinging through it. [1] Also, your knee bend of 145.39 degrees is on the straighter side of the expert range (102.79 to 152.09 degrees), which can affect your balance and power. [2]",
+    "improve": "Focus on swinging through the ball and finishing your follow-through over your opposite shoulder. [1] Aim to bend your knees more to get lower to the ball. [2] Next time, check if you are completing your swing.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_unstable": {
+    "question": "Why is my forehand unstable?",
+    "retrieval": {
+     "query": "Why is my forehand unstable? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.64,
+       "rerank": 2.08,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.601,
+       "rerank": -4.17,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.581,
+       "rerank": -4.27,
+       "rank_dense": 3,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.559,
+       "rerank": -8.43,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.52,
+       "rerank": 0.94,
+       "rank_dense": 5,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.504,
+       "rerank": -2.51,
+       "rank_dense": 6,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.501,
+       "rerank": -7.34,
+       "rank_dense": 7,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-arm-only-swing",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: arm-only swing",
+       "text": "Players who do not rotate their shoulders hit with the arm alone. The swing looks compact, but the ball comes off slowly and unpredictably. The usual cause is turning the racket back instead of turning the body. Fix it with shadow turns that bring the non-racket hand to the side fence before any ball is fed.",
+       "dense": 0.499,
+       "rerank": -7.6,
+       "rank_dense": 8,
+       "rank_final": 7
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.64,
+       "rerank": 2.08,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.52,
+       "rerank": 0.94,
+       "rank_dense": 5,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.504,
+       "rerank": -2.51,
+       "rank_dense": 6,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your forehand is unstable because you're not swinging through the ball enough, and you're not using your legs to help generate power and balance. [1][2]",
+    "why": "Your follow-through is short at 0.51 torso lengths, which means you're likely stopping your racket after contact instead of swinging through. [1] Also, your knee bend is quite upright at 145.39 degrees, meaning you're not getting low enough to use your legs for stability and power. [2]",
+    "improve": "Focus on swinging the racket *through* the ball towards your target. Aim to finish your swing over your opposite shoulder. [1] Next time, check if your follow-through looks longer and more complete.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_first": {
+    "question": "What should I work on first?",
+    "retrieval": {
+     "query": "What should I work on first? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.554,
+       "rerank": -1.0,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.48,
+       "rerank": 2.31,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.468,
+       "rerank": -6.55,
+       "rank_dense": 3,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.45,
+       "rerank": 4.37,
+       "rank_dense": 4,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.423,
+       "rerank": -8.44,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.421,
+       "rerank": -4.29,
+       "rank_dense": 6,
+       "rank_final": 4
+      },
+      {
+       "id": "04_motor_learning_and_feedback#repeat-then-progress",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "Repeat, then progress",
+       "text": "A drill should be repeated until the learner succeeds on about seven of ten attempts. If it feels too hard, simplify by removing the ball or slowing the feed. When it feels easy, add movement, a faster feed or a target.",
+       "dense": 0.413,
+       "rerank": -9.03,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "04_motor_learning_and_feedback#use-video-as-evidence",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "Use video as evidence",
+       "text": "Showing a learner frames from their own swing links the verbal feedback to what they did. Video feedback works best when it is paired with a clear instruction for the next practice, and when the learner can compare the key moments of preparation, contact and finish.",
+       "dense": 0.399,
+       "rerank": -5.14,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.45,
+       "rerank": 4.37,
+       "rank_dense": 4,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.48,
+       "rerank": 2.31,
+       "rank_dense": 2,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.554,
+       "rerank": -1.0,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Focus on a full follow-through first. This will help you swing through the ball more effectively and improve consistency [1][2].",
+    "why": "Your follow-through is currently short, measured at 0.51 torso lengths, which is below the expert range of 0.49 to 1.34 torso lengths [1]. This indicates you might be guiding the ball rather than swinging through it, impacting control [1][2].",
+    "improve": "Practice swinging through the ball and finishing over your opposite shoulder [1]. Try the \"Finish and Freeze\" drill, holding your follow-through for two seconds [3]. Next time, check if your racket continues forward after hitting the ball [2].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_week": {
+    "question": "What should I practise this week?",
+    "retrieval": {
+     "query": "What should I practise this week? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.452,
+       "rerank": -3.95,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.437,
+       "rerank": -1.61,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "05_filming_and_weekly_planning#reviewing-the-week",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Reviewing the week",
+       "text": "After each session note whether the drills were completed, how hard they felt and whether the feedback helped. Repeat drills that were skipped, simplify those that were too hard and progress those that felt too easy.",
+       "dense": 0.43,
+       "rerank": -7.15,
+       "rank_dense": 3,
+       "rank_final": 6
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.38,
+       "rerank": -8.31,
+       "rank_dense": 4,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.361,
+       "rerank": -6.53,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "04_motor_learning_and_feedback#repeat-then-progress",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "Repeat, then progress",
+       "text": "A drill should be repeated until the learner succeeds on about seven of ten attempts. If it feels too hard, simplify by removing the ball or slowing the feed. When it feels easy, add movement, a faster feed or a target.",
+       "dense": 0.358,
+       "rerank": -10.09,
+       "rank_dense": 6,
+       "rank_final": 8
+      },
+      {
+       "id": "03_beginner_drill_library#over-the-net-by-a-metre-rally",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Over-the-net-by-a-metre rally",
+       "text": "Use a rope or imaginary line one metre above the net. Aim every forehand over the line and into the court. The target encourages a full swing and upward finish, and gives clear success counts.",
+       "dense": 0.352,
+       "rerank": -6.55,
+       "rank_dense": 7,
+       "rank_final": 4
+      },
+      {
+       "id": "04_motor_learning_and_feedback#use-video-as-evidence",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "Use video as evidence",
+       "text": "Showing a learner frames from their own swing links the verbal feedback to what they did. Video feedback works best when it is paired with a clear instruction for the next practice, and when the learner can compare the key moments of preparation, contact and finish.",
+       "dense": 0.351,
+       "rerank": -7.08,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.437,
+       "rerank": -1.61,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.452,
+       "rerank": -3.95,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.361,
+       "rerank": -6.53,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "This week, focus on practicing your forehand finish and preparation. Use shadow swings at home for the finish and reserve court time for hitting balls, focusing on preparing early. [1]",
+    "why": "Your follow-through is slightly shorter than ideal (0.51 torso lengths vs. expert 0.49 to 1.34), and early preparation is key to a good swing. [1][3]",
+    "improve": "Practice your finish by swinging in slow motion and freezing for two seconds over your opposite shoulder. [2] On court, aim to finish your turn before the ball bounces. [3] Next time, check your follow-through length.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_late": {
+    "question": "Why do I hit the ball late?",
+    "retrieval": {
+     "query": "Why do I hit the ball late? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.721,
+       "rerank": 2.77,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.659,
+       "rerank": 5.92,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.657,
+       "rerank": 1.64,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.637,
+       "rerank": 4.01,
+       "rank_dense": 4,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.539,
+       "rerank": -4.92,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "03_beginner_drill_library#drop-feed-turn-and-hit",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Drop-feed turn and hit",
+       "text": "A partner drops the ball from shoulder height so it bounces once. Turn before the bounce and hit crosscourt. This isolates preparation timing because the feed is slow and repeatable. Three sets of eight balls.",
+       "dense": 0.532,
+       "rerank": -2.65,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.532,
+       "rerank": -2.9,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.516,
+       "rerank": -2.17,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.659,
+       "rerank": 5.92,
+       "rank_dense": 2,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.637,
+       "rerank": 4.01,
+       "rank_dense": 4,
+       "rank_final": 2
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.721,
+       "rerank": 2.77,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "You are hitting the ball late because your preparation and swing are not allowing you to meet the ball out in front of your body [3].",
+    "why": "Your follow-through is short, measuring 0.51 torso lengths, which suggests you are stopping your swing after contact rather than swinging through the ball [1][2]. This often happens when you slow down before hitting, leading to late contact [2][3].",
+    "improve": "Focus on swinging through the ball. Aim to finish your swing over your opposite shoulder [1]. Next time, check if you are meeting the ball out in front of your hip.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_power": {
+    "question": "How can I get more power without swinging harder?",
+    "retrieval": {
+     "query": "How can I get more power without swinging harder? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.662,
+       "rerank": 3.53,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.527,
+       "rerank": -3.04,
+       "rank_dense": 2,
+       "rank_final": 4
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.499,
+       "rerank": -6.08,
+       "rank_dense": 3,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.464,
+       "rerank": 1.02,
+       "rank_dense": 4,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p17-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (2)",
+       "text": "Later coiling can result in more power, since the racquet is actually still completing the backswing when the hips and shoulders start uncoiling. But the timing is more difficult\u037e if you don't get fully uncoiled in time, it will drastically affect your shot. Players who take the racquet back with the bounce can get into trouble if the ball comes deep or fast. In tennis, many movements are balanced by counter movements. For example, on a one-handed backhand, the free arm moves back toward the fence as the racquet arm swings forward. On a scissors smash, your body moves backward, reaching up for the smash, and your legs counter by going forward and scissoring. In the control phase of your rotation you have some muscle groups pulling and others pushing to balance one another. For a moment, your body is cocked, wound up, ready to spring\u2014but in perfect balance, awaiting the right moment to uncoil, releasing all that stored muscle elasticity into an effective swing.",
+       "dense": 0.46,
+       "rerank": -1.65,
+       "rank_dense": 5,
+       "rank_final": 3
+      },
+      {
+       "id": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Unit turn and shoulder rotation",
+       "text": "The forehand starts with the unit turn: the shoulders and hips rotate together so the chest faces the side fence and the non-racket hand guides the racket back. A full shoulder rotation stores energy in the trunk and lets the body, not just the arm, accelerate the racket. A swing with little rotation relies on the arm alone and loses both power and consistency.",
+       "dense": 0.457,
+       "rerank": -6.77,
+       "rank_dense": 6,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p48-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 48 (2)",
+       "text": "Rotation is your primary power source on your ground strokes. The hips, shoulders, and torso, counter-rotated on a firm athletic stance, create a lot of stored energy. Forehand. With the forehand the racquet arm pulls back and the other arm balances it, creating a full stretch across the upper body. Even in an open stance, the rotation of the upper body and hips is evident. The right shoulder lags back, causing a stretch through the chest. This is the coiling I've talked about, the preparation for the whiplike motion that provides power for your strokes. That racquet (right) shoulder eventually uncoils, rotating around until the body is squarely facing the net.",
+       "dense": 0.451,
+       "rerank": -9.23,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "serious_tennis#p24-6",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 24 (6)",
+       "text": "You don't always have to swing as hard as possible to win a match. Just as a good baseball pitcher uses change-ups and breaking balls to set up a blazing fastball, you can vary the speed of your swing and keep your opponent guessing. If you vary speeds in your practice time, starting slow and building up speed, you'll develop a wide repertoire of speeds to use in a match.",
+       "dense": 0.445,
+       "rerank": -4.47,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.662,
+       "rerank": 3.53,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.464,
+       "rerank": 1.02,
+       "rank_dense": 4,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p17-2",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 17 (2)",
+       "text": "Later coiling can result in more power, since the racquet is actually still completing the backswing when the hips and shoulders start uncoiling. But the timing is more difficult\u037e if you don't get fully uncoiled in time, it will drastically affect your shot. Players who take the racquet back with the bounce can get into trouble if the ball comes deep or fast. In tennis, many movements are balanced by counter movements. For example, on a one-handed backhand, the free arm moves back toward the fence as the racquet arm swings forward. On a scissors smash, your body moves backward, reaching up for the smash, and your legs counter by going forward and scissoring. In the control phase of your rotation you have some muscle groups pulling and others pushing to balance one another. For a moment, your body is cocked, wound up, ready to spring\u2014but in perfect balance, awaiting the right moment to uncoil, releasing all that stored muscle elasticity into an effective swing.",
+       "dense": 0.46,
+       "rerank": -1.65,
+       "rank_dense": 5,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "To get more power without swinging harder, focus on using your body's rotation and a full follow-through. This allows you to generate racquet head speed through efficient movement rather than brute force [1][2].",
+    "why": "Your short follow-through (0.51 torso lengths) indicates you're stopping the swing after contact, limiting power [2]. Not enough knee bend (145.39 deg) means you're not utilizing your legs and core for rotation, which is a key source of power [3].",
+    "improve": "Focus on swinging *through* the ball. Imagine finishing your swing over your opposite shoulder. Aim to extend your follow-through to at least 1.34 torso lengths. Check your knee bend next time to ensure you're coiling your body for power [2][3].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_balance": {
+    "question": "How do I stay balanced when I hit?",
+    "retrieval": {
+     "query": "How do I stay balanced when I hit? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.628,
+       "rerank": 2.87,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.582,
+       "rerank": -2.5,
+       "rank_dense": 2,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.577,
+       "rerank": 3.68,
+       "rank_dense": 3,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.559,
+       "rerank": -6.81,
+       "rank_dense": 4,
+       "rank_final": 8
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.535,
+       "rerank": 2.7,
+       "rank_dense": 5,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.53,
+       "rerank": 3.01,
+       "rank_dense": 6,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.505,
+       "rerank": -2.86,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.5,
+       "rerank": -2.24,
+       "rank_dense": 8,
+       "rank_final": 5
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.577,
+       "rerank": 3.68,
+       "rank_dense": 3,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#balance-and-posture",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Balance and posture",
+       "text": "Keep the head still and the trunk close to vertical from preparation to contact. Leaning away from the ball or tipping forward moves the racket off its intended path. Finish the stroke in balance and hold the finish for a moment as a self-check.",
+       "dense": 0.53,
+       "rerank": 3.01,
+       "rank_dense": 6,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.628,
+       "rerank": 2.87,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "To stay balanced, focus on a full swing and finishing your stroke in a stable position. Keep your head still and your body upright throughout the swing [2].",
+    "why": "Your follow-through is shorter than experts [1], and you're not bending your knees enough [2]. This suggests you might be stopping your swing, which can lead to imbalance. A full swing helps maintain momentum and control [1][2].",
+    "improve": "Swing through the ball and finish over your opposite shoulder [1]. Hold your finish for two seconds to check your balance [3]. Next time, we'll check if you're finishing over your opposite shoulder.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_net": {
+    "question": "Why does my forehand go into the net?",
+    "retrieval": {
+     "query": "Why does my forehand go into the net? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.665,
+       "rerank": 3.59,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.601,
+       "rerank": -3.7,
+       "rank_dense": 2,
+       "rank_final": 5
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.58,
+       "rerank": 1.13,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.566,
+       "rerank": -1.72,
+       "rank_dense": 4,
+       "rank_final": 3
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.557,
+       "rerank": -4.26,
+       "rank_dense": 5,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#unit-turn-and-shoulder-rotation",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Unit turn and shoulder rotation",
+       "text": "The forehand starts with the unit turn: the shoulders and hips rotate together so the chest faces the side fence and the non-racket hand guides the racket back. A full shoulder rotation stores energy in the trunk and lets the body, not just the arm, accelerate the racket. A swing with little rotation relies on the arm alone and loses both power and consistency.",
+       "dense": 0.55,
+       "rerank": -4.01,
+       "rank_dense": 6,
+       "rank_final": 6
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.549,
+       "rerank": -8.42,
+       "rank_dense": 7,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-overhitting-for-power",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: overhitting for power",
+       "text": "Swinging harder rarely helps a beginner. Power comes from rotation, timing and a relaxed arm. If the ball is going long or into the net, reduce effort and focus on contact point and finish.",
+       "dense": 0.511,
+       "rerank": -3.07,
+       "rank_dense": 8,
+       "rank_final": 4
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.665,
+       "rerank": 3.59,
+       "rank_dense": 1,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.58,
+       "rerank": 1.13,
+       "rank_dense": 3,
+       "rank_final": 2
+      },
+      {
+       "id": "serious_tennis#p49-3",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (3)",
+       "text": "Backhand. On the right-handed backhand, the right foot is pointing slightly forward at a 45-degree angle so that the hips are not blocked and can be rotated into the shot. The transfer of weight is earlier on the backhand than it is on the forehand, from the left foot to the right and typically heel to toe on the lead (right) foot. As the swing nears its completion, it's not uncommon on a two-handed backhand to see the left leg rotate through, squaring up with the right leg. This shows that rotation has contributed to the power of the stroke\u037e it also helps the player recover, regaining balance.",
+       "dense": 0.566,
+       "rerank": -1.72,
+       "rank_dense": 4,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your forehand might be going into the net because you are stopping your racket swing too early after hitting the ball [1][2].",
+    "why": "Your follow-through is shorter than typical for a good forehand. A short follow-through, measured at 0.51 torso lengths, suggests you might be guiding the ball instead of swinging through it, which can lead to a lack of power and control, causing the ball to fall short [1][2].",
+    "improve": "Focus on swinging the racket *through* the ball. Imagine your racket finishing over your opposite shoulder. This will help you accelerate the racket and aim for a target higher than the net. Check your follow-through length next time [1].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_nocourt": {
+    "question": "I have 15 minutes and no court. What can I do?",
+    "retrieval": {
+     "query": "I have 15 minutes and no court. What can I do? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.631,
+       "rerank": -2.1,
+       "rank_dense": 1,
+       "rank_final": 3
+      },
+      {
+       "id": "03_beginner_drill_library#over-the-net-by-a-metre-rally",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Over-the-net-by-a-metre rally",
+       "text": "Use a rope or imaginary line one metre above the net. Aim every forehand over the line and into the court. The target encourages a full swing and upward finish, and gives clear success counts.",
+       "dense": 0.502,
+       "rerank": -3.63,
+       "rank_dense": 2,
+       "rank_final": 6
+      },
+      {
+       "id": "03_beginner_drill_library#shadow-turn-and-point",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Shadow turn and point",
+       "text": "No court or ball needed. Stand side-on to a mirror or wall and turn the shoulders until the non-racket hand points at the side fence. Hold for two seconds and return. Three sets of ten repetitions train the unit turn and can be done at home in five minutes.",
+       "dense": 0.497,
+       "rerank": -2.15,
+       "rank_dense": 3,
+       "rank_final": 4
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.493,
+       "rerank": -3.08,
+       "rank_dense": 4,
+       "rank_final": 5
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.485,
+       "rerank": -9.24,
+       "rank_dense": 5,
+       "rank_final": 8
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.458,
+       "rerank": 1.17,
+       "rank_dense": 6,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.442,
+       "rerank": -6.95,
+       "rank_dense": 7,
+       "rank_final": 7
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.419,
+       "rerank": -1.27,
+       "rank_dense": 8,
+       "rank_final": 2
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.458,
+       "rerank": 1.17,
+       "rank_dense": 6,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.419,
+       "rerank": -1.27,
+       "rank_dense": 8,
+       "rank_final": 2
+      },
+      {
+       "id": "05_filming_and_weekly_planning#planning-around-time-and-court-access",
+       "doc": "05_filming_and_weekly_planning.md",
+       "doc_title": "Filming Your Swing and Weekly Planning",
+       "section": "Planning around time and court access",
+       "text": "Two or three short sessions a week work better than one long one. Players without court access can still rehearse the turn, contact marker and finish with shadow swings at home. Reserve court time for fed or self-dropped balls.",
+       "dense": 0.631,
+       "rerank": -2.1,
+       "rank_dense": 1,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "With 15 minutes and no court, focus on shadow swings at home to practice your forehand turn, contact point, and follow-through. This helps build muscle memory for when you are on court [3].",
+    "why": "Your short follow-through (0.51 torso lengths) suggests you might be guiding the ball rather than swinging through it [1]. Practicing a full follow-through at home can improve racket acceleration and control [2].",
+    "improve": "Practice your forehand swing, focusing on finishing over your opposite shoulder. Aim to extend your racket forward and up after imaginary contact. Next time, check if your follow-through is longer [1][2].",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   },
+   "q_followthrough": {
+    "question": "How do I know if my follow-through is right?",
+    "retrieval": {
+     "query": "How do I know if my follow-through is right? Short follow-through follow-through finish swing path",
+     "stage1": true,
+     "kind": "onnx",
+     "candidates": [
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.593,
+       "rerank": 2.93,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.528,
+       "rerank": -1.83,
+       "rank_dense": 2,
+       "rank_final": 3
+      },
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.522,
+       "rerank": 3.85,
+       "rank_dense": 3,
+       "rank_final": 1
+      },
+      {
+       "id": "02_common_beginner_faults#fault-late-contact",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: late contact",
+       "text": "When the ball is struck beside or behind the hip the racket face is open or closed by the time it arrives. Late contact is usually a preparation problem, not a swing speed problem. Start the turn as soon as the ball leaves the opponent's racket and mark a contact zone in front of the front hip.",
+       "dense": 0.439,
+       "rerank": -8.41,
+       "rank_dense": 4,
+       "rank_final": 7
+      },
+      {
+       "id": "serious_tennis#p49-4",
+       "doc": "serious_tennis.pdf",
+       "doc_title": "Serious Tennis (Williams & Petersen)",
+       "section": "p. 49 (4)",
+       "text": "Now that you are in position to swing you want to keep the following in mind: (a) keep your swing smooth, and (b) accelerate your swing on the ground strokes keeping your head still. Forehand. From the athletic stance in the ready position, you've taken a split step and moved to the ball, adjusting to various factors on the way\u037e you have obtained ideal striking distance to the ball, and you've rotated, taking the racquet",
+       "dense": 0.423,
+       "rerank": -7.44,
+       "rank_dense": 5,
+       "rank_final": 6
+      },
+      {
+       "id": "04_motor_learning_and_feedback#use-video-as-evidence",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "Use video as evidence",
+       "text": "Showing a learner frames from their own swing links the verbal feedback to what they did. Video feedback works best when it is paired with a clear instruction for the next practice, and when the learner can compare the key moments of preparation, contact and finish.",
+       "dense": 0.409,
+       "rerank": -6.08,
+       "rank_dense": 6,
+       "rank_final": 4
+      },
+      {
+       "id": "01_forehand_technique_guide#preparation-timing",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Preparation timing",
+       "text": "Finish the turn before the ball bounces. Early preparation gives time to set the feet and choose where to make contact. Late preparation squeezes the swing and pushes contact behind the hip, which causes mishits and balls that drift wide.",
+       "dense": 0.405,
+       "rerank": -6.29,
+       "rank_dense": 7,
+       "rank_final": 5
+      },
+      {
+       "id": "04_motor_learning_and_feedback#repeat-then-progress",
+       "doc": "04_motor_learning_and_feedback.md",
+       "doc_title": "Motor Learning and Feedback Principles",
+       "section": "Repeat, then progress",
+       "text": "A drill should be repeated until the learner succeeds on about seven of ten attempts. If it feels too hard, simplify by removing the ball or slowing the feed. When it feels easy, add movement, a faster feed or a target.",
+       "dense": 0.377,
+       "rerank": -9.86,
+       "rank_dense": 8,
+       "rank_final": 8
+      }
+     ],
+     "final": [
+      {
+       "id": "02_common_beginner_faults#fault-short-follow-through",
+       "doc": "02_common_beginner_faults.md",
+       "doc_title": "Common Beginner Forehand Faults",
+       "section": "Fault: short follow-through",
+       "text": "Stopping the racket soon after contact is a sign the player is guiding the ball rather than swinging through it. Beginners often do this out of fear of hitting long. Aiming one metre above the net and finishing over the opposite shoulder teaches the swing to continue.",
+       "dense": 0.522,
+       "rerank": 3.85,
+       "rank_dense": 3,
+       "rank_final": 1
+      },
+      {
+       "id": "01_forehand_technique_guide#follow-through",
+       "doc": "01_forehand_technique_guide.md",
+       "doc_title": "Forehand Technique Guide for Beginners",
+       "section": "Follow-through",
+       "text": "After contact the racket keeps travelling forward, up and across the body, finishing near the opposite shoulder. A full follow-through is a sign the racket accelerated through the ball. A short, abrupt finish usually means the player slowed down before contact, which reduces depth and control.",
+       "dense": 0.593,
+       "rerank": 2.93,
+       "rank_dense": 1,
+       "rank_final": 2
+      },
+      {
+       "id": "03_beginner_drill_library#finish-and-freeze",
+       "doc": "03_beginner_drill_library.md",
+       "doc_title": "Beginner Drill Library",
+       "section": "Finish and freeze",
+       "text": "Swing in slow motion and finish over the opposite shoulder, freezing for two seconds. Holding the finish gives immediate feedback on balance and on whether the swing continued through contact.",
+       "dense": 0.528,
+       "rerank": -1.83,
+       "rank_dense": 2,
+       "rank_final": 3
+      }
+     ]
+    },
+    "answer": "Your follow-through is right when the racket continues to move forward, up, and across your body after hitting the ball, finishing near your opposite shoulder [2].",
+    "why": "Your current follow-through is measured at 0.51 torso lengths, which is on the shorter side of the expert range (0.49 to 1.34 torso lengths) [1]. A short follow-through suggests you might be guiding the ball instead of swinging through it [1][2].",
+    "improve": "Focus on swinging the racket *through* the ball towards your target. Try finishing your swing over your opposite shoulder [1]. Next time, check if your racket continues its path after contact.",
+    "model": "google/gemini-2.5-flash-lite via OpenRouter"
+   }
+  },
+  "racket": {
+   "frames": 50,
+   "detected": 6,
+   "detect_rate": 0.12
+  },
+  "view": "front"
+ },
+ "plan": {
+  "focus": [
+   "follow",
+   "knee"
+  ],
+  "levels": {
+   "follow": 2,
+   "knee": 2
+  },
+  "sessions": [
+   {
+    "day": "Mon",
+    "at_court": true,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "follow2",
+      "issue": "follow",
+      "level": 2,
+      "name": "Over-the-net-by-a-metre rally",
+      "minutes": 10,
+      "court": true,
+      "partner": false,
+      "steps": "Hit ten forehands (self-feed) aiming ~1 m above the net, over a rope or line. 3 sets.",
+      "goal": "7 of 10 balls clear the target height and land in."
+     },
+     {
+      "id": "knee1",
+      "issue": "knee",
+      "level": 1,
+      "name": "Sit and swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+      "goal": "Stay bent until contact on 8 of 10."
+     }
+    ],
+    "label": "Court session"
+   },
+   {
+    "day": "Wed",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "follow1",
+      "issue": "follow",
+      "level": 1,
+      "name": "Finish and freeze",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Slow-motion forehand swings. Finish with the racket over the opposite shoulder and freeze 2 s. 3 sets of 10.",
+      "goal": "Held finish above shoulder height on 8 of 10."
+     },
+     {
+      "id": "knee1",
+      "issue": "knee",
+      "level": 1,
+      "name": "Sit and swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+      "goal": "Stay bent until contact on 8 of 10."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   },
+   {
+    "day": "Sat",
+    "at_court": false,
+    "minutes": 20,
+    "drills": [
+     {
+      "id": "knee1",
+      "issue": "knee",
+      "level": 1,
+      "name": "Sit and swing",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Stand with feet shoulder width. Bend knees ~20 degrees, shadow swing while staying low, rise through contact. 3 sets of 10.",
+      "goal": "Stay bent until contact on 8 of 10."
+     },
+     {
+      "id": "follow1",
+      "issue": "follow",
+      "level": 1,
+      "name": "Finish and freeze",
+      "minutes": 5,
+      "court": false,
+      "partner": false,
+      "steps": "Slow-motion forehand swings. Finish with the racket over the opposite shoulder and freeze 2 s. 3 sets of 10.",
+      "goal": "Held finish above shoulder height on 8 of 10."
+     }
+    ],
+    "label": "Home session (no court needed)"
+   }
+  ],
+  "rationale": "Focus: short follow-through, then not enough knee bend. Built for 3 sessions/week of ~20 min, court access: sometimes, partner: no.",
+  "adjustments": []
+ }
+}

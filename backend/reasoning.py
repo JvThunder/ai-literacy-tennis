@@ -1,6 +1,6 @@
 """Issue detection + prioritisation, and report text generation."""
 from __future__ import annotations
-import json, os, urllib.request
+import json
 import numpy as np
 from .config import ISSUES, REF, DATA_DIR
 
@@ -72,6 +72,9 @@ def diagnose(feat_result: dict) -> dict:
     cands, unreliable, table = [], [], {}
     t = feat_result["t"]
     for name, f in feat_result["features"].items():
+        if not (np.isfinite(f["value"]) and np.isfinite(f["confidence"])):   # joint never visible in the window
+            unreliable.append(dict(id=name, title=ISSUES[name]["title"]))
+            continue
         dev, cons, ref, extra = _deviation(name, f)
         table[name] = dict(reference=ref, **extra)
         if dev <= 0.02:
@@ -96,27 +99,6 @@ def rule_explanation(issue: dict, player: dict) -> str:
     return (f"{m['summary']} We measured {issue['value']} {issue['unit']} against a target of "
             f"{issue['reference']} (around {issue['time_s']} s, {issue['phase']} phase). "
             f"Fixing this first should help you {goal.lower().rstrip('.')}. Try this: {m['cue']}")
-
-
-def llm_explanation(issue, player, refs):
-    """Optional: ground a pretrained LLM on the features + retrieved references (needs ANTHROPIC_API_KEY)."""
-    key = os.environ.get("ANTHROPIC_API_KEY")
-    if not key:
-        return None
-    prompt = (
-        "You are a beginner tennis coaching assistant. In under 90 words, plain language, explain this "
-        "forehand issue and give ONE ball-focused cue (external focus, no joint angles). Use only the evidence.\n"
-        f"Issue: {issue['title']}; measured {issue['value']} {issue['unit']} vs target {issue['reference']}.\n"
-        f"Player question: {player.get('question','')}\nReferences:\n" + "\n".join("- " + r["text"] for r in refs))
-    body = json.dumps(dict(model=os.environ.get("TENNIS_LLM", "claude-sonnet-5-5"), max_tokens=250,
-                           messages=[dict(role="user", content=prompt)])).encode()
-    req = urllib.request.Request("https://api.anthropic.com/v1/messages", body, {
-        "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=20) as r:
-            return json.load(r)["content"][0]["text"].strip()
-    except Exception:
-        return None
 
 
 def chain(issue: dict, rank: int, n_cand: int) -> list[dict]:

@@ -86,22 +86,33 @@ function PoseStep({ d, si, setSi }: { d: CaseData; si: number; setSi: (n: number
           <div className="small">t = {cur.time_s}s</div></>}</div>
         <div>
           <p style={{ marginTop: 0 }}>Detected a full-body skeleton (33 keypoints) in every sampled frame, then cleaned the track.</p>
-          <dl className="kv"><dt>Frames</dt><dd>{pe?.detail}</dd><dt>Cleaning</dt><dd>{cl?.detail}</dd><dt>Processing</dt><dd>{(pe?.ms ?? 0) + (cl?.ms ?? 0)} ms on CPU</dd></dl>
-          <p className="small">Faces are blurred in all frames shown.</p>
-        </div>
+          <dl className="kv"><dt>Frames</dt><dd>{pe?.detail}</dd><dt>Cleaning</dt><dd>{cl?.detail}</dd><dt>Processing</dt><dd>{(pe?.ms ?? 0) + (cl?.ms ?? 0)} ms on CPU</dd></dl>        </div>
       </div>
       {!!r.strip?.length && <div className="strip">{r.strip.map((f) => <img key={f.file} className="f" src={base + f.file} alt="" title={f.label} />)}</div>}
     </Assistant>
   );
 }
 
-function StrokeStep({ d }: { d: CaseData }) {
-  const s = d.report.stroke!;
+function StrokeStep({ d, onForehand }: { d: CaseData; onForehand?: () => void }) {
+  const r = d.report, s = r.stroke;
+  const [redo, setRedo] = useState(false);
   return (
-    <Assistant title="Stroke check" models={[(d.report.stroke as any)?.method === "learned" ? "Learned pose-sequence classifier (logistic regression)" : "Pose-sequence classifier (rule-based)"]}>
-      <div style={{ fontSize: 17 }}><b style={{ textTransform: "capitalize" }}>{s.label}</b> · {Math.round(s.confidence * 100)}% confidence <Chip k="g">passed to feedback</Chip></div>
-      {Object.entries(s.scores).map(([k, v]) => (
+    <Assistant title="Stroke check" models={[s?.method === "learned" ? "Learned pose-sequence classifier (logistic regression)" : "Pose-sequence classifier (rule-based)",
+      ...(r.watch?.stroke ? ["Watch: wrist rotation direction"] : [])]}>
+      {s && <div style={{ fontSize: 17 }}><b style={{ textTransform: "capitalize" }}>{s.label}</b>
+        {s.confirmed_by ? <> · <Chip k="g">{s.confirmed_by === "watch" ? "confirmed by your watch" : s.confirmed_by === "player" ? "as you said" : "filmed from behind: analysed as a forehand"}</Chip> <span className="small">video check read {s.video_label} ({Math.round((s.video_confidence ?? 0) * 100)}%)</span></>
+          : <> · {Math.round(s.confidence * 100)}% confidence {r.status === "ok" ? <Chip k="g">passed to feedback</Chip> : <Chip k="w">not analysed</Chip>}
+            {s.watch_label && <> <Chip k={s.watch_label === s.label ? "g" : "w"}>watch: {s.watch_label}</Chip></>}</>}</div>}
+      {s && Object.entries(s.scores).map(([k, v]) => (
         <div key={k} style={{ display: "grid", gridTemplateColumns: "80px 1fr 40px", gap: 8, alignItems: "center", marginTop: 6 }}><span style={{ textTransform: "capitalize" }}>{k}</span><Bar v={v} />{Math.round(v * 100)}%</div>))}
+      {s?.confirmed_by === "watch" && r.watch?.vertical_rotation_dps != null && <p className="small">Your wrist turned {Math.abs(r.watch.vertical_rotation_dps)}°/s {r.watch.vertical_rotation_dps > 0 ? "counterclockwise" : "clockwise"} (seen from above) just before the hit, the direction of a {r.watch.hand === "left" ? "left" : "right"}-handed forehand{r.watch.hand === "left" ? "" : " (assumed right-handed unless you set the hand)"}.</p>}
+      {r.status !== "ok" && <>
+        {r.reason && <div className="callout">{r.reason}</div>}
+        {(r.warnings ?? []).filter((w) => w !== r.reason).map((w) => <div key={w} className="callout">{w}</div>)}
+        {!!r.capture_tips?.length && <ul className="notes">{r.capture_tips.map((t) => <li key={t}>{t}</li>)}</ul>}
+        {r.status === "not_forehand" && onForehand && <p><button className="p" disabled={redo} onClick={() => { setRedo(true); onForehand(); }}>
+          {redo ? "Analysing as a forehand… about 20 seconds" : "It is a forehand: analyse it anyway"}</button></p>}
+      </>}
     </Assistant>
   );
 }
@@ -279,14 +290,13 @@ function CompareStep({ d, reference }: { d: CaseData; reference: Reference | nul
   );
 }
 
-export default function Chat({ d, questions, reference }: { d: CaseData; questions: Question[]; reference: Reference | null }) {
+export default function Chat({ d, questions, reference, onForehand }: { d: CaseData; questions: Question[]; reference: Reference | null; onForehand?: () => void }) {
   const defaultQ = d.report.qa ? Object.keys(d.report.qa)[0] : "";
   const [msgs, setMsgs] = useState<Msg[]>([]);
-  const [shown, setShown] = useState(0);
   const [si, setSi] = useState(0);
   const [text, setText] = useState("");
   const [liveQa, setLiveQa] = useState<Record<string, QA>>({});   // uploads: answers fetched on demand, keyed by qid
-  const endRef = useRef<HTMLDivElement>(null);
+  const endRef = useRef<HTMLDivElement>(null), threadRef = useRef<HTMLDivElement>(null), asked = useRef(false);
   const idx = d.report.scrub?.[Math.min(si, (d.report.scrub?.length ?? 1) - 1)]?.idx ?? null;
   const qText = (id: string) => d.report.qa?.[id]?.question ?? questions.find((q) => q.id === id)?.text ?? d.player.question ?? "";
   const qaFor = (qid: string) => (d.live ? liveQa[qid] : d.report.qa?.[qid]);
@@ -302,28 +312,25 @@ export default function Chat({ d, questions, reference }: { d: CaseData; questio
     } catch (e: any) { qa = { question, model: `Template explainer (${e.message})` }; }
     setLiveQa((m) => ({ ...m, [qid]: qa }));
   }
-  useEffect(() => { if (d.live) fetchLive("", d.player.question || "Please review my forehand."); }, [d]);   // eslint-disable-line
+  useEffect(() => { if (d.live && d.report.status === "ok") fetchLive("", d.player.question || "Please review my forehand."); }, [d]);   // eslint-disable-line
 
   useEffect(() => {
-    const m: Msg[] = [{ key: "u0", kind: "user-clip", text: qText(defaultQ) },
+    const m: Msg[] = d.report.status !== "ok" ? [{ key: "u0", kind: "user-clip", text: qText(defaultQ) },
+      ...(d.report.frames?.length ? [{ key: "pose", kind: "pose" as const }] : []), { key: "stroke", kind: "stroke" }] : [{ key: "u0", kind: "user-clip", text: qText(defaultQ) },
       { key: "pose", kind: "pose" }, { key: "stroke", kind: "stroke" }, { key: "feat", kind: "features" }, ...(d.report.watch ? [{ key: "watch", kind: "watch" as const }] : []), { key: "prio", kind: "priority" },
       { key: "rag0", kind: "rag", qid: defaultQ }, { key: "ans0", kind: "answer", qid: defaultQ },
       { key: "cmp", kind: "compare" }, { key: "plan", kind: "plan" }];
-    setMsgs(m); setShown(1);
+    setMsgs(m); asked.current = false;              // the whole session at once, read from the top
+    threadRef.current?.scrollTo({ top: 0 });
   }, [d, questions.length]);                       // eslint-disable-line
-
-  useEffect(() => {
-    if (shown >= msgs.length) return;
-    const t = setTimeout(() => setShown((s) => s + 1), msgs[shown]?.kind.startsWith("user") ? 250 : 650);
-    return () => clearTimeout(t);
-  }, [shown, msgs]);
-  useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [shown]);
+  // only a newly asked question scrolls the thread, to its answer
+  useEffect(() => { if (asked.current) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [msgs.length]);
 
   function ask(qid: string, shownText: string, note?: string) {
     const k = Date.now();
     if (d.live) { qid = "live" + k; fetchLive(qid, shownText); }
+    asked.current = true;
     setMsgs((m) => [...m, { key: "uq" + k, kind: "user-q", text: shownText, note }, { key: "rag" + k, kind: "rag", qid }, { key: "ans" + k, kind: "answer", qid }]);
-    setShown((s) => s + 1);
   }
   function submit() {
     const t = text.trim(); if (!t) return;
@@ -333,14 +340,12 @@ export default function Chat({ d, questions, reference }: { d: CaseData; questio
     ask(mt.id, t, mt.sim > 0 ? `Interpreted as: “${mt.text}” (match ${mt.sim.toFixed(2)})` : `Closest supported question: “${mt.text}”`);
   }
 
-  const visible = msgs.slice(0, shown);
-  const typing = shown < msgs.length;
   const r = d.report;
 
   return (
     <>
-      <div className="thread"><div className="col">
-        {visible.map((m) => {
+      <div className="thread" ref={threadRef}><div className="col">
+        {msgs.map((m) => {
           switch (m.kind) {
             case "user-clip": return (
               <div className="row-msg user" key={m.key}><div className="bubble user">
@@ -354,7 +359,7 @@ export default function Chat({ d, questions, reference }: { d: CaseData; questio
             case "user-q": return (
               <div className="row-msg user" key={m.key}><div className="bubble user">{m.text}{m.note && <div style={{ opacity: .75, fontSize: 12.5, marginTop: 4 }}>{m.note}</div>}</div></div>);
             case "pose": return <PoseStep key={m.key} d={d} si={si} setSi={setSi} />;
-            case "stroke": return r.stroke ? <StrokeStep key={m.key} d={d} /> : null;
+            case "stroke": return r.stroke || r.status !== "ok" ? <StrokeStep key={m.key} d={d} onForehand={onForehand} /> : null;
             case "features": return r.features ? <FeaturesStep key={m.key} d={d} idx={idx} /> : null;
             case "watch": return <WatchStep key={m.key} d={d} />;
             case "priority": return <PriorityStep key={m.key} d={d} />;
@@ -364,7 +369,6 @@ export default function Chat({ d, questions, reference }: { d: CaseData; questio
             case "plan": return <Assistant key={m.key} title="Your weekly practice plan" models={["Adaptive rule-based planner"]}><PlanPanel d={d} /></Assistant>;
           }
         })}
-        {typing && <Typing />}
         <div ref={endRef} />
       </div></div>
       <div className="composer"><div className="col">

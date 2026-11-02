@@ -2495,7 +2495,17 @@
     "improve": "Focus on meeting the ball out in front of your body. Check your video next time to see if your racket travels forward and up across your body after contact [1].",
     "model": "google/gemini-2.5-flash-lite via OpenRouter"
    }
-  }
+  },
+  "racket": {
+   "frames": 13,
+   "detected": 10,
+   "detect_rate": 0.77,
+   "head_vs_hand_at_contact": -0.28,
+   "lowest_before_contact": -0.31,
+   "highest_after_contact": 1.22,
+   "low_to_high": 1.53
+  },
+  "view": "behind"
  },
  "plan": {
   "focus": [

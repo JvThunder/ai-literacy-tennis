@@ -328,6 +328,29 @@ def _seq(cid):
 STROKE_FEATS = ["crosses", "start_side", "end_side", "reach_up", "other_reach_up", "hands_gap", "other_speed", "contact_height", "duration"]
 
 
+def _paired_forehands():
+    """Forehands from the team's paired recordings (every swing in them is a forehand; the watch's wrist rotation agrees
+    for 94%): each swing window, plus each whole video subsampled the way an upload is (<= 240 frames). Filmed from the
+    front, side and behind, which THETIS (front-on only) lacks. Grouped by video for cross-validation."""
+    import make_examples as me
+    from backend import pose, features
+    from backend.pose import MAX_FRAMES
+    rows = []
+    for f in sorted((ACACHE / "watch").glob("*.npz")):
+        z = np.load(f); full = dict(world=z["world"], img=z["img"], vis=z["vis"], t=z["t"], fps=float(z["fps"]), frames={})
+        step = max(1, int(np.ceil(len(full["t"]) / MAX_FRAMES)))
+        sub = {k: full[k][::step] for k in ("world", "img", "vis", "t")}; sub.update(fps=full["fps"] / step, frames={})
+        cands = [("full", sub)] + [("window", me.window(full, k)[0]) for k in me.swings(full)]
+        for kind, sq in cands:
+            if len(sq["t"]) < 12:
+                continue
+            res = features.compute(pose.clean(sq), "auto")
+            if res["ok"]:
+                rows.append(dict(id=f"{f.stem}_{kind}_{len(rows)}", player="team_" + f.stem, y="forehand", kind=kind,
+                                 rule=res["cls"]["label"], x=res["cls"]["x"]))
+    return rows
+
+
 def train_stroke(folds=5, C=0.1):
     """Replace the rule-based stroke check with multinomial logistic regression on interpretable trajectory features.
     Accuracy is measured with player-grouped cross-validation (no player in both train and test), then the model is
@@ -344,6 +367,8 @@ def train_stroke(folds=5, C=0.1):
         res = features.compute(_seq(r["id"]), "auto")
         if res["ok"]:
             rows.append(dict(id=r["id"], player=r["player"], y=TRUE_LABEL[r["action"]], rule=res["cls"]["label"], x=res["cls"]["x"]))
+    n_thetis = len(rows)
+    rows += _paired_forehands()
     X = np.array([[r["x"][k] for k in STROKE_FEATS] for r in rows]); y = np.array([r["y"] for r in rows]); g = np.array([r["player"] for r in rows])
     from sklearn.preprocessing import PolynomialFeatures
 
@@ -357,15 +382,24 @@ def train_stroke(folds=5, C=0.1):
     for tr, te in GroupKFold(folds).split(X, y, g):
         m, proba, _ = fit(X[tr], y[tr])
         p = proba(X[te]); pred[te] = m.classes_[p.argmax(1)]; conf[te] = p.max(1)
-    acc = float(np.mean(pred == y)); rule_acc = float(np.mean(np.array([r["rule"] for r in rows]) == y))
+    th = np.arange(len(y)) < n_thetis                      # THETIS rows keep the same accuracy definition as before
+    acc = float(np.mean(pred[th] == y[th])); rule_acc = float(np.mean(np.array([r["rule"] for r in rows])[th] == y[th]))
+    paired = {}
+    for kind in ("window", "full"):
+        k = np.array([r.get("kind") == kind for r in rows])
+        if k.any():
+            paired[kind] = dict(n=int(k.sum()), forehand=round(float(np.mean(pred[k] == "forehand")), 3),
+                                rules=round(float(np.mean(np.array([r["rule"] for r in rows])[k] == "forehand")), 3))
     (CACHE / "stroke_cv.json").write_text(json.dumps({r["id"]: dict(label=str(p), confidence=round(float(c), 3)) for r, p, c in zip(rows, pred, conf)}))
     m, proba, (mu, sd, mu2, sd2) = fit(X, y)
     out = dict(features=STROKE_FEATS, mean=mu.round(6).tolist(), sd=sd.round(6).tolist(), mean2=mu2.round(6).tolist(), sd2=sd2.round(6).tolist(),
                degree=2, C=C, classes=m.classes_.tolist(),
                coef=m.coef_.round(6).tolist(), intercept=m.intercept_.round(6).tolist(), pose_model=POSE_MODEL,
-               trained_on=f"THETIS, {len(rows)} clips, {len(set(g))} players", cv=dict(folds=folds, accuracy=round(acc, 3), rules_accuracy=round(rule_acc, 3)))
+               trained_on=f"THETIS, {n_thetis} clips + team paired recordings, {len(rows) - n_thetis} forehands",
+               cv=dict(folds=folds, accuracy=round(acc, 3), rules_accuracy=round(rule_acc, 3), paired=paired))
     (DATA_DIR.parent / "models" / "stroke_classifier.json").write_text(json.dumps(out, indent=1))
-    print(f"stroke check, {len(rows)} clips: rules {rule_acc:.3f} -> learned (player-grouped {folds}-fold CV) {acc:.3f}")
+    print(f"stroke check, {n_thetis} THETIS clips: rules {rule_acc:.3f} -> learned (player-grouped {folds}-fold CV) {acc:.3f}; "
+          f"team recordings held out by video: {paired}")
     # the runtime re-implementation in backend/features.py must reproduce sklearn exactly
     os.environ["TENNIS_STROKE"] = "learned"; features._MODEL = None
     agree = np.mean([features.compute(_seq(r["id"]), "auto")["cls"]["label"] == lab for r, lab in zip(rows[:60], m.classes_[proba(X[:60]).argmax(1)])])

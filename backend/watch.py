@@ -15,6 +15,11 @@ import numpy as np
 MAX_ROWS = 200_000
 GYRO = ["rotationRateX", "rotationRateY", "rotationRateZ"]
 ACC = ["accelerationX", "accelerationY", "accelerationZ"]
+GRAV = ["gravityX", "gravityY", "gravityZ"]
+# Stroke from the watch: rotation about the world vertical in the 0.3 s before the hit. A right-hander's forehand turns
+# the wrist counterclockwise seen from above (+), a backhand clockwise; mirrored for left-handers. On the team's
+# 124 paired forehands it was + for 94% (the rest were running or side-on forehands); backhands not yet recorded.
+STROKE_MIN = 0.5     # rad/s; weaker rotation gives no verdict
 
 
 class BadCSV(ValueError):
@@ -39,14 +44,20 @@ def load(path) -> dict:
             break
     else:
         raise BadCSV("no time column (clip_time_seconds_coarse, video_time_seconds_coarse, seconds_elapsed or time)")
-    g = np.linalg.norm(d[GYRO].apply(pd.to_numeric, errors="coerce").to_numpy(float), axis=1)
+    w3 = d[GYRO].apply(pd.to_numeric, errors="coerce").to_numpy(float)
+    g = np.linalg.norm(w3, axis=1)
     a = np.linalg.norm(d[ACC].apply(pd.to_numeric, errors="coerce").to_numpy(float), axis=1)
+    if all(c in d.columns for c in GRAV):     # rotation about the world vertical (up = -gravity)
+        gr = d[GRAV].apply(pd.to_numeric, errors="coerce").to_numpy(float)
+        vert = -(w3 * gr).sum(1) / np.linalg.norm(gr, axis=1)
+    else:
+        vert = np.full(len(g), np.nan)
     ok = np.isfinite(t) & np.isfinite(g) & np.isfinite(a)
-    t, g, a = t[ok], g[ok], a[ok]
-    o = np.argsort(t); t, g, a = t[o], g[o], a[o]
+    t, g, a, vert = t[ok], g[ok], a[ok], vert[ok]
+    o = np.argsort(t); t, g, a, vert = t[o], g[o], a[o], vert[o]
     if len(t) < 50 or t[-1] - t[0] < 0.5:
         raise BadCSV("too few sensor rows (need at least half a second of data)")
-    return dict(t=t, gyro=g, acc=a, clock=kind, column=col, rows=int(len(t)), hz=round(float(1 / np.median(np.diff(t))), 1))
+    return dict(t=t, gyro=g, acc=a, vert=vert, clock=kind, column=col, rows=int(len(t)), hz=round(float(1 / np.median(np.diff(t))), 1))
 
 
 def _align(w, vt, vs):
@@ -68,7 +79,8 @@ def _align(w, vt, vs):
     return best
 
 
-def analyse(path, report: dict) -> dict:
+def analyse(path, report: dict, hand: str = "right") -> dict:
+    """report needs t, wrist_speed and phases.contact_s (the pipeline's or a full report); hand = the player's hitting hand."""
     w = load(path)
     vt = np.asarray(report.get("t") or [], float); vs = np.asarray(report.get("wrist_speed") or [], float)
     contact = (report.get("phases") or {}).get("contact_s")
@@ -95,7 +107,13 @@ def analyse(path, report: dict) -> dict:
     if inclip.mean() < 0.01 or inclip.sum() < 20:
         out["warnings"].append("The watch recording does not cover this clip.")
         return out
-    k = k0 if fallback else int(np.argmax(np.where(inclip, w["acc"], -1)))
+    if fallback:
+        k = k0
+    else:     # the hit nearest the analysed swing (a long clip can hold several)
+        from scipy.signal import find_peaks
+        pk, _ = find_peaks(np.where(inclip, w["acc"], 0), height=max(2.0, 0.5 * float(w["acc"][inclip].max())),
+                           distance=max(1, int(1.2 * w["hz"])))
+        k = int(pk[np.argmin(np.abs(tc[pk] - contact))]) if len(pk) else int(np.argmax(np.where(inclip, w["acc"], -1)))
     imp = float(tc[k])
     win = (tc >= imp - 0.4) & (tc <= imp + 0.1)
     kg = int(np.argmax(np.where(win, w["gyro"], -1)))
@@ -103,6 +121,12 @@ def analyse(path, report: dict) -> dict:
                contact_gap_ms=None if fallback else int(round(1000 * (contact - imp))),
                peak_rotation_dps=int(round(np.degrees(w["gyro"][kg]))),
                rotation_peak_vs_impact_ms=int(round(1000 * (tc[kg] - imp))))
+    pre = (tc >= imp - 0.3) & (tc <= imp + 0.03)
+    v = float(np.nanmean(w["vert"][pre])) if pre.any() and np.isfinite(w["vert"][pre]).any() else float("nan")
+    if np.isfinite(v):
+        sv = v if hand != "left" else -v
+        out.update(vertical_rotation_dps=int(round(np.degrees(v))), hand=hand,
+                   stroke="forehand" if sv > STROKE_MIN else "backhand" if sv < -STROKE_MIN else None)
     # chart series on the video timeline, ~50 Hz
     grid = np.arange(vt[0], vt[-1], 0.02)
     out["series"] = dict(t=[round(x, 2) for x in grid],

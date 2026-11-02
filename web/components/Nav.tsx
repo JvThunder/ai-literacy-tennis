@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 
-// Top bar with the site's tabs and theme switch; shared by the coach app (/) and the evaluation page (/eval).
-export type Tab = "coach" | "upload" | "models" | "eval" | "about";
-const TABS: [Tab, string, string][] = [["coach", "Coach", "/"], ["upload", "Upload a video", "/?tab=upload"], ["models", "Models & frameworks", "/?tab=models"],
+// Top bar with the site's tabs and theme switch; shared by the app (/) and the evaluation page (/eval).
+export type Tab = "home" | "coach" | "upload" | "models" | "eval" | "about";
+const TABS: [Tab, string, string][] = [["home", "Overview", "/"], ["coach", "Coach", "/?tab=coach"], ["upload", "Upload a video", "/?tab=upload"], ["models", "Models & frameworks", "/?tab=models"],
   ["eval", "Evaluation", "/eval"], ["about", "About", "/?tab=about"]];
 type Theme = "system" | "light" | "dark";
 const ICON: Record<Theme, React.ReactNode> = {

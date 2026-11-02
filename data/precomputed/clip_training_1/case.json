@@ -2572,7 +2572,13 @@
     "improve": "Focus on swinging the racket *through* the ball towards your target. Try finishing your swing over your opposite shoulder [1]. Next time, check if your racket continues its path after contact.",
     "model": "google/gemini-2.5-flash-lite via OpenRouter"
    }
-  }
+  },
+  "racket": {
+   "frames": 50,
+   "detected": 6,
+   "detect_rate": 0.12
+  },
+  "view": "front"
  },
  "plan": {
   "focus": [

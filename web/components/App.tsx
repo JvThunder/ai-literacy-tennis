@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CaseData, CaseItem, Question, Reference } from "./types";
 import Chat from "./Chat";
 import ModelsPage from "./Stack";
 import Nav, { type Tab } from "./Nav";
 import About from "./About";
+import Home from "./Home";
 
 const TIPS = ["Film from the front, facing you, phone at hip height, about 4–6 m away.", "Keep your whole body in frame, head to feet, and fill most of the frame.",
   "Good light and a steady phone (lean it on something).", "One forehand per clip, 3–6 seconds long."];
@@ -19,30 +20,38 @@ export default function App() {
   const [err, setErr] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [sensor, setSensor] = useState<File | null>(null);
-  const [up, setUp] = useState({ dominant: "auto", n: 3, m: 20, court: "sometimes", partner: false });
-  const [tab, setTabState] = useState<Tab>("coach");
+  const [up, setUp] = useState({ dominant: "auto", n: 3, m: 20, court: "sometimes", partner: false, q: "" });
+  const [tab, setTabState] = useState<Tab>("home");
   function setTab(t: Tab) {
     setTabState(t);
-    try { history.replaceState(null, "", t === "coach" ? "/" : `/?tab=${t}`); } catch {}
+    try { history.replaceState(null, "", t === "home" ? "/" : `/?tab=${t}`); } catch {}
   }
 
+  const caseCache = useRef(new Map<string, Promise<any>>());    // example sessions stay in memory once fetched
+  const getCase = (id: string) => {
+    if (!caseCache.current.has(id)) caseCache.current.set(id, fetch(`/api/case/${id}`).then((r) => r.json()));
+    return caseCache.current.get(id)!;
+  };
   async function load(id: string) {
     setActive(id); setErr("");
-    const c = await (await fetch(`/api/case/${id}`)).json();
+    const c = await getCase(id);
     setData({ id, title: c.title, blurb: c.blurb, player: c.player, report: c.report, plan: c.plan, base: `/api/pre/${id}/`, video: `/api/clip/${id}` });
   }
   useEffect(() => {
     const t = new URLSearchParams(location.search).get("tab");
-    if (t === "upload" || t === "models" || t === "about") setTabState(t);
-    fetch("/api/cases").then((r) => r.json()).then((cs: CaseItem[]) => { setCases(cs); if (cs[0]) load(cs.find((c) => c.n_issues)?.id ?? cs[0].id); });
+    if (t === "coach" || t === "upload" || t === "models" || t === "about") setTabState(t);
+    fetch("/api/cases").then((r) => r.json()).then((cs: CaseItem[]) => {
+      setCases(cs); if (cs[0]) load(cs.find((c) => c.n_issues)?.id ?? cs[0].id);
+      cs.forEach((c) => getCase(c.id));            // prefetch the rest so switching sessions is instant
+    });
     fetch("/api/questions").then((r) => r.json()).then(setQuestions);
     fetch("/api/reference").then((r) => r.json()).then(setRef);
   }, []);
 
-  async function analyse() {
+  async function analyse(forehand = false) {
     if (!file) return setErr("Choose a video first.");
     setBusy(true); setErr("");
-    const profile = { dominant: up.dominant, question: "What can I improve on?", goal: "Improve my forehand", sessions_per_week: up.n, minutes: up.m, court_access: up.court, partner: up.partner, level: "NTRP below 3.0" };
+    const profile = { dominant: up.dominant, question: up.q.trim() || "What can I improve on?", ...(forehand ? { stroke: "forehand" } : {}), goal: "Improve my forehand", sessions_per_week: up.n, minutes: up.m, court_access: up.court, partner: up.partner, level: "NTRP below 3.0" };
     const fd = new FormData(); fd.append("video", file); fd.append("profile", JSON.stringify(profile));
     if (sensor) fd.append("sensor", sensor);
     try {
@@ -72,6 +81,9 @@ export default function App() {
             <b>{sensor ? sensor.name : "Add smartwatch data (optional)"}</b>
             <span className="small">{sensor ? `${(sensor.size / 1e6).toFixed(1)} MB` : "WristMotion CSV from Sensor Logger, recorded during this clip, up to 20 MB"}</span>
           </label>
+          <label className="qfield">Your question
+            <input type="text" maxLength={300} value={up.q} placeholder="What can I improve on?" onChange={(e) => setUp({ ...up, q: e.target.value })} />
+            <span className="small">Answered first, about this clip. You can ask more after the analysis.</span></label>
           <label className="row">Dominant hand
             <select value={up.dominant} onChange={(e) => setUp({ ...up, dominant: e.target.value })}><option>auto</option><option>right</option><option>left</option></select></label>
           <label className="row">Practice: <input type="number" min={1} max={6} value={up.n} style={{ width: 56 }} onChange={(e) => setUp({ ...up, n: +e.target.value })} /> sessions a week of
@@ -79,7 +91,7 @@ export default function App() {
           <label className="row">Court access
             <select value={up.court} onChange={(e) => setUp({ ...up, court: e.target.value })}><option>none</option><option>sometimes</option><option>regular</option></select>
             <label><input type="checkbox" checked={up.partner} onChange={(e) => setUp({ ...up, partner: e.target.checked })} /> I practise with a partner</label></label>
-          <p><button className="p" disabled={busy || !file} onClick={analyse}>{busy ? "Analysing… about 20 seconds" : "Analyse my forehand"}</button></p>
+          <p><button className="p" disabled={busy || !file} onClick={() => analyse()}>{busy ? "Analysing… about 20 seconds" : "Analyse my forehand"}</button></p>
           {err && <div className="callout">{err}</div>}
         </div>
         <div className="card" style={{ marginTop: 0 }}>
@@ -108,10 +120,12 @@ export default function App() {
         ))}
       </aside>}
       <main className="main">
-        {tab === "upload" ? <div className="thread">{upload}</div>
+        {tab === "home" ? <div className="thread"><Home onTab={setTab} /></div>
+          : tab === "upload" ? <div className="thread">{upload}</div>
           : tab === "models" ? <div className="thread"><ModelsPage /></div>
           : tab === "about" ? <div className="thread"><About /></div>
-          : data ? <Chat key={(data.id ?? "") + data.title} d={data} questions={questions} reference={ref} />
+          : data ? <Chat key={(data.id ?? "") + data.title} d={data} questions={questions} reference={ref}
+            onForehand={data.live && file && !busy ? () => analyse(true) : undefined} />
           : <div className="empty">Loading sessions…</div>}
       </main>
     </div>

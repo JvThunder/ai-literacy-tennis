@@ -70,6 +70,15 @@ def detect_frame(frame, pts, wrist: int):
 def track(seq: dict, idxs, dominant: str = "right", video_path: str | None = None) -> dict:
     """Racket per analysed frame index. With video_path the detector sees the original full-resolution frames
     (a far-away player is only ~70 px tall in the 480 px analysis frames); otherwise the kept analysis frames."""
+    global _det
+    try:
+        return _track(seq, idxs, dominant, video_path)
+    finally:     # close now: left to interpreter teardown, MediaPipe prints an error on exit
+        if _det is not None:
+            _det[1].close(); _det = None
+
+
+def _track(seq, idxs, dominant, video_path):
     wrist = LM["l_wr"] if dominant == "left" else LM["r_wr"]
     idxs = sorted(int(i) for i in idxs)
     out = {}

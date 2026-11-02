@@ -11,16 +11,10 @@ MAX_QUESTIONS = int(os.environ.get("MAX_QUESTIONS_PER_CLIP", "20"))   # caps LLM
 
 def analyse(video, profile, out):
     from . import pipeline
-    rep = pipeline.run(video, json.loads(Path(profile).read_text()), out)
-    out.mkdir(parents=True, exist_ok=True)
     csv = out / "watch.csv"          # optional smartwatch export uploaded with the clip; the raw file is not kept
-    if csv.exists():
-        from . import watch
-        try:
-            rep["watch"] = watch.analyse(csv, rep)
-        except watch.BadCSV as e:
-            rep["watch"] = dict(error=str(e))
-        csv.unlink()
+    rep = pipeline.run(video, json.loads(Path(profile).read_text()), out, watch_csv=csv if csv.exists() else None)
+    out.mkdir(parents=True, exist_ok=True)
+    csv.unlink(missing_ok=True)
     (out / "report.json").write_text(json.dumps(rep))
     return rep
 

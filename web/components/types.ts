@@ -13,12 +13,14 @@ export type QA = { question: string; retrieval?: Retrieval; answer?: string; why
 export type Feature = { value: number; unit: string; confidence: number; reference?: string; expert_median?: number; expert_p10?: number; expert_p90?: number; percentile?: number; z?: number };
 export type Report = {
   status: "ok" | "not_forehand" | "rejected"; reason?: string;
-  stroke?: { label: string; confidence: number; scores: Record<string, number> };
+  stroke?: { label: string; confidence: number; scores: Record<string, number>; method?: string;
+    video_label?: string; video_confidence?: number; confirmed_by?: "watch" | "player" | "view"; watch_label?: string };
+  view?: "front" | "behind" | "side";
   issues: Issue[]; other_candidates?: Partial<Issue>[];
   features?: Record<string, Feature>;
   phases?: { preparation_s: number[]; contact_s: number; follow_through_s: number[] };
   wrist_speed?: number[]; t?: number[]; contact_idx?: number;
-  watch?: { error?: string; rows?: number; hz?: number; aligned_by?: string; match_r?: number; impact_s?: number; impact_acc?: number; contact_gap_ms?: number | null;
+  watch?: { error?: string; stroke?: string | null; vertical_rotation_dps?: number; hand?: string; rows?: number; hz?: number; aligned_by?: string; match_r?: number; impact_s?: number; impact_acc?: number; contact_gap_ms?: number | null;
     peak_rotation_dps?: number; rotation_peak_vs_impact_ms?: number; warnings?: string[]; series?: { t: number[]; rotation_dps: (number | null)[]; acc: (number | null)[] } };
   racket?: { frames: number; detected: number; detect_rate: number; head_vs_hand_at_contact?: number; lowest_before_contact?: number; highest_after_contact?: number; low_to_high?: number } | null;
   frames: Img[]; strip?: Img[]; scrub?: Img[]; warnings: string[]; capture_tips?: string[]; stages: Stage[];
